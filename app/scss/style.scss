@@ -4,5 +4,109 @@
 @import 'global';
 
 
+.header {
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+ position: relative;
+}
+.logo span {
+  position: absolute;
+  transform: translate(66%, -83%);
+  font-size: 36px;
+  line-height: 1.6;
+  color: $top-links;
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__item + .menu__item {
+    padding-left: 30px;
+  }
+  &__link {
+    transition: color 0.3s;
+  }
+  &__link:hover {
+    color: $accent;
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__link {
+    position: relative;
+  }
+  &__link--search-color {
+    margin-right: 18px;
+    padding: 18px;
+    border-radius: 50%;
+    background-color: $search;
+  }
+  &__link--heart-color,
+  &__link--cart-color {
+    position: relative;
+    padding: 18px 30px 12px 40px;
+    background-color: $user-btn;
+    border-radius: 50% 0 0 50%;
+  }
+  &__link--cart-color {
+    border-radius: 0 50% 50% 0;
+  }
+  &__link--heart-color::after,
+  &__link--cart-color::after {
+    position: absolute;
+    content: '0';
+    top: 9px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 1.6;
+    text-align: center;
+    color: $top-links;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  &__link--cart-color::after {
+    top: 9px;
+    right: 30px;
+  }
+  &__link--cart-color {
+    padding: 18px 40px 12px 27px;
+    border-radius: 0 50% 50% 0;
+  }
+  &__link--dots-color {
+    margin-left: 18px;
+    padding: 18px;
+    border-radius: 50%;
+    background-color: $accent;
+  }
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @import 'media';
