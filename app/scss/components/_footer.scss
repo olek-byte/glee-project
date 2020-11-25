@@ -1,0 +1,158 @@
+// FOOTER
+.footer {
+  padding-top: 100px;
+  background-color: #fff;
+
+  &__inner {
+    display: flex;
+
+    position: relative;
+    margin-bottom: 50px;
+
+    @extend %rubik-400;
+    color: $footer-links;
+  }
+
+  &__logo {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    z-index: 100;
+  }
+
+  &__address {
+    margin-top: 38px;
+    margin-right: 100px;
+    max-width: 200px;
+    font-style: normal;
+
+    & span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__contact {
+    margin-bottom: 16px;
+    display: block;
+
+    &--height {
+      line-height: 1.7;
+    }
+  }
+
+  &__services {
+    max-width: 120px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #1f2044;
+  }
+
+  &__item {
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    transition: color 0.3s;
+
+    &:hover {
+      color: $top-links;
+    }
+  }
+
+  &__account {
+    max-width: 120px;
+    margin: 0 206px 0 182px;
+  }
+
+  &__newsletter {
+    max-width: 274px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    line-height: 1.7;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    padding: 14px 18px;
+    max-width: 170px;
+    width: 100%;
+
+    color: #234969;
+    background-color: #fef7f0;
+
+    border: none;
+    outline-color: transparent;
+    outline-width: 0;
+
+    &::placeholder {
+      @extend %dmsans-400;
+      font-size: 12px;
+      line-height: 1.3;
+      color: #234969;
+    }
+  }
+
+  &__btn {
+    padding: 14px 19px 14px 16px;
+    @extend %dmsans-400;
+
+    color: #fff;
+    background-color: $accent;
+
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $text;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 90px;
+    @extend %rubik-400;
+
+    color: $footer-links;
+    border-top: 1px solid #dae4e9;
+  }
+
+  &__copyright-list {
+    display: flex;
+  }
+
+  &__copyright-item {
+    padding: 0 14px;
+    border-right: 3px solid $footer-links;
+
+    transition: color 0.3s;
+
+    &:hover {
+      color: $text;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right: 0;
+    }
+  }
+}

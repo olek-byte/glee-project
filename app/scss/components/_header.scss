@@ -1,0 +1,151 @@
+// HEADER
+.header {
+  padding: 50px 0;
+  background-color: #fff;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 486px;
+  }
+}
+
+// MENU
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &+& {
+      margin-left: 32px;
+    }
+
+  }
+
+  &__link {
+    @extend %rubik-500;
+    font-size: 15px;
+
+    color: $top-links;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__user {
+    margin-left: 345px;
+  }
+
+  &__btns {
+    display: flex;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    fill: $text;
+    background-color: #fff;
+
+    outline-color: transparent;
+    outline-width: 0;
+    border: none;
+    cursor: pointer;
+
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: $accent;
+    }
+
+    &--search {
+      margin-right: 21px;
+      width: 51px;
+      height: 52px;
+
+      border-radius: 50%;
+      background-color: #edf1f4;
+    }
+
+    &--heart,
+    &--cart {
+      position: relative;
+      margin-right: 0;
+      width: 88px;
+      height: 51px;
+      background-color: $bg;
+    }
+
+    &--heart {
+      padding: 22px 30px 12px 41px;
+      border-radius: 41px 0 0 41px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 9px;
+
+        width: 1px;
+        height: 32px;
+
+        background-color: #fde7d3;
+        z-index: 10;
+      }
+    }
+
+    &--cart {
+      padding: 21px 42px 13px 27px;
+      border-radius: 0 41px 41px 0;
+    }
+
+    &--menu-dots {
+      margin-left: 18px;
+
+      width: 51px;
+      height: 52px;
+
+      border-radius: 50%;
+      fill: #fff;
+      background-color: $accent;
+
+      transition: fill 0.3s;
+
+      &:hover {
+        fill: $bg;
+      }
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    width: 16px;
+    height: 16px;
+
+    font-size: 10px;
+    line-height: 1.6;
+
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  &__num--cart {
+    right: 30px;
+  }
+}

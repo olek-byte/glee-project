@@ -1,0 +1,49 @@
+// SERVICE
+.service {
+  padding-bottom: 75px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    min-height: 171px;
+    background-color: #fef7f0;
+  }
+
+  &__item {
+    display: flex;
+
+    padding: 46px 0 44px 146px;
+    
+    border-right: 1px solid #e8e4df;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__icon {
+    margin-right: 20px;
+  }
+
+  &__content {
+    margin-right: 146px;
+    max-width: 220px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @extend %dmsans-700;
+    font-size: 18px;
+
+    color: #414141;
+  }
+
+  &__text {
+    @extend %dmsans-400;
+    font-size: 16px;
+
+    color: #585858;
+  }
+}

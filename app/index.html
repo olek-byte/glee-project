@@ -15,7 +15,7 @@
     <div class="container">
       <div class="header__inner">
 
-        <a class="logo" href="#">
+        <a class="header__logo">
           <img src="images/logo.png" alt="logo">
         </a>
 
@@ -42,25 +42,48 @@
             </li>
 
           </ul>
+
+          <div class="menu__user">
+            <div class="menu__btns">
+
+              <button class="menu__btn menu__btn--search" type="button">
+                <svg width="16" height="16" viewBox="0 0 15.28 15.281">
+                  <path
+                    d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                    transform="translate(-1544.72 -66)" />
+                </svg>
+              </button>
+
+              <button class="menu__btn menu__btn--heart" type="button">
+                <svg width="18" height="17" viewBox="0 0 18 17">
+                  <path
+                    d="M8.913 16.244a.707.707 0 0 1-.28-.056c-.353-.15-8.65-3.75-8.65-10.76C.074 2.779 2.19.722 4.801.722c1.743 0 3.266.918 4.112 2.31a4.796 4.796 0 0 1 4.112-2.31c2.61 0 4.725 2.058 4.817 4.684 0 7.034-8.297 10.634-8.65 10.783a.71.71 0 0 1-.28.056zM4.8 2.106c-1.847 0-3.343 1.47-3.408 3.346 0 5.408 6.125 8.663 7.52 9.335 1.395-.672 7.52-3.93 7.52-9.358-.065-1.853-1.563-3.323-3.408-3.323s-3.342 1.47-3.408 3.346a.7.7 0 0 1-.704.67.7.7 0 0 1-.705-.67c-.064-1.876-1.561-3.346-3.407-3.346z" />
+                </svg>
+                <span class="menu__num">0</span>
+              </button>
+
+              <button class="menu__btn menu__btn--cart" type="button">
+                <svg width="19" height="17" viewBox="0 0 18.94 16.969">
+                  <path
+                    d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                    transform="translate(-1716 -69)" />
+                </svg>
+                <span class="menu__num menu__num--cart">0</span>
+              </button>
+
+              <button class="menu__btn menu__btn--menu-dots" type="button">
+                <svg width="20" height="21" viewBox="0 0 20.03 20.031">
+                  <path
+                    d="M1813.15,67.881a2.146,2.146,0,1,1,2.14-2.145A2.145,2.145,0,0,1,1813.15,67.881Zm0,7.869a2.146,2.146,0,1,1,2.14-2.147A2.146,2.146,0,0,1,1813.15,75.75Zm0,7.868a2.146,2.146,0,1,1,2.14-2.146A2.145,2.145,0,0,1,1813.15,83.618Zm7.86-15.737a2.146,2.146,0,1,1,2.15-2.145A2.143,2.143,0,0,1,1821.01,67.881Zm0,7.869a2.146,2.146,0,1,1,2.15-2.147A2.144,2.144,0,0,1,1821.01,75.75Zm0,7.868a2.146,2.146,0,1,1,2.15-2.146A2.143,2.143,0,0,1,1821.01,83.618Zm7.87-15.737a2.146,2.146,0,1,1,2.15-2.145A2.143,2.143,0,0,1,1828.88,67.881Zm0,7.869a2.146,2.146,0,1,1,2.15-2.147A2.144,2.144,0,0,1,1828.88,75.75Zm0,7.868a2.146,2.146,0,1,1,2.15-2.146A2.143,2.143,0,0,1,1828.88,83.618Z"
+                    transform="translate(-1811 -63.594)" />
+                </svg>
+              </button>
+
+            </div>
+
+          </div>
+
         </nav>
-
-        <div class="user-nav">
-          <a class="user-nav__link user-nav__link--search" href="#">
-            <img class="user-nav__img" src="images/icons/search.svg" alt="search btn">
-          </a>
-          <a class="user-nav__link user-nav__link--heart" href="#">
-            <img class="user-nav__img" src="images/icons/heart.svg" alt="like btn">
-            <!-- <span class="user-nav__num">0</span> -->
-          </a>
-          <a class="user-nav__link user-nav__link--cart" href="#">
-            <img class="user-nav__img" src="images/icons/cart.svg" alt="cart btn">
-            <!-- <span class="user-nav__num">0</span> -->
-          </a>
-          <a class="user-nav__link user-nav__link--dots" href="#">
-            <img class="user-nav__img" src="images/icons/dots.svg" alt="menu btn">
-          </a>
-
-        </div>
 
       </div>
     </div>
@@ -68,113 +91,565 @@
 
   <main class="main">
 
-  </main>
+    <!-- SLIDER -->
+    <section class="top-slider">
+      <div class="container">
+        <div class="top-slider__inner">
 
+          <div class="top-slider__item">
+
+            <div class="top-slider__content">
+
+              <div class="top-slider__title">
+                Smart and <br>
+                trendy
+              </div>
+              <div class="top-slider__text">
+                Dolor sit amet, consectetur adipisicing elit, <br>
+                sed do eiusmod tempor incididunt
+              </div>
+
+              <button class="top-slider__btn" type="button">
+                Shop Now <span></span>
+              </button>
+
+            </div>
+
+            <img class="top-slider__img" src="images/slider/image_1.png" alt="slide image">
+
+          </div>
+
+          <div class="top-slider__item">
+
+            <div class="top-slider__content">
+
+              <div class="top-slider__title">
+                Smart and <br>
+                trendy
+              </div>
+              <div class="top-slider__text">
+                Dolor sit amet, consectetur adipisicing elit, <br>
+                sed do eiusmod tempor incididunt
+              </div>
+
+              <button class="top-slider__btn" type="button">
+                Shop Now <span></span>
+              </button>
+
+            </div>
+
+            <img class="top-slider__img" src="images/slider/image_1.png" alt="slide image">
+
+          </div>
+
+
+          <div class="top-slider__item">
+
+            <div class="top-slider__content">
+
+              <div class="top-slider__title">
+                Smart and <br>
+                trendy
+              </div>
+              <div class="top-slider__text">
+                Dolor sit amet, consectetur adipisicing elit, <br>
+                sed do eiusmod tempor incididunt
+              </div>
+
+              <button class="top-slider__btn" type="button">
+                Shop Now <span></span>
+              </button>
+
+            </div>
+
+            <img class="top-slider__img" src="images/slider/image_1.png" alt="slide image">
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE -->
+    <section class="service">
+      <div class="container">
+
+        <div class="service__inner">
+
+          <div class="service__item">
+            <div class="service__icon">
+              <svg width="52px" height="54px">
+                <path fill-rule="evenodd" opacity="0.341" fill="rgb(163, 187, 200)"
+                  d="M41.984,33.594 C47.395,33.594 51.781,37.987 51.781,43.406 C51.781,48.825 47.395,53.219 41.984,53.219 C36.574,53.219 32.187,48.825 32.187,43.406 C32.187,37.987 36.574,33.594 41.984,33.594 Z" />
+                <path fill-rule="evenodd" fill="rgb(163, 187, 200)"
+                  d="M25.463,49.206 C20.103,49.206 15.010,47.509 10.735,44.300 C10.321,43.990 10.237,43.401 10.548,42.988 C10.859,42.573 11.447,42.490 11.860,42.801 C15.808,45.764 20.512,47.330 25.463,47.330 C37.969,47.330 48.144,37.156 48.144,24.650 C48.144,20.396 46.960,16.251 44.720,12.662 C44.446,12.222 44.580,11.644 45.020,11.369 C45.459,11.096 46.037,11.230 46.312,11.669 C48.737,15.557 50.019,20.046 50.019,24.650 C50.019,38.190 39.003,49.206 25.463,49.206 ZM34.783,35.484 C34.265,35.484 33.845,35.063 33.845,34.546 L33.845,29.046 L26.907,29.046 C26.569,29.046 26.258,28.864 26.091,28.571 C25.925,28.277 25.929,27.917 26.102,27.627 L33.977,14.439 C34.243,13.995 34.818,13.849 35.263,14.115 C35.554,14.288 35.716,14.595 35.719,14.911 C35.719,14.914 35.720,14.916 35.720,14.919 L35.720,22.528 C35.720,23.046 35.300,23.465 34.783,23.465 C34.265,23.465 33.845,23.046 33.845,22.528 L33.845,18.318 L28.559,27.170 L33.845,27.170 L33.845,25.654 C33.845,25.136 34.265,24.716 34.783,24.716 C35.300,24.716 35.720,25.136 35.720,25.654 L35.720,27.170 L38.321,27.170 C38.839,27.170 39.259,27.590 39.259,28.108 C39.259,28.625 38.839,29.046 38.321,29.046 L35.720,29.046 L35.720,34.546 C35.720,35.063 35.300,35.484 34.783,35.484 ZM18.375,15.857 C16.186,15.857 14.406,17.637 14.406,19.826 C14.406,20.344 13.986,20.764 13.468,20.764 C12.950,20.764 12.531,20.344 12.531,19.826 C12.531,16.604 15.152,13.982 18.375,13.982 C21.597,13.982 24.219,16.604 24.219,19.826 C24.219,23.241 22.889,26.451 20.475,28.865 L15.732,33.608 L23.282,33.608 C23.799,33.608 24.219,34.028 24.219,34.546 C24.219,35.063 23.799,35.484 23.281,35.484 L13.468,35.484 C13.089,35.484 12.747,35.255 12.602,34.905 C12.457,34.554 12.537,34.151 12.805,33.883 L19.149,27.540 C21.209,25.480 22.344,22.740 22.344,19.826 C22.344,17.637 20.563,15.857 18.375,15.857 ZM42.832,9.558 L38.772,9.654 C38.765,9.654 38.757,9.654 38.749,9.654 C38.242,9.654 37.824,9.250 37.812,8.740 C37.800,8.222 38.210,7.792 38.727,7.780 L40.570,7.737 C36.435,4.050 31.041,1.969 25.463,1.969 C12.957,1.969 2.782,12.144 2.782,24.650 C2.782,30.790 5.197,36.541 9.581,40.843 C9.951,41.205 9.957,41.799 9.594,42.168 C9.411,42.356 9.168,42.449 8.925,42.449 C8.688,42.449 8.451,42.360 8.269,42.181 C3.522,37.525 0.907,31.298 0.907,24.650 C0.907,11.110 11.923,0.094 25.463,0.094 C28.948,0.094 32.316,0.809 35.473,2.220 C37.803,3.261 39.928,4.641 41.818,6.332 L41.776,4.583 C41.764,4.065 42.174,3.636 42.691,3.623 C43.208,3.612 43.638,4.020 43.651,4.538 L43.747,8.599 C43.760,9.116 43.350,9.546 42.832,9.558 Z" />
+              </svg>
+            </div>
+            <div class="service__content">
+              <div class="service__title">
+                Support 24/7.
+              </div>
+              <div class="service__text">
+                Contact us 24 hours a day,
+                7 days a week.
+              </div>
+            </div>
+          </div>
+
+          <div class="service__item">
+            <div class="service__icon">
+              <svg width="55px" height="37px">
+                <path fill-rule="evenodd" fill="rgb(163, 187, 200)"
+                  d="M46.781,17.812 L46.781,19.804 C46.781,20.238 46.429,20.590 45.995,20.590 C45.562,20.590 45.210,20.238 45.210,19.804 L45.210,17.812 C45.210,17.377 45.562,17.025 45.995,17.025 C46.429,17.025 46.781,17.377 46.781,17.812 ZM36.757,14.090 L36.757,6.700 C36.757,6.266 37.108,5.914 37.542,5.914 L41.843,5.914 C44.566,5.914 46.781,8.130 46.781,10.855 L46.781,14.090 C46.781,14.525 46.429,14.877 45.995,14.877 L37.542,14.877 C37.108,14.877 36.757,14.525 36.757,14.090 ZM38.328,13.304 L45.210,13.304 L45.210,10.855 C45.210,8.998 43.700,7.487 41.843,7.487 L38.328,7.487 L38.328,13.304 ZM49.137,25.727 L46.355,25.727 C45.977,28.100 43.918,29.919 41.443,29.919 C38.967,29.919 36.909,28.100 36.531,25.727 L25.279,25.727 C24.902,28.100 22.843,29.919 20.368,29.919 C17.892,29.919 15.834,28.100 15.456,25.727 L13.037,25.727 C12.603,25.727 12.252,25.374 12.252,24.940 L12.252,1.354 C12.252,0.920 12.603,0.568 13.037,0.568 L19.083,0.568 C19.517,0.568 19.869,0.920 19.869,1.354 C19.869,1.788 19.517,2.140 19.083,2.140 L13.822,2.140 L13.822,24.154 L15.456,24.154 C15.834,21.780 17.892,19.961 20.368,19.961 C22.843,19.961 24.902,21.780 25.279,24.154 L33.615,24.154 L33.615,23.029 C33.615,22.595 33.967,22.243 34.400,22.243 C34.834,22.243 35.186,22.595 35.186,23.029 L35.186,24.154 L36.531,24.154 C36.909,21.780 38.967,19.961 41.443,19.961 C43.919,19.961 45.977,21.780 46.355,24.154 L48.352,24.154 L48.352,10.855 C48.352,7.264 45.432,4.342 41.843,4.342 L35.186,4.342 L35.186,19.360 C35.186,19.794 34.834,20.146 34.400,20.146 C33.967,20.146 33.615,19.794 33.615,19.360 L33.615,2.140 L22.225,2.140 C21.791,2.140 21.440,1.788 21.440,1.354 C21.440,0.920 21.791,0.568 22.225,0.568 L34.400,0.568 C34.834,0.568 35.186,0.920 35.186,1.354 L35.186,2.769 L41.843,2.769 C46.298,2.769 49.922,6.397 49.922,10.855 L49.922,24.940 C49.922,25.374 49.571,25.727 49.137,25.727 ZM20.368,21.534 C18.491,21.534 16.964,23.062 16.964,24.940 C16.964,26.819 18.491,28.347 20.368,28.347 C22.244,28.347 23.771,26.819 23.771,24.940 C23.771,23.062 22.244,21.534 20.368,21.534 ZM41.443,21.534 C39.567,21.534 38.040,23.061 38.040,24.940 C38.040,24.940 38.040,24.940 38.040,24.940 C38.040,24.941 38.040,24.941 38.040,24.941 C38.040,26.819 39.567,28.347 41.443,28.347 C43.320,28.347 44.847,26.819 44.847,24.940 C44.847,23.062 43.320,21.534 41.443,21.534 ZM41.443,26.967 C40.327,26.967 39.418,26.058 39.418,24.940 C39.418,23.823 40.327,22.914 41.443,22.914 C42.560,22.914 43.468,23.823 43.468,24.940 C43.468,26.058 42.560,26.967 41.443,26.967 ZM41.443,24.486 C41.193,24.486 40.989,24.689 40.989,24.940 C40.989,25.191 41.193,25.395 41.443,25.395 C41.693,25.395 41.897,25.191 41.897,24.940 C41.897,24.689 41.693,24.486 41.443,24.486 ZM20.368,26.967 C19.251,26.967 18.343,26.058 18.343,24.940 C18.343,23.823 19.251,22.914 20.368,22.914 C21.484,22.914 22.392,23.823 22.392,24.940 C22.392,26.058 21.484,26.967 20.368,26.967 ZM20.368,24.486 C20.117,24.486 19.913,24.689 19.913,24.940 C19.913,25.191 20.117,25.395 20.368,25.395 C20.618,25.395 20.822,25.191 20.822,24.940 C20.822,24.689 20.618,24.486 20.368,24.486 ZM10.340,17.912 L4.738,17.912 C4.304,17.912 3.952,17.560 3.952,17.126 C3.952,16.692 4.304,16.340 4.738,16.340 L10.340,16.340 C10.774,16.340 11.125,16.692 11.125,17.126 C11.125,17.560 10.774,17.912 10.340,17.912 ZM9.816,6.906 L3.690,6.906 C3.257,6.906 2.905,6.554 2.905,6.119 C2.905,5.686 3.257,5.334 3.690,5.334 L9.816,5.334 C10.250,5.334 10.602,5.686 10.602,6.119 C10.602,6.554 10.250,6.906 9.816,6.906 ZM9.031,12.409 C9.031,12.843 8.679,13.195 8.246,13.195 L1.596,13.195 C1.162,13.195 0.811,12.843 0.811,12.409 C0.811,11.975 1.162,11.623 1.596,11.623 L8.246,11.623 C8.679,11.623 9.031,11.975 9.031,12.409 ZM1.596,22.629 L4.983,22.629 C5.417,22.629 5.769,22.981 5.769,23.415 C5.769,23.849 5.417,24.202 4.983,24.202 L1.596,24.202 C1.162,24.202 0.811,23.849 0.811,23.415 C0.811,22.981 1.162,22.629 1.596,22.629 ZM7.602,22.629 L8.246,22.629 C8.679,22.629 9.031,22.981 9.031,23.415 C9.031,23.849 8.679,24.202 8.246,24.202 L7.602,24.202 C7.168,24.202 6.816,23.849 6.816,23.415 C6.816,22.981 7.168,22.629 7.602,22.629 Z" />
+                <path fill-rule="evenodd" opacity="0.341" fill="rgb(163, 187, 200)"
+                  d="M44.750,17.406 C50.169,17.406 54.562,21.792 54.562,27.203 C54.562,32.614 50.169,37.000 44.750,37.000 C39.331,37.000 34.937,32.614 34.937,27.203 C34.937,21.792 39.331,17.406 44.750,17.406 Z" />
+              </svg>
+            </div>
+            <div class="service__content">
+              <div class="service__title">
+                Delivery.
+              </div>
+              <div class="service__text">
+                Free shipping on all US order.
+              </div>
+            </div>
+          </div>
+
+          <div class="service__item">
+            <div class="service__icon">
+              <svg width="54px" height="53px">
+                <path fill-rule="evenodd" fill="rgb(163, 187, 200)"
+                  d="M40.382,26.240 C39.920,26.240 39.546,25.866 39.546,25.404 L39.546,23.363 C38.246,22.997 37.289,21.801 37.289,20.384 C37.289,18.677 38.677,17.289 40.382,17.289 C42.086,17.289 43.474,18.677 43.474,20.384 C43.474,21.801 42.517,22.997 41.217,23.363 L41.217,25.404 C41.217,25.866 40.843,26.240 40.382,26.240 ZM41.802,20.384 C41.802,19.601 41.165,18.962 40.382,18.962 C39.598,18.962 38.961,19.600 38.961,20.384 C38.961,21.169 39.598,21.806 40.382,21.806 C41.165,21.806 41.802,21.169 41.802,20.384 ZM48.534,22.737 C48.996,22.737 49.370,23.111 49.370,23.573 L49.370,26.759 C49.370,28.438 48.005,29.803 46.328,29.803 L34.434,29.803 C32.757,29.803 31.393,28.438 31.393,26.759 L31.393,16.012 C31.393,14.556 32.420,13.335 33.786,13.037 L33.786,7.021 C33.786,3.380 36.745,0.418 40.381,0.418 C44.018,0.418 46.976,3.380 46.976,7.021 L46.976,13.037 C48.343,13.335 49.370,14.555 49.370,16.011 L49.370,20.784 C49.370,21.246 48.996,21.621 48.534,21.621 C48.073,21.621 47.698,21.246 47.698,20.784 L47.698,16.011 C47.698,15.256 47.084,14.640 46.328,14.640 L34.434,14.640 C33.679,14.640 33.065,15.256 33.065,16.011 L33.065,26.759 C33.065,27.515 33.679,28.130 34.434,28.130 L46.328,28.130 C47.084,28.130 47.698,27.515 47.698,26.759 L47.698,23.573 C47.698,23.111 48.073,22.737 48.534,22.737 ZM35.458,12.967 L45.304,12.967 L45.304,7.021 C45.304,4.302 43.096,2.092 40.381,2.092 C37.666,2.092 35.458,4.302 35.458,7.021 L35.458,12.967 ZM5.711,35.228 L13.896,35.228 C14.357,35.228 14.731,35.603 14.731,36.064 C14.731,36.527 14.357,36.901 13.895,36.901 L5.711,36.901 C5.249,36.901 4.875,36.527 4.875,36.064 C4.875,35.603 5.249,35.228 5.711,35.228 ZM5.711,31.236 L19.982,31.236 C20.443,31.236 20.818,31.611 20.818,32.073 C20.818,32.535 20.443,32.910 19.982,32.910 L5.711,32.910 C5.249,32.910 4.875,32.535 4.875,32.073 C4.875,31.611 5.249,31.236 5.711,31.236 ZM29.220,21.355 L15.004,21.355 C14.543,21.355 14.168,20.980 14.168,20.518 C14.168,20.056 14.543,19.681 15.004,19.681 L29.220,19.681 C29.682,19.681 30.056,20.056 30.056,20.518 C30.056,20.980 29.682,21.355 29.220,21.355 ZM29.220,28.497 L1.929,28.497 L1.929,40.417 C1.929,41.610 2.900,42.582 4.092,42.582 L43.427,42.582 C44.619,42.582 45.589,41.610 45.589,40.417 L45.589,32.151 C45.589,31.690 45.964,31.315 46.425,31.315 C46.887,31.315 47.261,31.690 47.261,32.151 L47.261,40.417 C47.261,42.533 45.541,44.254 43.427,44.254 L4.092,44.254 C1.978,44.254 0.258,42.532 0.258,40.417 L0.258,16.797 C0.258,14.680 1.978,12.959 4.092,12.958 L29.220,12.958 C29.682,12.958 30.056,13.333 30.056,13.794 C30.056,14.256 29.682,14.631 29.220,14.631 L4.092,14.631 C2.900,14.631 1.929,15.603 1.929,16.797 L1.929,19.681 L11.798,19.681 C12.259,19.681 12.634,20.056 12.634,20.518 C12.634,20.980 12.259,21.354 11.798,21.354 L1.929,21.354 L1.929,26.824 L29.220,26.824 C29.682,26.824 30.056,27.199 30.056,27.661 C30.056,28.123 29.682,28.497 29.220,28.497 Z" />
+                <path fill-rule="evenodd" opacity="0.341" fill="rgb(163, 187, 200)"
+                  d="M44.000,33.062 C49.419,33.062 53.812,37.448 53.812,42.859 C53.812,48.270 49.419,52.656 44.000,52.656 C38.581,52.656 34.187,48.270 34.187,42.859 C34.187,37.448 38.581,33.062 44.000,33.062 Z" />
+              </svg>
+            </div>
+            <div class="service__content">
+              <div class="service__title">
+                100% Payment secure.
+              </div>
+              <div class="service__text">
+                We ensure secure payment
+                with PEV.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products">
+      <div class="narrow-container">
+        <div class="products__title">Products of the week</div>
+
+        <div class="products__filter-btns">
+
+          <button class="products__btn" data-filter="all">All</button>
+          <button class="products__btn" data-filter=".category-a">Furnitures</button>
+          <button class="products__btn" data-filter=".category-b">Chairs</button>
+          <button class="products__btn" data-filter=".category-c">Lighting</button>
+          <button class="products__btn" data-filter=".category-d">Decor</button>
+
+        </div>
+
+        <div class="products__inner">
+
+          <div class="products__item mix category-a">
+            <div class="products__img-box">
+
+              <img class="products__img" src="images/products/1.png" alt="furniture">
+              <div class="products__btn-icons">
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon search">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon cart">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon heart">
+                    <use xlink:href="#heart"></use>
+                  </svg>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="products__content">
+              <div class="products__name">Wooden radio</div>
+              <div class="products__price">$29.00</div>
+            </div>
+
+          </div>
+
+
+          <div class="products__item mix category-b">
+            <div class="products__img-box">
+
+              <img class="products__img" src="images/products/2.png" alt="furniture">
+              <div class="products__btn-icons">
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon search">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon cart">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon heart">
+                    <use xlink:href="#heart"></use>
+                  </svg>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="products__content">
+              <div class="products__name">Wooden chair</div>
+              <div class="products__price">$29.00</div>
+            </div>
+
+          </div>
+
+
+          <div class="products__item mix category-b">
+            <div class="products__img-box">
+
+              <img class="products__img" src="images/products/3.png" alt="furniture">
+              <div class="products__btn-icons">
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon search">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon cart">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon heart">
+                    <use xlink:href="#heart"></use>
+                  </svg>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="products__content">
+              <div class="products__name">White chair</div>
+              <div class="products__price">$29.00</div>
+            </div>
+          </div>
+
+
+          <div class="products__item mix category-c">
+            <div class="products__img-box">
+
+              <img class="products__img" src="images/products/4.png" alt="furniture">
+              <div class="products__btn-icons">
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon search">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon cart">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon heart">
+                    <use xlink:href="#heart"></use>
+                  </svg>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="products__content">
+              <div class="products__name">Retro table</div>
+              <div class="products__price">$29.00</div>
+            </div>
+
+          </div>
+
+
+          <div class="products__item mix category-a">
+            <div class="products__img-box">
+
+              <img class="products__img" src="images/products/5.png" alt="furniture">
+              <div class="products__btn-icons">
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon search">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon cart">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon heart">
+                    <use xlink:href="#heart"></use>
+                  </svg>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="products__content">
+              <div class="products__name">Wooden radio</div>
+              <div class="products__price">$29.00</div>
+            </div>
+
+          </div>
+
+
+          <div class="products__item mix category-d">
+            <div class="products__img-box">
+
+              <img class="products__img" src="images/products/6.png" alt="furniture">
+              <div class="products__btn-icons">
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon search">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon cart">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon heart">
+                    <use xlink:href="#heart"></use>
+                  </svg>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="products__content">
+              <div class="products__name">Wooden chair</div>
+              <div class="products__price">$29.00</div>
+            </div>
+
+          </div>
+
+
+          <div class="products__item mix category-b">
+            <div class="products__img-box">
+
+              <img class="products__img" src="images/products/7.png" alt="furniture">
+              <div class="products__btn-icons">
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon search">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon cart">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon heart">
+                    <use xlink:href="#heart"></use>
+                  </svg>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="products__content">
+              <div class="products__name">White chair</div>
+              <div class="products__price">$29.00</div>
+            </div>
+
+          </div>
+
+
+          <div class="products__item mix category-d">
+            <div class="products__img-box">
+
+              <img class="products__img" src="images/products/8.png" alt="furniture">
+              <div class="products__btn-icons">
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon search">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon cart">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </button>
+
+                <button class="products__btn-icon" type="button">
+                  <svg class="icon heart">
+                    <use xlink:href="#heart"></use>
+                  </svg>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="products__content">
+              <div class="products__name">Retro table</div>
+              <div class="products__price">$29.00</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="narrow-container">
-      <div class="footer-top">
+      <div class="footer__inner">
 
-        <div class="footer-top__contact">
+        <a class="footer__logo" href="#">
+          <img src="images/logo.png" alt="logo">
+        </a>
 
-          <a class="logo" href="#">
-            <img src="images/logo.png" alt="logo">
-          </a>
+        <address class="footer__address">
 
-          <a class="footer-top__address" href="#">
+          <a class="footer__contact footer__contact--height" href="#">
             <span>Address</span>: 4772 Wines Lane
             Houston, TX 77032
           </a>
 
-          <a class="footer-top__phone" href="tel:+8323475843"><span>Telephone</span>: +832-347-5843
+          <a class="footer__contact" href="tel:+8323475843"><span>Telephone</span>: +832-347-5843
           </a>
 
-          <a class="footer-top__email" href="mailto:contact@Glee.com"><span>Email</span>: contact@Glee.com
+          <a class="footer__contact" href="mailto:contact@Glee.com"><span>Email</span>: contact@Glee.com
           </a>
 
-        </div>
+        </address>
 
-        <div class="footer-top__nav">
-          <div class="footer-top__title">Services</div>
+        <div class="footer__services">
+          <div class="footer__title">Services</div>
 
-          <ul class="footer-top__list">
+          <ul class="footer__list">
 
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">About Us</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">About Us</a>
             </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Return Policy</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Return Policy</a>
             </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Our Blog</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Our Blog</a>
             </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Contact Us</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Contact Us</a>
             </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Terms & Condition</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Terms & Condition</a>
             </li>
 
           </ul>
 
         </div>
 
-        <div class="footer-top__nav">
-          <div class="footer-top__title">Account</div>
+        <div class="footer__account">
+          <div class="footer__title">Account</div>
 
-          <ul class="footer-top__list">
+          <ul class="footer__list">
 
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Your Account</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Your Account</a>
             </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Checkout</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Checkout</a>
             </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Login</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Login</a>
             </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Register</a>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Register</a>
             </li>
 
           </ul>
         </div>
 
-        <div class="footer-top__form">
-          <div class="footer-top__title">Newsletter</div>
-          <p class="footer-top__text">
+        <div class="footer__newsletter">
+          <div class="footer__title">Newsletter</div>
+          <p class="footer__text">
             Subscribe by our newsletter and get
             update protidin.
           </p>
 
-          <form class="footer-top__form-item" action="#">
-            <input class="footer-top__form-input" type="email" placeholder="Email address" required>
-            <button class="footer-top__form-btn" type="submit">Subscribe</button>
+          <form class="footer__form" action="#">
+            <input id="footer__input" class="footer__input" type="email" name="subscribe[email]"
+              placeholder="Email address" required>
+            <label for="footer__input"></label>
+            <button class="footer__btn" type="submit">Subscribe</button>
           </form>
 
         </div>
 
       </div>
 
-      <div class="footer-bottom">
-        <p class="footer-bottom__copy">
+      <div class="footer__copyright">
+
+        <p class="footer__copyright-text">
           ©2020 CopyRight Example. All rights reserved.
         </p>
 
-        <ul class="footer-bottom__list">
+        <ul class="footer__copyright-list">
 
-          <li class="footer-bottom__item">
-            <a class="footer-bottom__link" href="#">Home</a>
+          <li class="footer__copyright-item">
+            <a class="footer__copyright-link" href="#">Home</a>
           </li>
-          <li class="footer-bottom__item">
-            <a class="footer-bottom__link" href="#">About</a>
+          <li class="footer__copyright-item">
+            <a class="footer__copyright-link" href="#">About</a>
           </li>
-          <li class="footer-bottom__item">
-            <a class="footer-bottom__link" href="#">Blog</a>
+          <li class="footer__copyright-item">
+            <a class="footer__copyright-link" href="#">Blog</a>
           </li>
-          <li class="footer-bottom__item">
-            <a class="footer-bottom__link" href="#">Contact</a>
+          <li class="footer__copyright-item">
+            <a class="footer__copyright-link" href="#">Contact</a>
           </li>
 
         </ul>
@@ -183,7 +658,156 @@
     </div>
   </footer>
 
+
+  <!-- SPRITE -->
+  <svg display="none">
+
+    <symbol id="search" viewBox="0 0 15.28 15.281" width="20" height="20">
+      <g>
+        <path
+          d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+          transform="translate(-1544.72 -66)" />
+      </g>
+    </symbol>
+
+    <symbol id="heart" viewBox="0 0 18 17" width="22" height="18">
+      <g>
+        <path
+          d="M8.913 16.244a.707.707 0 0 1-.28-.056c-.353-.15-8.65-3.75-8.65-10.76C.074 2.779 2.19.722 4.801.722c1.743 0 3.266.918 4.112 2.31a4.796 4.796 0 0 1 4.112-2.31c2.61 0 4.725 2.058 4.817 4.684 0 7.034-8.297 10.634-8.65 10.783a.71.71 0 0 1-.28.056zM4.8 2.106c-1.847 0-3.343 1.47-3.408 3.346 0 5.408 6.125 8.663 7.52 9.335 1.395-.672 7.52-3.93 7.52-9.358-.065-1.853-1.563-3.323-3.408-3.323s-3.342 1.47-3.408 3.346a.7.7 0 0 1-.704.67.7.7 0 0 1-.705-.67c-.064-1.876-1.561-3.346-3.407-3.346z" />
+      </g>
+      </g>
+    </symbol>
+
+    <symbol id="cart" viewBox="0 0 18.94 16.969" width="22" height="20">
+      <g>
+        <path
+          d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+          transform="translate(-1716 -69)" />
+      </g>
+    </symbol>
+
+  </svg>
+  <!--  
+
+    <symbol id="menu-dots" viewBox="0 0 20.03 20.031" width="21" height="21">
+      <g>
+        <path
+          d="M1813.15,67.881a2.146,2.146,0,1,1,2.14-2.145A2.145,2.145,0,0,1,1813.15,67.881Zm0,7.869a2.146,2.146,0,1,1,2.14-2.147A2.146,2.146,0,0,1,1813.15,75.75Zm0,7.868a2.146,2.146,0,1,1,2.14-2.146A2.145,2.145,0,0,1,1813.15,83.618Zm7.86-15.737a2.146,2.146,0,1,1,2.15-2.145A2.143,2.143,0,0,1,1821.01,67.881Zm0,7.869a2.146,2.146,0,1,1,2.15-2.147A2.144,2.144,0,0,1,1821.01,75.75Zm0,7.868a2.146,2.146,0,1,1,2.15-2.146A2.143,2.143,0,0,1,1821.01,83.618Zm7.87-15.737a2.146,2.146,0,1,1,2.15-2.145A2.143,2.143,0,0,1,1828.88,67.881Zm0,7.869a2.146,2.146,0,1,1,2.15-2.147A2.144,2.144,0,0,1,1828.88,75.75Zm0,7.868a2.146,2.146,0,1,1,2.15-2.146A2.143,2.143,0,0,1,1828.88,83.618Z"
+          transform="translate(-1811 -63.594)" />
+      </g>
+    </symbol>
+
+    <symbol id="right-arrow" viewBox="0 0 22 9">
+      <g>
+        <path
+          d="M535.3,654.472h16.948l-0.1,2.857a0.292,0.292,0,0,0,0,.41l0.172,0.172a0.28,0.28,0,0,0,.2.086,0.285,0.285,0,0,0,.2-0.084l4.193-4.211A0.292,0.292,0,0,0,557,653.5a0.283,0.283,0,0,0-.084-0.2l-4.193-4.213a0.289,0.289,0,0,0-.407,0l-0.172.173a0.287,0.287,0,0,0-.084.2,0.278,0.278,0,0,0,.084.2l0.113,2.865H535.292a0.3,0.3,0,0,0-.292.295v1.37A0.292,0.292,0,0,0,535.3,654.472Z"
+          transform="translate(-535 -649)" />
+      </g>
+    </symbol>
+
+    <symbol id="support" viewBox="0 0 50.875 53.13">
+      <g>
+        <path d="M263.984,1044.59a9.815,9.815,0,1,1-9.8,9.82A9.811,9.811,0,0,1,263.984,1044.59Z"
+          transform="translate(-222.906 -1011.09)" />
+        <path
+          d="M268.312,1022.67a0.937,0.937,0,0,0-1.592.99,22.684,22.684,0,0,1-32.86,30.14,0.938,0.938,0,0,0-1.125,1.5A24.559,24.559,0,0,0,268.312,1022.67Zm-23.03,21.94h-7.55l4.743-4.75a12.68,12.68,0,0,0,3.744-9.03,5.844,5.844,0,1,0-11.688,0,0.938,0.938,0,0,0,1.875,0,3.969,3.969,0,1,1,7.938,0,10.836,10.836,0,0,1-3.195,7.71l-6.344,6.34a0.949,0.949,0,0,0-.2,1.03,0.93,0.93,0,0,0,.866.57h9.813A0.935,0.935,0,1,0,245.282,1044.61Zm15.039-6.44h-2.6v-1.52a0.938,0.938,0,0,0-1.875,0v1.52h-5.286l5.286-8.85v4.21a0.938,0.938,0,1,0,1.875,0v-7.62a0.957,0.957,0,0,0-.456-0.8,0.94,0.94,0,0,0-1.286.33l-7.875,13.19a0.933,0.933,0,0,0-.011.94,0.951,0.951,0,0,0,.816.48h6.938v5.5a0.938,0.938,0,0,0,1.875,0v-5.5h2.6A0.94,0.94,0,0,0,260.321,1038.17Zm5.33-22.63a0.938,0.938,0,1,0-1.875.04l0.042,1.75a24.556,24.556,0,0,0-33.549,35.85,0.93,0.93,0,0,0,.656.27,0.92,0.92,0,0,0,.669-0.28,0.942,0.942,0,0,0-.013-1.33,22.679,22.679,0,0,1,15.882-38.87,22.745,22.745,0,0,1,15.107,5.77l-1.843.04a0.935,0.935,0,0,0,.022,1.87h0.023l4.06-.09a0.934,0.934,0,0,0,.915-0.96Z"
+          transform="translate(-222.906 -1011.09)" />
+      </g>
+    </symbol>
+
+    <symbol id="delivery-truck" viewBox="0 0 53.75 36.44">
+      <g>
+        <path
+          d="M812.816,1025.33H806.69a0.79,0.79,0,0,0,0,1.58h6.126A0.79,0.79,0,0,0,812.816,1025.33Zm0.524,11.01h-5.6a0.785,0.785,0,1,0,0,1.57h5.6A0.785,0.785,0,1,0,813.34,1036.34Zm-2.094-4.72H804.6a0.79,0.79,0,0,0,0,1.58h6.65A0.79,0.79,0,0,0,811.246,1031.62Zm0,11.01H810.6a0.785,0.785,0,1,0,0,1.57h0.644A0.785,0.785,0,1,0,811.246,1042.63Zm-3.263,0H804.6a0.785,0.785,0,1,0,0,1.57h3.387A0.785,0.785,0,1,0,807.983,1042.63Zm36.86-19.86h-6.657v-1.42a0.784,0.784,0,0,0-.786-0.78H825.225a0.785,0.785,0,1,0,0,1.57h11.39v17.22a0.786,0.786,0,1,0,1.571,0v-15.02h6.657a6.519,6.519,0,0,1,6.509,6.52v13.29h-2a4.974,4.974,0,0,0-9.824,0h-1.345v-1.12a0.786,0.786,0,1,0-1.571,0v1.12h-8.336a4.974,4.974,0,0,0-9.823,0h-1.634v-22.01h5.261a0.785,0.785,0,1,0,0-1.57h-6.046a0.783,0.783,0,0,0-.785.78v23.59a0.791,0.791,0,0,0,.785.79h2.419a4.974,4.974,0,0,0,9.823,0h11.252a4.974,4.974,0,0,0,9.824,0h2.782a0.791,0.791,0,0,0,.785-0.79v-14.08A8.094,8.094,0,0,0,844.843,1022.77Zm-21.475,25.58a3.41,3.41,0,1,1,3.4-3.41A3.411,3.411,0,0,1,823.368,1048.35Zm21.075,0a3.411,3.411,0,0,1-3.4-3.41h0A3.4,3.4,0,1,1,844.443,1048.35Zm0.4-22.44h-4.3a0.791,0.791,0,0,0-.785.79v7.39a0.791,0.791,0,0,0,.785.79H849a0.792,0.792,0,0,0,.786-0.79v-3.23A4.949,4.949,0,0,0,844.843,1025.91Zm3.367,7.39h-6.882v-5.81h3.515a3.371,3.371,0,0,1,3.367,3.37v2.44Zm-24.842,9.61a2.03,2.03,0,1,0,2.024,2.03A2.029,2.029,0,0,0,823.368,1042.91Zm0,2.49a0.46,0.46,0,0,1-.455-0.46,0.455,0.455,0,0,1,.909,0A0.46,0.46,0,0,1,823.368,1045.4Zm21.075-2.49a2.03,2.03,0,1,0,2.025,2.03A2.03,2.03,0,0,0,844.443,1042.91Zm0,2.49a0.46,0.46,0,0,1-.454-0.46,0.454,0.454,0,0,1,.908,0A0.46,0.46,0,0,1,844.443,1045.4Zm4.552-8.37a0.783,0.783,0,0,0-.785.78v1.99a0.786,0.786,0,1,0,1.571,0v-1.99A0.784,0.784,0,0,0,849,1037.03Z"
+          transform="translate(-803.812 -1020.56)" />
+      </g>
+    </symbol>
+
+    <symbol id="payment-secure" viewBox="0 0 53.56 52.25">
+      <g>
+        <path
+          d="M1444.43,1042.32a0.83,0.83,0,0,0-.84.83v8.27a2.164,2.164,0,0,1-2.16,2.16h-39.34a2.164,2.164,0,0,1-2.16-2.16V1039.5h27.29a0.84,0.84,0,1,0,0-1.68h-27.29v-5.47h9.87a0.828,0.828,0,0,0,.83-0.83,0.837,0.837,0,0,0-.83-0.84h-9.87v-2.88a2.166,2.166,0,0,1,2.16-2.17h25.13a0.835,0.835,0,1,0,0-1.67h-25.13a3.839,3.839,0,0,0-3.83,3.84v23.62a3.837,3.837,0,0,0,3.83,3.83h39.34a3.837,3.837,0,0,0,3.83-3.83v-8.27A0.828,0.828,0,0,0,1444.43,1042.32Zm-17.21-11.64H1413a0.837,0.837,0,0,0-.83.84,0.828,0.828,0,0,0,.83.83h14.22a0.837,0.837,0,0,0,.84-0.83A0.845,0.845,0,0,0,1427.22,1030.68Zm-9.24,11.56h-14.27a0.835,0.835,0,0,0,0,1.67h14.27A0.835,0.835,0,1,0,1417.98,1042.24Zm-6.08,3.99h-8.19a0.835,0.835,0,0,0,0,1.67h8.19A0.835,0.835,0,0,0,1411.9,1046.23Zm34.63-13.61a0.832,0.832,0,0,0,.84-0.84v-4.77a3.038,3.038,0,0,0-2.39-2.97v-6.02a6.6,6.6,0,1,0-13.19,0v6.02a3.053,3.053,0,0,0-2.4,2.97v10.75a3.045,3.045,0,0,0,3.04,3.04h11.9a3.039,3.039,0,0,0,3.04-3.04v-3.19a0.835,0.835,0,0,0-1.67,0v3.19a1.379,1.379,0,0,1-1.37,1.37h-11.9a1.379,1.379,0,0,1-1.37-1.37v-10.75a1.379,1.379,0,0,1,1.37-1.37h11.9a1.379,1.379,0,0,1,1.37,1.37v4.77A0.83,0.83,0,0,0,1446.53,1032.62Zm-3.23-8.65h-9.84v-5.95a4.92,4.92,0,1,1,9.84,0v5.95h0Zm-4.92,4.32a3.092,3.092,0,0,0-.83,6.07v2.04a0.83,0.83,0,0,0,.83.84,0.839,0.839,0,0,0,.84-0.84v-2.04A3.094,3.094,0,0,0,1438.38,1028.29Zm0,4.52a1.425,1.425,0,1,1,1.42-1.43A1.428,1.428,0,0,1,1438.38,1032.81Z"
+          transform="translate(-1398.25 -1011.41)" />
+      </g>
+    </symbol>
+
+    <symbol id="video-play" viewBox="0 0 127 127">
+      <g>
+        <path fill-rule="evenodd" opacity="0.4" fill="rgb(163, 187, 200)"
+          d="M63.500,-0.000 C98.570,-0.000 127.000,28.430 127.000,63.500 C127.000,98.570 98.570,127.000 63.500,127.000 C28.430,127.000 -0.000,98.570 -0.000,63.500 C-0.000,28.430 28.430,-0.000 63.500,-0.000 Z" />
+        <path fill-rule="evenodd" fill="rgb(163, 187, 200)"
+          d="M63.000,14.000 C90.062,14.000 112.000,35.938 112.000,63.000 C112.000,90.062 90.062,112.000 63.000,112.000 C35.938,112.000 14.000,90.062 14.000,63.000 C14.000,35.938 35.938,14.000 63.000,14.000 Z" />
+        <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+          d="M73.684,64.740 L57.640,74.536 C57.139,74.842 56.559,74.997 55.977,74.997 C55.498,74.997 55.017,74.891 54.578,74.680 C53.606,74.210 52.999,73.293 52.999,72.295 L52.999,52.700 C52.999,51.701 53.606,50.783 54.578,50.314 C55.549,49.845 56.727,49.900 57.640,50.457 L73.684,60.255 C74.506,60.757 74.999,61.598 74.999,62.496 C74.999,63.396 74.506,64.237 73.684,64.740 Z" />
+      </g>
+    </symbol>
+
+    <symbol id="calendar" viewBox="0 0 512 512">
+      <g>
+        <path
+          d="m446 40h-46v-24c0-8.836-7.163-16-16-16s-16 7.164-16 16v24h-224v-24c0-8.836-7.163-16-16-16s-16 7.164-16 16v24h-46c-36.393 0-66 29.607-66 66v340c0 36.393 29.607 66 66 66h380c36.393 0 66-29.607 66-66v-340c0-36.393-29.607-66-66-66zm-380 32h46v16c0 8.836 7.163 16 16 16s16-7.164 16-16v-16h224v16c0 8.836 7.163 16 16 16s16-7.164 16-16v-16h46c18.748 0 34 15.252 34 34v38h-448v-38c0-18.748 15.252-34 34-34zm380 408h-380c-18.748 0-34-15.252-34-34v-270h448v270c0 18.748-15.252 34-34 34z" />
+      </g>
+    </symbol>
+
+    <symbol id="user" viewBox="0 0 32 32">
+      <g>
+        <path d="M16,16C9.375,16,4,21.375,4,28c0,2.211,1.789,4,4,4h16c2.211,0,4-1.789,4-4
+        C28,21.375,22.625,16,16,16z" />
+        <circle cx="16" cy="6" r="6" />
+      </g>
+    </symbol>
+
+  </svg> -->
+  <!-- SPRITE END-->
+
+  <!-- SVG ICONS -->
+  <!-- <svg class="icon search">
+    <use xlink:href="#search"></use>
+  </svg>
+
+  <svg class="icon heart">
+    <use xlink:href="#heart"></use>
+  </svg>
+
+  <svg class="icon cart">
+    <use xlink:href="#cart"></use>
+  </svg>
+
+  <svg class="icon menu-dots">
+    <use xlink:href="#menu-dots"></use>
+  </svg>
+
+  <svg class="icon right-arrow">
+    <use xlink:href="#right-arrow"></use>
+  </svg>
+
+  <svg class="icon support">
+    <use xlink:href="#support"></use>
+  </svg>
+
+  <svg class="icon delivery-truck">
+    <use xlink:href="#delivery-truck"></use>
+  </svg>
+
+  <svg class="icon payment-secure">
+    <use xlink:href="#payment-secure"></use>
+  </svg>
+
+  <svg class="icon video-play">
+    <use xlink:href="#video-play"></use>
+  </svg>
+
+  <svg class="icon calendar">
+    <use xlink:href="#calendar"></use>
+  </svg>
+
+  <svg class="icon user">
+    <use xlink:href="#user"></use>
+  </svg> -->
+  <!-- SVG ICONS END-->
+
   <script src="js/main.min.js"></script>
+
 </body>
 
 </html>
