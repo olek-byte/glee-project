@@ -29,11 +29,20 @@
     & span {
       text-transform: uppercase;
     }
+
   }
 
   &__contact {
     margin-bottom: 16px;
     display: block;
+
+    transition: color 0.3s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $top-links;
+    }
 
     &--height {
       line-height: 1.7;
@@ -59,7 +68,9 @@
   &__link {
     transition: color 0.3s;
 
-    &:hover {
+    &:focus,
+    &:hover,
+    &:active {
       color: $top-links;
     }
   }
@@ -115,36 +126,34 @@
 
     transition: background-color 0.3s;
 
-    &:hover {
+    &:focus,
+    &:hover,
+    &:active {
       background-color: $text;
     }
   }
+}
 
-  &__copyright {
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 90px;
+  @extend %rubik-400;
+
+  color: $footer-links;
+  border-top: 1px solid #dae4e9;
+
+  &__list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    min-height: 90px;
-    @extend %rubik-400;
-
-    color: $footer-links;
-    border-top: 1px solid #dae4e9;
   }
 
-  &__copyright-list {
-    display: flex;
-  }
-
-  &__copyright-item {
+  &__item {
     padding: 0 14px;
-    border-right: 3px solid $footer-links;
+    border-right: 1px solid $footer-links;
 
-    transition: color 0.3s;
 
-    &:hover {
-      color: $text;
-    }
 
     &:first-child {
       padding-left: 0;
@@ -153,6 +162,17 @@
     &:last-child {
       padding-right: 0;
       border-right: 0;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $text;
     }
   }
 }

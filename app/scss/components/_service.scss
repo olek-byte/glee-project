@@ -1,10 +1,11 @@
 // SERVICE
 .service {
-  padding-bottom: 75px;
+  padding-bottom: 66px;
 
-  &__inner {
+  &__list {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 
     min-height: 171px;
     background-color: #fef7f0;
@@ -13,21 +14,40 @@
   &__item {
     display: flex;
 
-    padding: 46px 0 44px 146px;
-    
-    border-right: 1px solid #e8e4df;
+    &--border {
+      align-items: center;
 
-    &:last-child {
-      border: none;
+      padding: 0 152px 0 160px;
+
+      max-width: 602px;
+      min-height: 171px;
+
+      border-right: 1px solid #e8e4df;
+      border-left: 1px solid #e8e4df;
     }
   }
 
   &__icon {
     margin-right: 20px;
+    fill: $accent;
+
+    &-support {
+      width: 52px;
+      height: 54px;
+    }
+
+    &-delivery-truck {
+      width: 55px;
+      height: 37px;
+    }
+
+    &-payment-secure {
+      width: 54px;
+      height: 53px;
+    }
   }
 
   &__content {
-    margin-right: 146px;
     max-width: 220px;
   }
 

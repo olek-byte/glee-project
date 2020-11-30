@@ -4,10 +4,11 @@ $(function(){
     arrows: false,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 3000
 
   });
 
   var mixer = mixitup('.products__inner');
   
+  var mixer = mixitup('.design__inner');
 });

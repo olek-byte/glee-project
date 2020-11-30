@@ -1,5 +1,6 @@
 // TOP-SLIDER
 .top-slider {
+  max-height: 820px;
 
   &__inner {
     background-color: $bg;
@@ -30,6 +31,7 @@
 
   &__text {
     margin-bottom: 40px;
+    max-width: 388px;
 
     font-size: 18px;
     line-height: 1.6;
@@ -43,8 +45,10 @@
     justify-content: flex-start;
     align-items: center;
 
+    position: relative;
+
     padding: 24px 100px 27px 27px;
-    
+
     font-size: 15px;
     line-height: 1;
     @extend %rubik-500;
@@ -52,19 +56,27 @@
     color: #fff;
     background-color: $accent;
 
-    background-image: url('../images/slider/btn_arrow.svg');
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-
     border: 0;
     outline-color: transparent;
-    outline-width: 0;
     cursor: pointer;
 
     transition: background-color 0.3s;
 
-    &:hover{
+    &:focus,
+    &:hover,
+    &:active{
       background-color: $text;
+    }
+
+    &::after {
+      content: '';
+      background-image: url('../images/slider/btn_arrow.svg');
+      width: 22px;
+      height: 9px;
+    
+      position: absolute;
+      right: 10%;
+      top: 40%;
     }
   }
 
@@ -95,11 +107,21 @@
       border-radius: 50%;
       background-color: #fde3cc;
       border: none;
-      outline: inherit;
+      outline-color:#808080;
+      cursor: pointer;
+
+      transition: background-color 0.3s;
+
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: #fff;
+      }
     }
 
     & .slick-active button {
       background-color: #fff;
+      
     }
   }
 }

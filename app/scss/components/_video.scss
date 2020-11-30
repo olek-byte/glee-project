@@ -1,0 +1,26 @@
+// VIDEO
+.video {
+  padding-bottom: 110px;
+
+  &__bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 501px;
+  }
+
+  &__link {
+    &-play {
+      fill: #fff;
+      transition: fill 0.3s;
+
+      &:focus,
+      &:hover,
+      &:active {
+        fill: #183b61;
+      }
+    }
+
+  }
+
+}
