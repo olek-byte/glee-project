@@ -26,7 +26,6 @@
     &+& {
       margin-left: 32px;
     }
-
   }
 
   &__link {
@@ -36,7 +35,9 @@
     color: $top-links;
     transition: color 0.3s;
 
-    &:hover {
+    &:focus,
+    &:hover,
+    &:active {
       color: $accent;
     }
   }
@@ -67,7 +68,9 @@
 
     transition: fill 0.3s;
 
-    &:hover {
+    &:focus,
+    &:hover,
+    &:active {
       fill: $accent;
     }
 
@@ -124,8 +127,32 @@
 
       transition: fill 0.3s;
 
-      &:hover {
+      &:focus,
+      &:hover,
+      &:active {
         fill: $bg;
+      }
+    }
+
+    &-icon {
+      &--search {
+        width: 16px;
+        height: 16px;
+      }
+
+      &--heart {
+        width: 18px;
+        height: 17px;
+      }
+
+      &--cart {
+        width: 19px;
+        height: 17px;
+      }
+
+      &--menu-dots {
+        width: 20px;
+        height: 21px;
       }
     }
   }
@@ -143,9 +170,9 @@
 
     background-color: #fff;
     border-radius: 50%;
-  }
 
-  &__num--cart {
-    right: 30px;
+    &--cart {
+      right: 30px;
+    }
   }
 }

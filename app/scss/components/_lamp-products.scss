@@ -1,0 +1,100 @@
+// LAMP-PRODUCTS
+.lamp-products {
+  padding-bottom: 91px;
+  background-color: #fff;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+  }
+}
+
+.lamp-card {
+  display: flex;
+  justify-content: flex-end;
+
+  position: relative;
+  min-height: 390px;
+  
+  background-color: #feefe2;
+
+  &__img {
+    position: absolute;
+    bottom: 85px;
+    left: 136px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 98px;
+    margin-right: 156px;
+    max-width: 328px;
+
+    &--distance {
+      margin-right: 112px;
+      margin-top: 84px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+
+    font-size: 26px;
+    @extend %dmsans-700;
+
+    color: $text;
+  }
+
+  &__descr {
+    margin-bottom: 26px;
+
+    @extend %rubik-400;
+    line-height: 1.9;
+    font-size: 16px;
+
+    color: $text;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    position: relative;
+
+    padding: 24px 82px 25px 20px;
+
+    width: 180px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: transparent;
+
+    @extend %rubik-500;
+    font-size: 15px;
+
+    color: $top-links;
+    border: 1px solid #d8d3cc;
+    outline-color: transparent;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $accent;
+    }
+
+    &-arrow {
+      position: absolute;
+      width: 22px;
+      height: 9px;
+      right: 10%;
+      top: 40%;
+      fill: $top-links;
+    }
+  }
+}
