@@ -1,3 +1,8 @@
+
+
+.blog-section{
+  margin-bottom: -268px;
+}
 // BLOG-TOP
 .blog-top {
   display: flex;
@@ -30,7 +35,7 @@
       position: absolute;
       width: 7px;
       height: 12px;
-      right: -14px;
+      right: -24px;
       top: 4px;
       background-image: url('../images/icons/small-arrow.svg');
     }
@@ -153,6 +158,8 @@
 
 // PATNERS
 .partners {
+  padding: 96px 0 107px;
+  background-color: #fef7f0;
   &__list {
     display: flex;
     justify-content: space-around;
