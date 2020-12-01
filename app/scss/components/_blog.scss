@@ -98,6 +98,7 @@
   }
 
   &__bottom {
+    // min-height: 60px;
     margin-left: 35px;
     font-size: 12px;
     text-transform: uppercase;
@@ -115,8 +116,31 @@
     fill: #222933;
   }
 
+  &__link--admin {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      left: -14px;
+      top: 2px;
+      background-image: url('../images/icons/user.svg');
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      &::before {
+        background-image: url('../images/icons/user-accent.svg');
+      }
+    }
+  }
+
   &__link,
   &__text {
+
     transition: color 0.3s;
 
     &:focus,
