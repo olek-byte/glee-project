@@ -32,10 +32,13 @@ body {
   @extend .container;
   max-width: 1200px;
 }
-.small-container{
+
+.small-container {
   max-width: 470px;
   margin: 0 auto;
 }
+
+
 
 .title {
   @extend %dmsans-700;
@@ -63,7 +66,7 @@ body {
 
     transition: color 0.3s;
 
-    & + & {
+    &+& {
       margin-left: 27px;
     }
 
@@ -77,4 +80,63 @@ body {
 
 .mixitup-control-active {
   border-bottom: 1px solid #000;
+}
+
+.header--small {
+  padding-bottom: 54px !important;
+}
+
+// Breadcrumbs
+.breadcrumbs {
+  padding: 19px 0 34px;
+  background-color: #edf1f4;
+
+  &__title {
+    margin-bottom: 7px;
+
+    @extend %rubik-300;
+    font-size: 36px;
+    text-align: center;
+    color: #222933;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    position: relative;
+    margin-left: 5px;
+    padding-left: 10px;
+
+    &::after {
+      content: '/';
+      position: absolute;
+      height: 13px;
+      left: 0px;
+      top: 0px;
+    }
+
+    &:first-child {
+      padding-left: 0;
+      margin-left: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    opacity: 0.6;
+    color: #222933;
+    transition: color 0.3s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $bg;
+    }
+  }
 }

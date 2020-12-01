@@ -1,0 +1,18 @@
+// PATNERS
+.partners {
+  padding: 75px 0 76px;
+  background-color: #fef7f0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-left: 48px;
+  }
+
+  &__item{
+    &+& {
+      margin-left: 100px;
+    }
+  }
+  
+}

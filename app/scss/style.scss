@@ -11,124 +11,24 @@
 @import 'components/design';
 @import 'components/video';
 @import 'components/blog';
+@import 'components/partners';
 @import 'components/footer';
 
+@import 'home/terms';
 
 
 
-.header--small{
-  padding-bottom: 0;;
-}
 
-// TERMS
-.top {
-  padding: 35px 0 33px;
-  &__title {
- 
-
-    @extend %rubik-300;
-    font-size: 36px;
-    line-height: 1.5;
-    text-align: center;
-    color: #222933;
-  }
-}
-
-.breadcrumbs {
-  padding: 30px 0;
-  background-color: #edf1f4;
-  
-
-  &__list {
-    display: flex;
-    justify-content: center;
-  }
-
-
-  &__item {
-    position: relative;
-    margin-left: 5px;
-    padding-left: 10px;
-
-    &::after {
-      content: '/';
-      position: absolute;
-      height: 13px;
-      left: 0px;
-      top: 0px;
-    }
-
-    &:first-child {
-      padding-left: 0;
-      margin-left: 0;
-
-      &::after {
-        display: none;
-      }
-    }
-  }
-
-  &__link {
-    opacity: 0.6;
-    color: #222933;
-    transition: color 0.3s;
-
-    &:focus,
-    &:hover,
-    &:active {
-      color: $bg;
-    }
-  }
-}
-
-.terms-info {
-  padding: 74px 0 104px;
-
-  &__title {
-    margin-bottom: 14px;
-    @extend %rubik-500;
-    font-size: 24px;
-    line-height: 1.6;
-    color: $text;
-  }
-
-  &__list {
-    margin-bottom: 55px;
-    padding-left: 34px;
-    list-style-type: decimal-leading-zero;
-  }
-
-  &__item {
-    margin-bottom: 20px;
-  }
-
-  &__text {
-    margin-bottom: 50px;
-
-    &:last-child {
-      margin-bottom: 0px;
-    }
-  }
-
-  &__item,
-  &__text {
-    font-size: 16px;
-    line-height: 1.9;
-    color: $text;
-  }
-}
-
-// TERMS END
 
 
 // MODAL START
 
 .modal {
-  padding: 90px 0;
+  padding: 111px 0 90px;
 
   &__label {
     display: block;
-    margin-bottom: 22px;
+    margin-bottom: 26px;
     color: $top-links;
   }
 
@@ -145,8 +45,8 @@
 
   &__btn {
     display: block;
-    margin-bottom: 35px;
-    padding: 23px 0;
+    margin-bottom: 33px;
+    padding: 16px 0;
     width: 100%;
 
     font-size: 18px;
@@ -182,7 +82,7 @@
   }
 
   &__btn--white {
-    padding: 15px 0;
+    padding: 18px 0;
 
     border: 2px solid $accent;
     color: #243f4d;

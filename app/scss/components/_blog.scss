@@ -1,7 +1,5 @@
-
-
 .blog-section{
-  margin-bottom: -268px;
+  margin-bottom: -250px;
 }
 // BLOG-TOP
 .blog-top {
@@ -103,7 +101,6 @@
   }
 
   &__bottom {
-    // min-height: 60px;
     margin-left: 35px;
     font-size: 12px;
     text-transform: uppercase;
@@ -156,13 +153,3 @@
   }
 }
 
-// PATNERS
-.partners {
-  padding: 75px 0 76px;
-  background-color: #fef7f0;
-  &__list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
