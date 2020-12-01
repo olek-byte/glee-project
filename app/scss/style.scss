@@ -15,14 +15,20 @@
 
 
 
+
+.header--small{
+  padding-bottom: 0;;
+}
+
 // TERMS
 .top {
+  padding: 35px 0 33px;
   &__title {
-    margin-bottom: 18px;
+ 
 
-    @extend %rubik-400;
+    @extend %rubik-300;
     font-size: 36px;
-    line-height: 24px;
+    line-height: 1.5;
     text-align: center;
     color: #222933;
   }
@@ -30,8 +36,8 @@
 
 .breadcrumbs {
   padding: 30px 0;
-  margin-bottom: 112px;
-  background-color: #a3bbc8;
+  background-color: #edf1f4;
+  
 
   &__list {
     display: flex;
@@ -47,15 +53,14 @@
     &::after {
       content: '/';
       position: absolute;
-
       height: 13px;
       left: 0px;
       top: 0px;
     }
 
     &:first-child {
-
-      padding-right: 0;
+      padding-left: 0;
+      margin-left: 0;
 
       &::after {
         display: none;
@@ -73,19 +78,18 @@
     &:active {
       color: $bg;
     }
-
   }
-
 }
 
 .terms-info {
+  padding: 74px 0 104px;
 
   &__title {
+    margin-bottom: 14px;
     @extend %rubik-500;
     font-size: 24px;
-    line-height: 40px;
-    color: #243f4d;
-    margin-bottom: 14px;
+    line-height: 1.6;
+    color: $text;
   }
 
   &__list {
@@ -102,22 +106,99 @@
     margin-bottom: 50px;
 
     &:last-child {
-      margin-bottom: 100px;
+      margin-bottom: 0px;
     }
   }
 
   &__item,
   &__text {
     font-size: 16px;
-    line-height: 30px;
-    color: #243f4d;
+    line-height: 1.9;
+    color: $text;
   }
-
 }
 
-
-// .blog-top {
-//   min-height: calc(100vh - 80px);
-// }
-
 // TERMS END
+
+
+// MODAL START
+
+.modal {
+  padding: 90px 0;
+
+  &__label {
+    display: block;
+    margin-bottom: 22px;
+    color: $top-links;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 60px;
+    margin-top: 15px;
+    padding: 0 15px;
+
+    border: 2px solid #f6f6f6;
+    background-color: #fff;
+  }
+
+  &__btn {
+    display: block;
+    margin-bottom: 35px;
+    padding: 23px 0;
+    width: 100%;
+
+    font-size: 18px;
+    @extend %rubik-500;
+   
+    cursor: pointer;
+
+    background-color: $accent;
+    border: 2px solid $accent;
+    color: #fffefe;
+
+    transition: all 0.3s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: #fff;
+      color: $accent;
+    }
+  }
+
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #f6f6f6;
+  }
+
+  &__text {
+    margin: 33px 0 24px;
+    text-align: center;
+    color: $top-links;
+  }
+
+  &__btn--white {
+    padding: 15px 0;
+
+    border: 2px solid $accent;
+    color: #243f4d;
+    background-color: #fff;
+
+    transition: all 0.3s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+
+
+
+
+}
