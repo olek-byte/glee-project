@@ -1,25 +1,36 @@
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+html {
   box-sizing: border-box;
 }
 
-:focus,
-:active {
-  outline: none;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
-a:focus,
-a:active {
-  outline: none;
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
 nav,
@@ -34,49 +45,38 @@ body {
   height: 100%;
   width: 100%;
   font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
   overflow-x: hidden;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 input,
 button,
-textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
+textarea,
+select {
+  font: inherit;
+  outline-color: transparent;
 }
 
 button {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner {
   padding: 0;
-  border: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 a,
 a:visited {
   text-decoration: none;
-  color: inherit;
+  // color: inherit;
 }
 
 a:hover {
   text-decoration: none;
 }
 
-ul li {
-  list-style: none;
-}
-
 img {
-  vertical-align: top;
+  max-width: 100%;
+  display: block;
 }
 
 h1,
@@ -87,4 +87,5 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: 400;
+  padding: 0;
 }

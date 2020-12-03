@@ -14,12 +14,9 @@ body {
 }
 
 .main {
-  flex-grow: 1;
-
+  // flex-grow: 1;
   // @media (max-width:1200px){
-
   // }
-
 }
 
 .container {
@@ -33,12 +30,11 @@ body {
   max-width: 1200px;
 }
 
-.small-container {
-  max-width: 470px;
-  margin: 0 auto;
-}
-
-
+// разобраться с этим контейнером, переиммновать в .login-container
+// .small-container {
+//   max-width: 470px;
+//   margin: 0 auto;
+// }
 
 .title {
   @extend %dmsans-700;
@@ -66,8 +62,8 @@ body {
 
     transition: color 0.3s;
 
-    &+& {
-      margin-left: 27px;
+    &:not(:last-child) {
+      margin-right: 27px;
     }
 
     &:focus,
@@ -76,14 +72,6 @@ body {
       color: #1a1a1a;
     }
   }
-}
-
-.mixitup-control-active {
-  border-bottom: 1px solid #000;
-}
-
-.header--small {
-  padding-bottom: 54px !important;
 }
 
 // Breadcrumbs

@@ -1,34 +1,43 @@
 // SERVICE
 .service {
-  padding-bottom: 66px;
+  padding: 48px 0;
+  background-color: #fef7f0;
 
   &__list {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
-    min-height: 171px;
-    background-color: #fef7f0;
   }
 
   &__item {
     display: flex;
+    position: relative;
+
+    // margin-right: 342px;
 
     &--border {
-      align-items: center;
 
-      padding: 0 152px 0 160px;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -160px;
+        border-left: 1px solid #e8e4df;
+        height: 158px;
+        transform: translateY(-50%);
+      }
 
-      max-width: 602px;
-      min-height: 171px;
-
-      border-right: 1px solid #e8e4df;
-      border-left: 1px solid #e8e4df;
+      &::after {
+        right: -160px;
+        border-right: 1px solid #e8e4df;
+      }
     }
   }
 
   &__icon {
-    margin-right: 20px;
+    // margin-right: 20px;
     fill: $accent;
 
     &-support {
@@ -47,9 +56,9 @@
     }
   }
 
-  &__content {
-    max-width: 220px;
-  }
+  // &__content {
+  //   max-width: 220px;
+  // }
 
   &__title {
     margin-bottom: 10px;

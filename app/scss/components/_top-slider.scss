@@ -1,25 +1,24 @@
 // TOP-SLIDER
 .top-slider {
-  max-height: 820px;
-
-  &__inner {
-    background-color: $bg;
-    background-image: url('../images/slider/slider-bg.png');
-    background-repeat: no-repeat;
-    background-position: 84% 50%;
-  }
+  background-color: $bg;
 
   &__item {
     display: flex !important;
-    justify-content: space-between;
+    padding: 214px 264px 275px 298px;
+
+    // background-image: url('../images/slider/slider-decor.png');
+    // background-repeat: no-repeat;
+    // background-position: 84% center;
   }
 
   &__content {
-    padding: 215px 0 0 300px;
+    max-width: 411px;
+    margin-right: 123px;
   }
 
   &__title {
-    margin-bottom: 24px;
+    display: block;
+    margin-bottom: 25px;
 
     font-size: 72px;
     line-height: 1;
@@ -30,7 +29,7 @@
   }
 
   &__text {
-    margin-bottom: 40px;
+    margin-bottom: 39px;
     max-width: 388px;
 
     font-size: 18px;
@@ -40,14 +39,10 @@
     color: $top-links;
   }
 
-  &__btn {
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-
+  &__link {
+    display: inline-block;
     position: relative;
-
-    padding: 24px 100px 27px 27px;
+    padding: 25px 101px 21px 27px;
 
     font-size: 15px;
     line-height: 1;
@@ -58,14 +53,23 @@
 
     border: 0;
     outline-color: transparent;
-    cursor: pointer;
+    transition: all 0.3s;
 
-    transition: background-color 0.3s;
+    &:focus {
+      color: #e6d96d;
+    }
 
-    &:focus,
-    &:hover,
-    &:active{
+    &:hover {
+      color: $bg;
       background-color: $text;
+
+      &::after {
+        background-image: url('../images/slider/yellow-arrow.svg');
+      }
+    }
+
+    &:active {
+      color: $footer-links;
     }
 
     &::after {
@@ -73,7 +77,7 @@
       background-image: url('../images/slider/btn_arrow.svg');
       width: 22px;
       height: 9px;
-    
+
       position: absolute;
       right: 10%;
       top: 40%;
@@ -81,7 +85,22 @@
   }
 
   &__img {
-    padding: 270px 295px 280px 0;
+    align-self: flex-end;
+    position: relative;
+
+    &::after {
+      display: block;
+
+      content: '';
+      width: 634px;
+      height: 634px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+
+      background-image: url('../images/slider/slider-decor.png');
+    }
   }
 
   // SLICK-DOTS
@@ -107,21 +126,27 @@
       border-radius: 50%;
       background-color: #fde3cc;
       border: none;
-      outline-color:#808080;
-      cursor: pointer;
+      outline-color: transparent;
+      outline-width: 0;
 
-      transition: background-color 0.3s;
+      transition: color 0.3s;
 
-      &:focus,
-      &:hover,
-      &:active {
-        background-color: #fff;
+      &:focus {
+        color: #314b58;
       }
+
+      &:hover {
+        color: $accent;
+      }
+
+      &:active {
+        color: $footer-links;
+      }
+
     }
 
     & .slick-active button {
       background-color: #fff;
-      
     }
   }
 }

@@ -1,6 +1,6 @@
 // HEADER
 .header {
-  padding: 50px 0;
+  padding: 51px 0 54px;
   background-color: #fff;
 
   &__inner {
@@ -23,8 +23,8 @@
   }
 
   &__item {
-    &+& {
-      margin-left: 32px;
+    &:not(:last-child) {
+      margin-right: 34px;
     }
   }
 
@@ -32,18 +32,25 @@
     @extend %rubik-500;
     font-size: 15px;
 
+    outline-color: transparent;
     color: $top-links;
     transition: color 0.3s;
 
-    &:focus,
-    &:hover,
-    &:active {
+    &:focus {
+      color: $bg;
+    }
+
+    &:hover {
       color: $accent;
+    }
+
+    &:active {
+      color: $footer-links;
     }
   }
 
   &__user {
-    margin-left: 345px;
+    margin-left: 333px;
   }
 
   &__btns {
@@ -59,19 +66,19 @@
     padding: 0;
 
     fill: $text;
-    background-color: #fff;
-
-    outline-color: transparent;
     outline-width: 0;
-    border: none;
-    cursor: pointer;
-
     transition: fill 0.3s;
 
-    &:focus,
-    &:hover,
-    &:active {
+    &:focus {
+      fill: #aec3bd;
+    }
+
+    &:hover {
       fill: $accent;
+    }
+
+    &:active {
+      fill: $footer-links;
     }
 
     &--search {
@@ -89,6 +96,7 @@
       margin-right: 0;
       width: 88px;
       height: 51px;
+
       background-color: $bg;
     }
 
@@ -127,35 +135,42 @@
 
       transition: fill 0.3s;
 
-      &:focus,
-      &:hover,
-      &:active {
+      &:focus {
+        fill: #e6d96d;
+      }
+
+      &:hover {
         fill: $bg;
       }
-    }
 
-    &-icon {
-      &--search {
-        width: 16px;
-        height: 16px;
-      }
-
-      &--heart {
-        width: 18px;
-        height: 17px;
-      }
-
-      &--cart {
-        width: 19px;
-        height: 17px;
-      }
-
-      &--menu-dots {
-        width: 20px;
-        height: 21px;
+      &:active {
+        fill: $footer-links;
       }
     }
   }
+
+  &__btn-icon {
+    &--search {
+      width: 16px;
+      height: 16px;
+    }
+
+    &--heart {
+      width: 18px;
+      height: 17px;
+    }
+
+    &--cart {
+      width: 19px;
+      height: 17px;
+    }
+
+    &--menu-dots {
+      width: 20px;
+      height: 21px;
+    }
+  }
+
 
   &__num {
     position: absolute;
