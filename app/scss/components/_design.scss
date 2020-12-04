@@ -1,10 +1,14 @@
 // DESIGN
 .design {
-  padding-bottom: 120px;
+  padding: 96px 0 120px;
   background-color: #fff;
 
   &__title {
-    margin-bottom: 23px;
+    margin-bottom: 22px;
+  }
+
+  &__filter {
+    margin-bottom: 78px;
   }
 
   &__inner {
@@ -16,35 +20,46 @@
 
 .design-card {
   position: relative;
-  min-height: 246px;
-  padding: 32px 0 127px 36px;
+  padding: 38px 0 129px;
+
   background-color: #f8f8f8;
 
+  &__content {
+    max-width: 196px;
+    margin-left: 37px;
+  }
+
   &__name {
-    max-width: 176px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 
     font-size: 20px;
     @extend %dmsans-700;
+
     color: #1a1a1a;
   }
 
   &__type {
+    display: inline-block;
+    margin-top: -25px;
+
     font-size: 16px;
     @extend %dmsans-700;
-    color: #a3bbc8;
+    color: $accent;
   }
 
-  &__img-link {
+  &__img {
     position: absolute;
     bottom: 30px;
     right: 0;
 
-    &--chair_1 {
+    max-width: 269px;
+
+    &--chair-1 {
       right: 56px;
+      bottom: 49px;
     }
 
-    &--chair_2 {
+    &--chair-2 {
       right: 30px;
     }
   }

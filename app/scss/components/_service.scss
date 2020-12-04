@@ -1,22 +1,19 @@
 // SERVICE
 .service {
-  padding: 48px 0;
+  padding: 48px 0 48px 147px;
   background-color: #fef7f0;
 
   &__list {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-
   }
 
   &__item {
     display: flex;
-    position: relative;
-
-    // margin-right: 342px;
 
     &--border {
+      position: relative;
+      margin: 0 304px 0 289px;
 
       &::before,
       &::after {
@@ -24,8 +21,10 @@
         position: absolute;
         top: 50%;
         left: -160px;
+
         border-left: 1px solid #e8e4df;
         height: 158px;
+
         transform: translateY(-50%);
       }
 
@@ -37,31 +36,33 @@
   }
 
   &__icon {
-    // margin-right: 20px;
+    margin-right: 25px;
     fill: $accent;
 
-    &-support {
+    &--support {
       width: 52px;
       height: 54px;
     }
 
-    &-delivery-truck {
+    &--truck {
       width: 55px;
       height: 37px;
     }
 
-    &-payment-secure {
+    &--payment {
+      margin-right: 35px;
       width: 54px;
       height: 53px;
     }
   }
 
-  // &__content {
-  //   max-width: 220px;
-  // }
+  &__content {
+    max-width: 214px;
+  }
 
   &__title {
-    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 7px;
 
     @extend %dmsans-700;
     font-size: 18px;
@@ -72,6 +73,7 @@
   &__text {
     @extend %dmsans-400;
     font-size: 16px;
+    line-height: 1.7;
 
     color: #585858;
   }

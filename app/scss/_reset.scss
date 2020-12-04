@@ -8,8 +8,7 @@ html {
   box-sizing: inherit;
 }
 
-ul[class],
-ol[class] {
+ul[class] {
   padding: 0;
   list-style: none;
 }
@@ -54,11 +53,13 @@ textarea,
 select {
   font: inherit;
   outline-color: transparent;
+  outline-width: 0;
+  border: none;
 }
 
 button {
+  margin: 0;
   padding: 0;
-  border: none;
   color: inherit;
   background-color: transparent;
   cursor: pointer;
@@ -67,7 +68,9 @@ button {
 a,
 a:visited {
   text-decoration: none;
-  // color: inherit;
+  outline-color: transparent;
+  outline-width: 0;
+  color: inherit;
 }
 
 a:hover {
@@ -77,6 +80,7 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 h1,

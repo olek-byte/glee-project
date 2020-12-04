@@ -1,10 +1,14 @@
 // PRODUCTS
 .products {
-  padding-bottom: 164px;
+  padding: 60px 0 186px;
   background-color: #fff;
 
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: 25px;
+  }
+
+  &__filter {
+    margin-bottom: 74px;
   }
 
   &__inner {
@@ -15,77 +19,65 @@
 }
 
 .product-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   position: relative;
 
-  max-width: 270px;
-  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 300px 0 20px;
 
   background-color: #fff;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   border-radius: 10px;
 
-  cursor: pointer;
-
   &:hover {
     .product-card__btns {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(-254%);
     }
   }
 
   &__img {
     position: absolute;
-    bottom: 40%;
+    top: 15%;
+
+    &--high {
+      top: 9%;
+    }
+
+    &--small {
+      top: 22%;
+    }
   }
 
   &__btns {
+    position: absolute;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    position: absolute;
-
-    transform: translateY(100%);
+    transform: translateY(0);
     opacity: 0;
+
     transition: all 0.4s;
   }
 
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &__icon {
+    height: 20px;
+    width: 22px;
 
-    &-search {
+    &--search {
       width: 20px;
-      height: 20px;
-    }
-  }
-
-  &__btn {
-    &-cart {
-      width: 22px;
-      height: 20px;
     }
 
-    &-heart {
-      width: 22px;
+    &--heart {
       height: 18px;
     }
   }
 
-  &__btn {
-    outline-width: 0;
-    outline-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-
-  &__btn,
   &__link {
     display: flex;
     justify-content: center;
@@ -98,24 +90,30 @@
     background-color: #fff;
     border-radius: 50%;
 
+    outline-width: 0;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
     transition: all 0.3s;
 
-    &:focus,
-    &:hover,
-    &:active {
+    &:focus {
+      fill: #e6d96d;
+      background-color: $top-links;
+    }
+
+    &:hover {
       fill: #fff;
       background-color: $accent;
     }
 
-    &+& {
-      margin-left: 16px;
+    &:active {
+      fill: $footer-links;
+    }
+
+    &:not(:last-child) {
+      margin-right: 16px;
     }
   }
 
   &__content {
-    position: absolute;
-    bottom: 38px;
     text-align: center;
   }
 
@@ -127,12 +125,12 @@
   }
 
   &__price {
-    margin: 0 auto;
+    display: block;
 
     @extend %dmsans-700;
     font-size: 16px;
     line-height: 2.5;
+
     color: $accent;
   }
 }
-

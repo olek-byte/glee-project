@@ -1,26 +1,28 @@
-.blog-section{
-  margin-bottom: -250px;
-}
-// BLOG-TOP
-.blog-top {
-  display: flex;
-  align-items: flex-end;
+.blog {
+  margin-bottom: -172px;
+  padding-top: 109px;
+  background-color: #fff;
 
-  margin-bottom: 296px;
+  &__top {
+    display: flex;
+    align-items: center;
 
-  &__link {
+    margin-bottom: 46px;
+  }
+
+  &__top-link {
     position: relative;
     margin-left: 693px;
 
     font-size: 16px;
     @extend %dmsans-700;
+
     color: #262626;
 
     transition: color 0.3s;
 
     &:focus,
-    &:hover,
-    &:active {
+    &:hover {
       color: $accent;
 
       &::after {
@@ -31,125 +33,146 @@
     &::after {
       content: '';
       position: absolute;
-      width: 7px;
-      height: 12px;
       right: -24px;
       top: 4px;
+
+      width: 7px;
+      height: 12px;
       background-image: url('../images/icons/small-arrow.svg');
     }
   }
-}
-
-//BLOG 
-.blog {
-  background-color: #fef7f0;
-  min-height: 437px;
-  padding-bottom: 85px;
 
   &__inner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 30px;
+    display: flex;
   }
-}
 
-// BLOG-CARD
-.blog-card {
-  min-height: 420px;
-  padding-bottom: 27px;
-  margin: -250px 0 92px;
+  .blog-card {
+    width: 33.3333%;
+    padding-bottom: 27px;
 
-  background-color: #fff;
-  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-  border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 5px;
 
-  &__img-link {
-    display: block;
-    margin-bottom: -10px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
 
-    img {
-      min-height: 250px;
+    &__img {
       object-fit: cover;
-    }
-  }
-
-  &__subtitle {
-    display: inline-block;
-    margin: -10px 0 14px 28px;
-    padding: 10px 31px;
-
-    @extend %poppins-700;
-    text-transform: uppercase;
-
-    background-color: $accent;
-    color: #fff;
-    border-radius: 31px;
-  }
-
-  &__text {
-    margin: 0 0 20px 31px;
-    padding-bottom: 10px;
-
-    max-width: 284px;
-    min-height: 75px;
-
-    font-size: 18px;
-    @extend %dmsans-500;
-
-    color: #262626;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  &__bottom {
-    margin-left: 35px;
-    font-size: 12px;
-    text-transform: uppercase;
-  }
-
-  &__icon {
-    display: inline-block;
-    margin-right: 31px;
-  }
-
-  &__calendar,
-  &__user {
-    width: 10px;
-    height: 10px;
-    fill: #222933;
-  }
-
-  &__link--admin {
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      height: 10px;
-      width: 10px;
-      left: -14px;
-      top: 2px;
-      background-image: url('../images/icons/user.svg');
+      margin-bottom: -10px;
     }
 
-    &:focus,
-    &:hover,
-    &:active {
+    &__category {
+      display: inline-block;
+      margin: -10px 0 18px 28px;
+      padding: 7px 31px;
+
+      @extend %poppins-700;
+      text-transform: uppercase;
+
+      background-color: $accent;
+      color: #fff;
+      border-radius: 31px;
+
+      transition: color 0.3s;
+
+      &:focus {
+        color: $bg;
+      }
+
+      &:hover {
+        color: #771911;
+      }
+
+      &:active {
+        color: #fcd7b6;
+      }
+    }
+
+    &__title {
+      margin: 0 0 20px 31px;
+      padding-bottom: 10px;
+
+      max-width: 284px;
+      min-height: 75px;
+
+      font-size: 18px;
+      @extend %dmsans-500;
+
+      color: #262626;
+      border-bottom: 1px solid #e0e0e0;
+
+      transition: color 0.3s;
+
+      // &:focus {
+      //   color: red;
+      // }
+  
+      &:hover {
+        color: $accent;
+      }
+
+      &:active {
+        color: $footer-links;
+      }
+    }
+
+    &__bottom {
+      padding-left: 46px;
+
+      font-size: 12px;
+      text-transform: uppercase;
+
+      color: #222933;
+    }
+
+    &__icon {
+      display: inline-block;
+      margin-right: 31px;
+    }
+
+    &__time,
+    &__link--admin {
+      position: relative;
+      margin-right: 42px;
+
       &::before {
-        background-image: url('../images/icons/user-accent.svg');
+        content: '';
+        position: absolute;
+        left: -14px;
+        top: 2px;
+
+        width: 10px;
+        height: 10px;
+        background-image: url('../images/icons/calendar.svg');
+      }
+    }
+
+    &__link {
+      color: #222933;
+
+      &:focus,
+      &:hover {
+        color: $accent;
+
+        &::before {
+          background-image: url('../images/icons/user-accent.svg');
+        }
+
+      }
+
+      &:active {
+        color: $footer-links;
+      }
+
+      &--admin {
+        margin-right: 0;
+
+        &::before {
+          background-image: url('../images/icons/user.svg');
+        }
       }
     }
   }
-
-  &__link,
-  &__text {
-
-    transition: color 0.3s;
-
-    &:focus,
-    &:hover,
-    &:active {
-      color: $accent;
-    }
-  }
 }
-

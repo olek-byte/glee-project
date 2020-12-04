@@ -1,26 +1,35 @@
 // VIDEO
 .video {
-  padding-bottom: 110px;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  &__bg {
+  &__link {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 501px;
+
+    min-height: 501px;
   }
 
-  &__link {
-    &-play {
-      fill: #fff;
-      transition: fill 0.3s;
+  &__play {
+    fill: #fff;
+    transition: fill 0.3s;
 
-      &:focus,
-      &:hover,
-      &:active {
-        fill: #183b61;
-      }
+    &:focus {
+      fill: #e6d96d;
     }
 
-  }
+    &:hover {
+      fill: #183b61;
+    }
 
+    &:active {
+      fill: $footer-links;
+    }
+  }
 }

@@ -4,11 +4,7 @@
 
   &__item {
     display: flex !important;
-    padding: 214px 264px 275px 298px;
-
-    // background-image: url('../images/slider/slider-decor.png');
-    // background-repeat: no-repeat;
-    // background-position: 84% center;
+    padding: 213px 0 177px 301px;
   }
 
   &__content {
@@ -18,7 +14,7 @@
 
   &__title {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 21px;
 
     font-size: 72px;
     line-height: 1;
@@ -48,44 +44,37 @@
     line-height: 1;
     @extend %rubik-500;
 
-    color: #fff;
     background-color: $accent;
+    color: #fff !important;
 
-    border: 0;
-    outline-color: transparent;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
 
-    &:focus {
-      color: #e6d96d;
+    &:focus{
+      background-color: $top-links;
     }
-
     &:hover {
-      color: $bg;
       background-color: $text;
-
-      &::after {
-        background-image: url('../images/slider/yellow-arrow.svg');
-      }
     }
 
     &:active {
-      color: $footer-links;
+      background-color: $footer-links;
     }
 
     &::after {
       content: '';
-      background-image: url('../images/slider/btn_arrow.svg');
-      width: 22px;
-      height: 9px;
-
       position: absolute;
       right: 10%;
       top: 40%;
+
+      background-image: url('../images/slider/icons/btn_arrow.svg');
+      width: 22px;
+      height: 9px;
     }
   }
 
-  &__img {
-    align-self: flex-end;
+  &__box {
+    display: flex;
+    align-items: flex-end;
     position: relative;
 
     &::after {
@@ -95,12 +84,16 @@
       width: 634px;
       height: 634px;
       position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 10;
+      right: -140px;
+      top: -120px;
+      z-index: -1;
 
-      background-image: url('../images/slider/slider-decor.png');
+      background-image: url('../images/decor/slider-decor.png');
     }
+  }
+
+  &__img {
+    max-width: 640px;
   }
 
   // SLICK-DOTS
@@ -109,6 +102,7 @@
     position: absolute;
     bottom: 42px;
     left: 50%;
+    
     transform: translateX(-50%);
 
     & li+li {

@@ -107,7 +107,10 @@
               </a>
             </div>
 
-            <img class="top-slider__img" src="images/slider/image_1.png" alt="slide image">
+            <div class="top-slider__box">
+              <img class="top-slider__img" src="images/slider/bed-1.png" alt="slide image">
+            </div>
+
           </div>
 
           <div class="top-slider__item">
@@ -127,8 +130,10 @@
               </a>
 
             </div>
-            <img class="top-slider__img" src="images/slider/image_1.png" alt="slide image">
-            <!-- <img class="top-slider__img" src="images/slider/bed.jpg" alt="slide image"> -->
+
+            <div class="top-slider__box">
+              <img class="top-slider__img" src="images/slider/bed-2.png" alt="slide image">
+            </div>
           </div>
 
 
@@ -147,12 +152,12 @@
               </a>
 
             </div>
-            <img class="top-slider__img" src="images/slider/image_1.png" alt="slide image">
-            <!-- <img class="top-slider__img" src="https://via.placeholder.com/150 C/O https://placeholder.com/" alt="slide image"> -->
+            <div class="top-slider__box">
+              <img class="top-slider__img" src="images/slider/bed-3.png" alt="slide image">
+            </div>
           </div>
 
         </div>
-
       </section>
     </div>
 
@@ -163,8 +168,8 @@
         <ul class="service__list">
 
           <li class="service__item">
-            <span class="service__icon">
-              <svg class="service__icon-support">
+            <span class="service__img">
+              <svg class="service__icon service__icon--support">
                 <use xlink:href="#support"></use>
               </svg>
             </span>
@@ -180,9 +185,9 @@
           </li>
 
           <li class="service__item service__item--border">
-            <span class="service__icon">
-              <svg class="service__icon-delivery-truck">
-                <use xlink:href="#delivery-truck"></use>
+            <span class="service__img">
+              <svg class="service__icon service__icon--truck">
+                <use xlink:href="#truck"></use>
               </svg>
             </span>
             <div class="service__content">
@@ -196,9 +201,9 @@
           </li>
 
           <li class="service__item">
-            <span class="service__icon">
-              <svg class="service__icon-payment-secure">
-                <use xlink:href="#payment-secure"></use>
+            <span class="service__img">
+              <svg class="service__icon service__icon--payment">
+                <use xlink:href="#payment"></use>
               </svg>
             </span>
             <div class="service__content">
@@ -222,7 +227,7 @@
       <div class="narrow-container">
         <h2 class="title products__title">Products of the week</h2>
 
-        <div class="filter">
+        <div class="filter products__filter">
 
           <button class="filter__btn" data-filter="all">All</button>
           <button class="filter__btn" data-filter=".category-a">Furnitures</button>
@@ -236,7 +241,7 @@
 
           <article class="product-card mix category-a">
 
-            <div class="product-card__img">
+            <div class="product-card__img product-card__img--high">
               <img src="images/products/1.png" alt="furniture">
             </div>
 
@@ -331,7 +336,7 @@
 
           <article class="product-card mix category-d">
 
-            <div class="product-card__img">
+            <div class="product-card__img product-card__img--small">
               <img src="images/products/4.png" alt="furniture">
             </div>
 
@@ -498,18 +503,18 @@
         <div class="lamp-products__inner">
 
           <article class="lamp-card">
-            <div class="lamp-card__img">
+            <div class="lamp-card__img lamp-card__img--first-lamp">
               <img src="images/lamp-products/lamp-1.png" alt="lamp">
             </div>
 
             <div class="lamp-card__content">
-              <h3 class="lamp-card__title">Mirum Notare Tellus</h3>
+              <h3 class="lamp-card__title lamp-card__title--first">Mirum Notare Tellus</h3>
               <div class="lamp-card__descr">
                 <p>
                   LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
                 </p>
               </div>
-              <a class="lamp-card__link">
+              <a class="lamp-card__link" href="#">
                 View More
               </a>
 
@@ -517,7 +522,7 @@
           </article>
 
           <article class="lamp-card">
-            <div class="lamp-card__img">
+            <div class="lamp-card__img lamp-card__img--second-lamp">
               <img src="images/lamp-products/lamp-2.png" alt="lamp">
             </div>
 
@@ -530,7 +535,7 @@
                   50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
                 </p>
               </div>
-              <a class="lamp-card__link">
+              <a class="lamp-card__link" href="#">
                 View More
               </a>
             </div>
@@ -546,7 +551,7 @@
       <div class="narrow-container">
         <h2 class="title design__title">New Design</h2>
 
-        <div class="filter">
+        <div class="filter design__filter">
 
           <button class="filter__btn" data-filter="all">All</button>
           <button class="filter__btn" data-filter=".category-a">Furnitures</button>
@@ -638,16 +643,16 @@
       </div>
     </section>
 
-    <div class="video">
-      <div class="video__bg" style="background-image: url(images/video_bg.jpg)">
+    <div class="video" style="background-image: url(images/video_bg.jpg)">
+      <a class="video__link" data-fancybox href="https://www.youtube.com/watch?v=cVCxssYAYiQ">
 
-        <a class="video__link" data-fancybox href="https://www.youtube.com/watch?v=cVCxssYAYiQ">
-          <svg class="video__link-play">
+        <span class="video__icon">
+          <svg class="video__play">
             <use xlink:href="#play"></use>
           </svg>
-        </a>
+        </span>
 
-      </div>
+      </a>
     </div>
 
     <section class="blog">
@@ -655,7 +660,7 @@
 
         <div class="blog__top">
           <h2 class="title blog__title">Our Insights & Articles</h2>
-          <a class="blog__link" href="#">
+          <a class="blog__top-link" href="#">
             View All
           </a>
         </div>
@@ -663,13 +668,13 @@
         <div class="blog__inner">
 
           <article class="blog-card">
+
             <a class="blog-card__link" href="#">
               <img src="images/blog/1.jpg" alt="flat design" class="blog-card__img">
+              <span class="blog-card__category">
+                News
+              </span>
             </a>
-
-            <span class="blog-card__category">
-              News
-            </span>
 
             <a class="blog-card__link" href="#">
               <h3 class="blog-card__title">
@@ -687,16 +692,15 @@
 
           <article class="blog-card">
             <a class="blog-card__link" href="#">
-              <img src="images/blog/1.jpg" alt="flat design" class="blog-card__img">
+              <img class="blog-card__img" src="images/blog/2.jpg" alt="flat design" class="blog-card__img">
+              <span class="blog-card__category">
+                News
+              </span>
             </a>
-
-            <span class="blog-card__category">
-              News
-            </span>
 
             <a class="blog-card__link" href="#">
               <h3 class="blog-card__title">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
               </h3>
             </a>
 
@@ -710,16 +714,14 @@
 
           <article class="blog-card">
             <a class="blog-card__link" href="#">
-              <img src="images/blog/1.jpg" alt="flat design" class="blog-card__img">
+              <img src="images/blog/3.jpg" alt="flat design" class="blog-card__img">
+              <span class="blog-card__category">
+                News
+              </span>
             </a>
-
-            <span class="blog-card__category">
-              News
-            </span>
-
             <a class="blog-card__link" href="#">
               <h3 class="blog-card__title">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                Rncididunt ut labore et dolore magna aliqua. Ut enim
               </h3>
             </a>
 
@@ -907,14 +909,14 @@
         d="M49.01908 24.64977c0 13.53983-11.01574 24.55635-24.5557 24.55635-5.36053 0-10.45338-1.69681-14.72832-4.90611-.41428-.31014-.49793-.89873-.18723-1.31248.31094-.4144.8987-.49774 1.31264-.18694 3.94798 2.96353 8.65173 4.52962 13.60268 4.52962 12.5061 0 22.68082-10.17399 22.68082-22.68044 0-4.25346-1.18378-8.39875-3.4235-11.98813-.27397-.43924-.14008-1.01769.29926-1.29222.43934-.27387 1.01761-.13988 1.29181.29969 2.42546 3.88743 3.70754 8.37685 3.70754 12.98066zM23.21883 34.5463c0 .51702-.41977.9373-.93761.9373h-9.81331c-.37903 0-.72086-.22811-.86597-.57846-.14511-.35067-.06489-.75396.20325-1.02227l6.34369-6.3431c2.06039-2.06022 3.19496-4.79956 3.19496-7.71375 0-2.18899-1.78059-3.96913-3.96904-3.96913-2.18857 0-3.96915 1.78015-3.96915 3.96913 0 .518-.41965.93762-.9375.93762-.51785 0-.93761-.41963-.93761-.93762 0-3.22237 2.62184-5.84438 5.84427-5.84438 3.22254 0 5.84415 2.62201 5.84415 5.84438 0 3.41453-1.32969 6.62514-3.74416 9.03897l-4.74323 4.74335h7.55001c.51773 0 .93727.41995.93727.93795zm15.04006-6.43853c0 .51767-.41965.93795-.9375.93795h-2.60124v5.50058c0 .51702-.41977.9373-.9375.9373-.51785 0-.93773-.42028-.93773-.9373v-5.50058h-6.9381c-.33737 0-.64888-.18138-.81539-.47519-.16651-.29315-.16262-.65395.01041-.94318l7.87548-13.18884c.26562-.44381.84114-.58924 1.28586-.32387.29091.17354.45273.48041.45593.79611.00011.00327.00092.00523.00092.0085v7.60884c0 .518-.41965.9373-.9375.9373-.51785 0-.93761-.4193-.93761-.9373v-4.20967l-5.28614 8.85204h5.28614v-1.51674c0-.51767.41977-.93795.93761-.93795.51785 0 .9375.42028.9375.93795v1.51674h2.60136c.51762 0 .9375.41963.9375.9373zm4.48814-19.50905c.01247.51734-.39722.9471-.91484.95952l-4.06025.09608h-.02266c-.50766 0-.9248-.40459-.93693-.91475-.01236-.51767.39734-.94776.91507-.95919l1.84261-.04379c-4.13509-3.68677-9.52938-5.76726-15.10689-5.76726-12.50622 0-22.68093 10.17432-22.68093 22.6811 0 6.13982 2.41482 11.89074 6.79928 16.19257.36964.36243.37537.9556.0127 1.32522-.18356.18792-.42618.28106-.66925.28106-.23678 0-.4739-.08889-.65632-.26864C2.5215 37.52455-.09291 31.29845-.09291 24.64978c0-13.54016 11.01585-24.55537 24.55627-24.55537 3.4845 0 6.85226.71474 10.00923 2.12591 2.33013 1.0409 4.45576 2.42037 6.34506 4.11163l-.04154-1.74877c-.01225-.51832.39745-.94743.91507-.96017.51647-.01078.94723.3974.9597.91507z" />
     </symbol>
 
-    <symbol id="delivery-truck" viewBox="0 0 55 37">
+    <symbol id="truck" viewBox="0 0 55 37">
       <path opacity="0.4"
         d="M44.74994 17.40606c5.41935 0 9.81251 4.38615 9.81251 9.79685 0 5.4107-4.39316 9.79685-9.81251 9.79685-5.41924 0-9.81251-4.38615-9.81251-9.79685 0-5.4107 4.39327-9.79685 9.81251-9.79685z" />
       <path
         d="M10.60168 6.11927c0 .43466-.35145.78664-.78529.78664H3.69037c-.43362 0-.78529-.35198-.78529-.78664 0-.43368.35168-.78566.78529-.78566h6.12602c.43385 0 .78529.35198.78529.78566zm.5238 11.00671c0 .43401-.35168.78566-.78529.78566H4.73773c-.43373 0-.78529-.35165-.78529-.78566S4.304 16.34 4.73773 16.34h5.60223c.43373 0 .78552.35198.78552.78598zm-2.0945-4.7172c0 .43433-.35168.78631-.78541.78631H1.59609c-.43385 0-.78552-.35198-.78552-.78631 0-.43401.35168-.78566.78552-.78566h6.64948c.43373 0 .78541.35165.78541.78566zm0 11.00671c0 .43401-.35168.78631-.78541.78631H7.6015c-.43385 0-.78552-.3523-.78552-.78631 0-.43401.35168-.78664.78552-.78664h.64407c.43373 0 .78541.35263.78541.78664zm-3.26225 0c0 .43401-.35168.78631-.78529.78631H1.5961c-.43385 0-.78552-.3523-.78552-.78631 0-.43401.35168-.78664.78552-.78664h3.38734c.43362 0 .78529.35263.78529.78664zm44.15348-12.56038v14.08528c0 .43368-.35156.78631-.78529.78631h-2.7824c-.37777 2.37298-2.4361 4.19267-4.91169 4.19267s-4.53392-1.81969-4.91158-4.19267H25.2793c-.37766 2.37298-2.43622 4.19267-4.91169 4.19267-2.47559 0-4.53392-1.81969-4.9118-4.19267h-2.41894c-.43373 0-.78529-.35263-.78529-.78631V1.3537c0-.43401.35156-.78598.78529-.78598h6.0466c.43373 0 .78529.35198.78529.78598 0 .43433-.35156.78664-.78529.78664h-5.26108v22.01375h1.63342c.37788-2.37364 2.43622-4.193 4.9118-4.193 2.47547 0 4.53392 1.81936 4.91169 4.193h8.33565v-1.12521c0-.43401.35156-.78566.78541-.78566.43385 0 .78529.35165.78529.78566v1.12521h1.3456c.37766-2.37364 2.43599-4.193 4.91158-4.193 2.47581 0 4.53415 1.81936 4.9118 4.193h1.99699V10.85512c0-3.59134-2.91985-6.51337-6.5086-6.51337h-6.65737v15.01833c0 .43401-.35145.78598-.78529.78598-.43385 0-.78541-.35198-.78541-.78598V2.14034H22.2251c-.43373 0-.78541-.3523-.78541-.78664 0-.43401.35168-.78598.78541-.78598h12.17525c.43385 0 .78541.35198.78541.78598v1.41542h6.65726c4.45496 0 8.07941 3.62794 8.07919 8.08599zM23.77109 24.94039c0-1.87852-1.52687-3.40636-3.40347-3.40636-1.87672 0-3.40359 1.52785-3.40359 3.40636 0 1.87884 1.52687 3.40702 3.40359 3.40702 1.8766 0 3.40347-1.52817 3.40347-3.40702zm21.07544 0c0-1.87852-1.52687-3.40636-3.40336-3.40636-1.87649 0-3.40313 1.52719-3.40347 3.40571v.0013c.00034 1.87819 1.52699 3.40636 3.40347 3.40636 1.87649 0 3.40336-1.52817 3.40336-3.40702zm1.93416-14.08528v3.23511c0 .43433-.35168.78664-.78529.78664h-8.45329c-.43373 0-.78541-.3523-.78541-.78664V6.70001c0-.43368.35168-.78566.78541-.78566h4.30092c2.72266 0 4.93767 2.21611 4.93767 4.94075zm-1.5707 0c0-1.85727-1.51028-3.36845-3.36697-3.36845h-3.5154v5.81759h6.88236zM22.39242 24.94039c0 1.11737-.9082 2.02689-2.0248 2.02689-1.11649 0-2.02492-.90952-2.02492-2.02689 0-1.1177.90843-2.02689 2.02492-2.02689 1.1166 0 2.0248.90919 2.0248 2.02689zm-1.5707 0c0-.25099-.2037-.4546-.4541-.4546s-.45422.2036-.45422.4546c0 .25067.20382.45492.45422.45492s.4541-.20426.4541-.45492zm22.64637 0c0 1.11737-.90843 2.02689-2.02492 2.02689-1.1166 0-2.02503-.90952-2.02503-2.02689 0-1.1177.90843-2.02689 2.02503-2.02689 1.11649 0 2.02492.90919 2.02492 2.02689zm-1.57093 0c0-.25099-.2037-.4546-.45399-.4546-.25051 0-.45422.2036-.45422.4546 0 .25067.20382.45492.45422.45492.25005 0 .45399-.20426.45399-.45492zm4.88353-7.1281v1.99127c0 .43401-.35168.78631-.78529.78631-.43385 0-.78541-.3523-.78541-.78631v-1.99127c0-.43499.35156-.78696.78541-.78696.43362 0 .78529.35198.78529.78696z" />
     </symbol>
 
-    <symbol id="payment-secure" viewBox="0 0 54 53">
+    <symbol id="payment" viewBox="0 0 54 53">
       <path opacity="0.4"
         d="M43.99997 33.06225c5.41924 0 9.81251 4.38615 9.81251 9.79685 0 5.4107-4.39327 9.79685-9.81251 9.79685-5.41935 0-9.81251-4.38615-9.81251-9.79685 0-5.4107 4.39316-9.79685 9.81251-9.79685z" />
       <path

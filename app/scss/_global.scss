@@ -30,12 +30,6 @@ body {
   max-width: 1200px;
 }
 
-// разобраться с этим контейнером, переиммновать в .login-container
-// .small-container {
-//   max-width: 470px;
-//   margin: 0 auto;
-// }
-
 .title {
   @extend %dmsans-700;
   font-size: 36px;
@@ -47,29 +41,28 @@ body {
 // MIXITUP
 .filter {
   text-align: center;
-  margin-bottom: 80px;
 
   &__btn {
     font-size: 16px;
     @extend %dmsans-700;
 
     color: #8b8b8b;
-    background-color: transparent;
-
-    outline-color: #fff;
-    border: none;
-    cursor: pointer;
-
     transition: color 0.3s;
+
+    &:focus {
+      color: $bg;
+    }
+
+    &:hover {
+      color: #1a1a1a;
+    }
+
+    &:active {
+      color: $footer-links;
+    }
 
     &:not(:last-child) {
       margin-right: 27px;
-    }
-
-    &:focus,
-    &:hover,
-    &:active {
-      color: #1a1a1a;
     }
   }
 }
@@ -121,10 +114,22 @@ body {
     color: #222933;
     transition: color 0.3s;
 
-    &:focus,
-    &:hover,
-    &:active {
+    &:focus {
       color: $bg;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: $footer-links;
     }
   }
 }
+
+// разобраться с этим контейнером, переиммновать в .login-container
+// .small-container {
+//   max-width: 470px;
+//   margin: 0 auto;
+// }
