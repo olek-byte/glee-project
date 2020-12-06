@@ -1,0 +1,172 @@
+.team {
+  padding: 116px 0 0;
+  background-color: #fff;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    max-width: 305px;
+    margin-right: 95px;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.9;
+
+    color: $text;
+  }
+
+  &__link {
+    position: relative;
+    padding: 19px 60px 18px 18px;
+
+    font-size: 15px;
+    line-height: 3.7;
+    @extend %poppins-700;
+
+    background-color: $accent;
+    border-radius: 5px;
+
+    color: #fff !important;
+
+    transition: background-color 0.3s;
+
+    &:focus {
+      background-color: #aec3bd;
+    }
+
+    &:hover {
+      background-color: $bg;
+    }
+
+    &:active {
+      background-color: $footer-links;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 26px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 15px;
+      height: 11px;
+
+      background-image: url('../images/icons/about/join-arrow.svg');
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.team-card {
+  margin-bottom: 34px;
+
+  &--first {
+    margin-right: 30px;
+  }
+
+  &--third {
+    margin-right: 30px;
+  }
+
+  &--third,
+  &--fourth {
+    margin-bottom: 0;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+
+    margin-top: -50px;
+    padding: 31px 21px 28px 25px;
+    max-width: 326px;
+
+    background-color: #fff;
+    box-shadow: 0 6px 57px rgba(37, 37, 37, 0.05);
+    z-index: 10;
+  }
+
+  &__content {
+    margin-right: 57px;
+
+    &--long {
+      margin-right: 48px;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 5px;
+
+    font-size: 22px;
+    @extend %dmsans-700;
+
+    color: $top-links;
+  }
+
+  &__position {
+    font-size: 16px;
+    color: #565872;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    width: 41px;
+    height: 41px;
+
+    fill: #888888;
+    background-color: #f6f6f6;
+
+    transition: all 0.3s;
+
+    &:focus {
+      fill: #aec3bd;
+    }
+
+    &:hover {
+      fill: $bg;
+      background-color: $text;
+    }
+
+    &:active {
+      fill: $footer-links;
+    }
+
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+
+  &__insta {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__google {
+    width: 23px;
+    height: 15px;
+  }
+}

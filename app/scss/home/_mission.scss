@@ -1,0 +1,142 @@
+.mission {
+  padding: 118px 0;
+  background-color: #fff;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__img {
+    margin-right: 51px;
+  }
+
+  &__content {
+    max-width: 550px;
+  }
+
+  &__experience {
+    display: flex;
+    margin: 79px 0 34px;
+  }
+
+  &__number {
+    align-self: center;
+    margin-right: 25px;
+
+    font-size: 140px;
+    @extend %rubik-700;
+    line-height: 0.2;
+
+    color: $accent;
+  }
+
+  &__list {
+    margin-top: 21px;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 1.9;
+
+    color: $text;
+  }
+
+  &__title {
+    margin-bottom: 33px;
+    text-align: left;
+  }
+
+  &__text {
+    padding-bottom: 55px;
+    margin-bottom: 42px;
+
+    font-size: 16px;
+    line-height: 1.9;
+
+    border-bottom: 1px solid #e6eaf1;
+    color: $text;
+  }
+
+  &__icon-list {
+    display: flex;
+  }
+
+  &__icon-item {
+    position: relative;
+    @extend %dmsans-700;
+
+    &--projects {
+      margin: 0 112px 0 57px;
+    }
+
+    &--projects,
+    &--revenue,
+    &--awards {
+      &::before {
+        content: '';
+        position: absolute;
+        left: -65%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 37px;
+        height: 38px;
+
+        background-image: url('../images/icons/about/projects.svg');
+      }
+    }
+
+    &--revenue {
+      margin-right: 122px;
+
+      &::before {
+        left: -82%;
+        width: 43px;
+        height: 40px;
+        background-image: url('../images/icons/about/Revenue.svg');
+      }
+    }
+
+    &--awards {
+      &::before {
+        left: -90%;
+        width: 42px;
+        height: 42px;
+        background-image: url('../images/icons/about/Awards.svg');
+      }
+    }
+
+    &--projects,
+    &--revenue {
+      &::after {
+        content: '';
+        position: absolute;
+        right: -26px;
+        top: 0;
+        border-right: 1px solid#edf0f5;
+        height: 81px;
+      }
+    }
+
+    &--revenue {
+      &::after {
+        right: -35px;
+      }
+    }
+  }
+
+  &__icon-number {
+    display: block;
+    margin-bottom: 3px;
+
+    font-size: 36px;
+    line-height: 1.1;
+
+    color: $text;
+  }
+
+  &__name {
+    font-size: 16px;
+    color: #4c4c4c;
+  }
+}
