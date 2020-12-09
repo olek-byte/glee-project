@@ -1,136 +1,48 @@
-// PRODUCTS
 .products {
   padding: 60px 0 186px;
   background-color: #fff;
 
+  @include r(1200) {
+    padding: 25px 0;
+  }
+
   &__title {
     margin-bottom: 25px;
+
+    @include r(1200) {
+      margin-bottom: 15px;
+    }
   }
 
   &__filter {
     margin-bottom: 74px;
+
+    @include r(1200) {
+      margin-bottom: 20px;
+    }
+
+    @include r(448) {
+      margin-bottom: 20px;
+    }
   }
 
   &__inner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px 30px;
-  }
-}
 
-.product-card {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 300px 0 20px;
-
-  background-color: #fff;
-  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-  border-radius: 10px;
-
-  &:hover {
-    .product-card__btns {
-      opacity: 1;
-      transform: translateY(-254%);
-    }
-  }
-
-  &__img {
-    position: absolute;
-    top: 15%;
-
-    &--high {
-      top: 9%;
+    @include r(1200) {
+      grid-template-columns: repeat(3, 1fr);
     }
 
-    &--small {
-      top: 22%;
-    }
-  }
-
-  &__btns {
-    position: absolute;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transform: translateY(0);
-    opacity: 0;
-
-    transition: all 0.4s;
-  }
-
-  &__icon {
-    height: 20px;
-    width: 22px;
-
-    &--search {
-      width: 20px;
+    @include r(993) {
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    &--heart {
-      height: 18px;
-    }
-  }
-
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 45px;
-    height: 45px;
-
-    fill: $accent;
-    background-color: #fff;
-    border-radius: 50%;
-
-    outline-width: 0;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
-    transition: all 0.3s;
-
-    &:focus {
-      fill: #e6d96d;
-      background-color: $top-links;
+    @include r(648) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px 15px;
     }
 
-    &:hover {
-      fill: #fff;
-      background-color: $accent;
-    }
-
-    &:active {
-      fill: $footer-links;
-    }
-
-    &:not(:last-child) {
-      margin-right: 16px;
-    }
-  }
-
-  &__content {
-    text-align: center;
-  }
-
-  &__name {
-    @extend %dmsans-500;
-    font-size: 16px;
-
-    color: $text;
-  }
-
-  &__price {
-    display: block;
-
-    @extend %dmsans-700;
-    font-size: 16px;
-    line-height: 2.5;
-
-    color: $accent;
   }
 }

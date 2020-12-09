@@ -1,5 +1,4 @@
-// MODAL START
-.modal {
+.login {
   padding: 115px 0;
   max-width: 470px;
   margin: 0 auto;
@@ -22,13 +21,10 @@
 
     border: 2px solid #f6f6f6;
     background-color: #fff;
-
-    &--second {
-      margin-bottom: 30px;
-    }
   }
 
-  &__btn {
+  &__btn,
+  &__link {
     display: block;
     margin-bottom: 32px;
     padding: 17px 211px 17px 212px;
@@ -77,34 +73,30 @@
     border-top: 2px solid#f6f6f6;
   }
 
-  &__btn--white {
-    padding: 18px 150px 18px 156px;
-    margin-bottom: 0;
+  &__link {
+    &--white {
+      padding: 18px 150px 18px 156px;
+      margin-bottom: 0;
 
-    border: 2px solid $accent;
-    color: $text;
-    background-color: #fff;
+      border: 2px solid $accent;
+      color: $text;
+      background-color: #fff;
 
-    transition: all 0.3s;
+      transition: all 0.3s;
 
-    &:focus {
-      color: $bg;
-      background-color: $text;
+      &:focus {
+        color: $bg;
+        background-color: $text;
+      }
+
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+      }
+
+      &:active {
+        color: $footer-links;
+      }
     }
-
-    &:hover {
-      background-color: $accent;
-      color: #fff;
-    }
-
-    &:active {
-      color: $footer-links;
-    }
-  }
-}
-
-.partners {
-  &--narrow-section {
-    padding-top: 78px;
   }
 }

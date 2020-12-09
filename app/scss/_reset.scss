@@ -43,7 +43,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-size: 100%;
   overflow-x: hidden;
 }
 
@@ -52,9 +51,8 @@ button,
 textarea,
 select {
   font: inherit;
-  outline-color: transparent;
-  outline-width: 0;
   border: none;
+  outline-color: #b7aa9a;
 }
 
 button {
@@ -68,19 +66,13 @@ button {
 a,
 a:visited {
   text-decoration: none;
-  outline-color: transparent;
-  outline-width: 0;
+  outline-color: inset;
   color: inherit;
-}
-
-a:hover {
-  text-decoration: none;
 }
 
 img {
   max-width: 100%;
   display: block;
-  object-fit: cover;
 }
 
 h1,

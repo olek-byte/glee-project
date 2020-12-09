@@ -8,6 +8,27 @@ const imagemin     = require('gulp-imagemin');
 const del          = require('del');
 const browserSync  = require('browser-sync').create();
 
+// const fileinclude = require('gulp-file-include');
+// const gulp = require('gulp');
+
+// function include(){
+//   return src(['app/**/*.html'])
+//   .pipe(fileinclude({
+//       prefix: '@@',
+//       basepath: '@file'
+//   }))
+//   .pipe(concat('*.html'))
+// }
+ 
+// gulp.task('fileinclude', function() {
+//   gulp.src(['index.html'])
+//     .pipe(fileinclude({
+//       prefix: '@@',
+//       basepath: '@file'
+//     }))
+//     .pipe(gulp.dest('./'));
+// });
+
 function browsersync() {
   browserSync.init({
     server: {
@@ -95,13 +116,6 @@ exports.build = series(cleanDist, images, build);
 
 exports.default = parallel(styles, scripts, browsersync, watching);
 
+// exports.default = includeHTML;
 
-// var gulp = require('gulp');
-// var browserSync = require('browser-sync').create();
 
-// gulp.task('sync', function() {
-//  browserSync.init({
-//  proxy: "my_project.dev",
-//  files: "*.css,*.php,css/*css"
-// });
-// });

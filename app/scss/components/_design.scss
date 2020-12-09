@@ -1,66 +1,51 @@
-// DESIGN
 .design {
   padding: 96px 0 120px;
   background-color: #fff;
 
+  @include r(1200) {
+    padding: 25px 0;
+  }
+
+    @include r(448) {
+      padding: 5px 0;
+    }
+
   &__title {
     margin-bottom: 22px;
+
+    @include r(1200) {
+      margin-bottom: 10px;
+    }
   }
 
   &__filter {
     margin-bottom: 78px;
+
+    @include r(1200) {
+      margin-bottom: 20px;
+    }
+
+    @include r(448) {
+      margin-bottom: 20px;
+    }
   }
 
   &__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 34px 30px;
-  }
-}
 
-.design-card {
-  position: relative;
-  padding: 38px 0 129px;
-
-  background-color: #f8f8f8;
-
-  &__content {
-    max-width: 196px;
-    margin-left: 37px;
-  }
-
-  &__name {
-    margin-bottom: 8px;
-
-    font-size: 20px;
-    @extend %dmsans-700;
-
-    color: #1a1a1a;
-  }
-
-  &__type {
-    display: inline-block;
-    margin-top: -25px;
-
-    font-size: 16px;
-    @extend %dmsans-700;
-    color: $accent;
-  }
-
-  &__img {
-    position: absolute;
-    bottom: 30px;
-    right: 0;
-
-    max-width: 269px;
-
-    &--chair-1 {
-      right: 56px;
-      bottom: 49px;
+    @include r(1200) {
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    &--chair-2 {
-      right: 30px;
+    @include r(993) {
+      grid-gap: 20px 15px;
     }
+
+    @include r(648) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
   }
 }

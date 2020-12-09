@@ -2,12 +2,17 @@
   padding: 118px 0;
   background-color: #fff;
 
-  &__inner {
-    display: flex;
+  &__bg {
+    background-repeat: no-repeat;
+    background-position: left center;
+    // background-size: contain;
   }
 
-  &__img {
-    margin-right: 51px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 
   &__content {
@@ -32,6 +37,8 @@
 
   &__list {
     margin-top: 21px;
+    @extend %text-hiding;
+    -webkit-line-clamp: 3;
   }
 
   &__item {
@@ -44,6 +51,9 @@
   &__title {
     margin-bottom: 33px;
     text-align: left;
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
+
   }
 
   &__text {
@@ -55,10 +65,14 @@
 
     border-bottom: 1px solid #e6eaf1;
     color: $text;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 6;
   }
 
   &__icon-list {
     display: flex;
+    margin-bottom: 100px;
   }
 
   &__icon-item {
@@ -126,17 +140,22 @@
   }
 
   &__icon-number {
-    display: block;
     margin-bottom: 3px;
 
     font-size: 36px;
     line-height: 1.1;
 
     color: $text;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
   }
 
   &__name {
     font-size: 16px;
     color: #4c4c4c;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
   }
 }

@@ -50,10 +50,31 @@ $footer-links: #7b7b7b;
   font-weight: 700;
 }
 
+
+%text-hiding {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// for video
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
 
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
+}
+
+// for media
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content;
+  }
 }

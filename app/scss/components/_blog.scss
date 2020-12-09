@@ -1,19 +1,33 @@
 .blog {
-  margin-bottom: -172px;
+  margin-bottom: -200px;
   padding-top: 109px;
   background-color: #fff;
 
+  @include r(1200) {
+    padding-top: 25px;
+  }
 
   &__top {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    margin-bottom: 46px;
+    margin-bottom: 25px;
+
+    @include r(448) {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    @include r(448) {
+      margin-bottom: 15px;
+    }
   }
 
   &__top-link {
     position: relative;
-    margin-left: 693px;
 
     font-size: 16px;
     @extend %dmsans-700;
@@ -21,6 +35,7 @@
     color: #262626;
 
     transition: color 0.3s;
+
 
     &:focus,
     &:hover {
@@ -33,9 +48,8 @@
 
     &::after {
       content: '';
-      position: absolute;
-      right: -24px;
-      top: 4px;
+      display: inline-block;
+      margin-right: 20px;
 
       width: 7px;
       height: 12px;
@@ -45,135 +59,13 @@
 
   &__inner {
     display: flex;
-  }
+    // justify-content: space-between;
+    flex-wrap: wrap;
 
-  .blog-card {
-    width: 33.3333%;
-    padding-bottom: 27px;
-
-    background-color: #fff;
-    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-    border-radius: 5px;
-
-    &:not(:last-child) {
-      margin-right: 30px;
+    @include r(1200) {
+      justify-content: center;
     }
 
-    &__img {
-      object-fit: cover;
-      margin-bottom: -10px;
-    }
 
-    &__category {
-      display: inline-block;
-      margin: -10px 0 18px 28px;
-      padding: 7px 31px;
-
-      @extend %poppins-700;
-      text-transform: uppercase;
-
-      background-color: $accent;
-      color: #fff;
-      border-radius: 31px;
-
-      transition: color 0.3s;
-
-      &:focus {
-        color: $bg;
-      }
-
-      &:hover {
-        color: #771911;
-      }
-
-      &:active {
-        color: #fcd7b6;
-      }
-    }
-
-    &__title {
-      margin: 0 0 20px 31px;
-      padding-bottom: 10px;
-
-      max-width: 284px;
-      min-height: 75px;
-
-      font-size: 18px;
-      @extend %dmsans-500;
-
-      color: #262626;
-      border-bottom: 1px solid #e0e0e0;
-
-      transition: color 0.3s;
-
-      // &:focus {
-      //   color: red;
-      // }
-  
-      &:hover {
-        color: $accent;
-      }
-
-      &:active {
-        color: $footer-links;
-      }
-    }
-
-    &__bottom {
-      padding-left: 46px;
-
-      font-size: 12px;
-      text-transform: uppercase;
-
-      color: #222933;
-    }
-
-    &__icon {
-      display: inline-block;
-      margin-right: 31px;
-    }
-
-    &__time,
-    &__link--admin {
-      position: relative;
-      margin-right: 42px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: -14px;
-        top: 2px;
-
-        width: 10px;
-        height: 10px;
-        background-image: url('../images/icons/calendar.svg');
-      }
-    }
-
-    &__link {
-      color: #222933;
-
-      &:focus,
-      &:hover {
-        color: $accent;
-
-        &::before {
-          background-image: url('../images/icons/user-accent.svg');
-        }
-
-      }
-
-      &:active {
-        color: $footer-links;
-      }
-
-      &--admin {
-        margin-right: 0;
-
-        &::before {
-          background-image: url('../images/icons/user.svg');
-        }
-      }
-    }
   }
 }

@@ -1,113 +1,12 @@
-// LAMP-PRODUCTS
 .lamp-products {
   background-color: #fff;
 
   &__inner {
     display: flex;
-  }
-}
 
-.lamp-card {
-  position: relative;
-  display: flex;
-
-  padding: 90px 0 85px;
-  width: 50%;
-
-  background-color: #feefe2;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  &__img {
-    position: absolute;
-    bottom: 85px;
-    max-width: 233px;
-
-    &--first-lamp {
-      left: 137px;
+    @include r(1200) {
+      flex-wrap: wrap;
     }
 
-    &--second-lamp {
-      left: 148px;
-    }
-  }
-
-  &__content {
-    align-self: center;
-    max-width: 330px;
-    margin-left: 388px;
-
-    &--distance {
-      margin-left: 432px;
-    }
-  }
-
-  &__title {
-    margin-bottom: 24px;
-
-    font-size: 26px;
-    @extend %dmsans-700;
-
-    color: $text;
-
-    &--first {
-      margin-bottom: 32px;
-    }
-  }
-
-  &__descr {
-    margin: -13px 0 25px;
-
-    line-height: 1.9;
-    font-size: 16px;
-
-    color: $text;
-  }
-
-  &__link {
-    display: inline-block;
-    position: relative;
-
-    padding: 20px 80px 18px 23px;
-
-    border-radius: 5px;
-    background-color: transparent;
-
-    @extend %rubik-500;
-    font-size: 15px;
-
-    color: $top-links;
-    border: 1px solid #d8d3cc;
-
-    transition: all 0.3s;
-
-    &:focus,
-    &:hover {
-      background-color: $accent;
-      color: #fff;
-
-      &::after {
-        background-image: url('../images/icons/white-arrow.svg');
-      }
-    }
-
-    &:active {
-      color: $footer-links;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 22px;
-      height: 9px;
-      right: 9%;
-
-      background-image: url(../images/icons/blue-arrow.svg);
-      top: 50%;
-
-      transform: translateY(-50%);
-    }
   }
 }

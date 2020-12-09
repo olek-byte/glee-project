@@ -15,8 +15,7 @@ body {
 }
 
 .main {
- 
-  // flex-grow: 1;
+  flex-grow: 1;
   // @media (max-width:1200px){
   // }
 }
@@ -38,6 +37,22 @@ body {
   text-align: center;
 
   color: #191919;
+
+  @include r(1200) {
+    font-size: 30px;
+  }
+
+  @include r(993) {
+    font-size: 28px;
+  }
+
+  @include r(648) {
+    font-size: 25px;
+  }
+
+  @include r(448) {
+    font-size: 20px;
+  }
 }
 
 // MIXITUP
@@ -50,6 +65,11 @@ body {
 
     color: #8b8b8b;
     transition: color 0.3s;
+
+    @include r(448) {
+      display: block;
+      margin-bottom: 20px;
+    }
 
     &:focus {
       color: $bg;
@@ -69,8 +89,14 @@ body {
   }
 }
 
-// Breadcrumbs
-.breadcrumbs {
+.mixitup-control-active {
+  background-color: #f8f8f8;
+  border-bottom: 2px solid red;
+}
+
+
+
+.page-top {
   padding: 19px 0 34px;
   background-color: #edf1f4;
 
@@ -82,7 +108,10 @@ body {
     text-align: center;
     color: #222933;
   }
+}
 
+// Breadcrumbs
+.breadcrumbs {
   &__list {
     display: flex;
     justify-content: center;

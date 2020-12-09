@@ -1,7 +1,7 @@
-// VIDEO
 .video {
   background-size: cover;
   background-repeat: no-repeat;
+
 
   &__link {
     width: 100%;
@@ -14,6 +14,18 @@
     align-items: center;
 
     min-height: 501px;
+
+    @include r(993) {
+      min-height: 400px;
+    }
+
+    @include r(648) {
+      min-height: 300px;
+    }
+
+    @include r(448) {
+      min-height: 250px;
+    }
   }
 
   &__play {

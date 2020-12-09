@@ -7,16 +7,23 @@
 @import 'components/top-slider';
 @import 'components/service';
 @import 'components/products';
+@import 'components/product-card';
 @import 'components/lamp-products';
+@import 'components/lamp-card';
 @import 'components/design';
+@import 'components/design-card';
+
 @import 'components/video';
 @import 'components/blog';
+@import 'components/blog-card';
 @import 'components/partners';
 @import 'components/footer';
 
-@import 'home/terms';
-@import 'home/modal';
+@import 'terms/page-content';
 
-@import 'home/mission';
-@import 'home/info';
-@import 'home/team';
+@import 'login/login';
+
+@import 'about/mission';
+@import 'about/mission-info';
+@import 'about/team';
+@import 'about/team-card';

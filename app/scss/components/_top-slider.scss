@@ -1,19 +1,46 @@
-// TOP-SLIDER
 .top-slider {
   background-color: $bg;
 
   &__item {
     display: flex !important;
-    padding: 213px 0 177px 301px;
+    flex-wrap: wrap;
+    padding: 213px 0 176px 301px;
+
+    @include r(1630) {
+      padding-left: 200px;
+    }
+
+    @include r(1200) {
+      padding-left: 50px;
+    }
+
+    @include r(993) {
+      padding: 50px 15px 100px;
+    }
+
+    @include r(448) {
+      padding: 25px 15px 80px;
+    }
   }
+
 
   &__content {
     max-width: 411px;
     margin-right: 123px;
+
+    @include r(1630) {
+      margin-right: 0;
+      max-width: 318px;
+    }
+
+    @include r(992) {
+      max-width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 
   &__title {
-    display: block;
     margin-bottom: 21px;
 
     font-size: 72px;
@@ -22,17 +49,45 @@
     text-transform: uppercase;
 
     color: $text;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 3;
+
+    @include r(1630) {
+      font-size: 50px;
+    }
+
+    @include r(993) {
+      font-size: 45px;
+    }
+
+
+    @include r(648) {
+      font-size: 40px;
+    }
+
+    @include r(448) {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
     margin-bottom: 39px;
-    max-width: 388px;
+    // max-width: 388px;
 
     font-size: 18px;
     line-height: 1.6;
     @extend %rubik-400;
 
     color: $top-links;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 4;
+
+    @include r(448) {
+      margin-bottom: 15px;
+    }
   }
 
   &__link {
@@ -49,9 +104,10 @@
 
     transition: background-color 0.3s;
 
-    &:focus{
+    &:focus {
       background-color: $top-links;
     }
+
     &:hover {
       background-color: $text;
     }
@@ -77,23 +133,46 @@
     align-items: flex-end;
     position: relative;
 
+    @include r(1630) {
+      align-items: center;
+    }
+
+    @include r(992) {
+      display: none;
+    }
+
     &::after {
       display: block;
 
       content: '';
-      width: 634px;
-      height: 634px;
+      // width: 634px;
+      // height: 634px;
+      width: 100%;
+      height: 199%;
+
       position: absolute;
       right: -140px;
       top: -120px;
+
       z-index: -1;
 
       background-image: url('../images/decor/slider-decor.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include r(1150) {
+        right: -50px;
+      }
     }
   }
 
   &__img {
     max-width: 640px;
+    object-fit: cover;
+
+    @include r(1630) {
+      max-width: 500px;
+    }
   }
 
   // SLICK-DOTS
@@ -102,8 +181,13 @@
     position: absolute;
     bottom: 42px;
     left: 50%;
-    
+
     transform: translateX(-50%);
+
+    @include r(448) {
+      bottom: 26px;
+    }
+
 
     & li+li {
       margin-left: 12px;
@@ -136,7 +220,6 @@
       &:active {
         color: $footer-links;
       }
-
     }
 
     & .slick-active button {

@@ -1,0 +1,52 @@
+.design-card {
+  position: relative;
+  padding: 38px 0 129px;
+
+  background-color: #f8f8f8;
+
+  &__content {
+    padding-right: 150px;
+    padding-left: 37px;
+
+    @include r(1200) {
+      padding-right: 0;
+    }
+
+    @include r(993) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    @extend %dmsans-700;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
+
+    color: #1a1a1a;
+  }
+
+  &__type {
+    display: block;
+    max-width: 69px;
+
+    font-size: 16px;
+    @extend %dmsans-700;
+
+    color: $accent;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+
+    max-width: 269px;
+  }
+}

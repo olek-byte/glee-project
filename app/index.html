@@ -20,10 +20,23 @@
         </a>
 
         <nav class="menu">
+
+          <button class="menu__nav-btn" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+              <path d="M0 0H30V2H0V0Z" fill="#333"></path>
+              <path d="M0 8H30V10H0V8Z" fill="#333"></path>
+              <rect y="16" width="30" height="2" fill="#333"></rect>
+            </svg>
+          </button>
+
           <ul class="menu__list">
 
             <li class="menu__item">
               <a class="menu__link" href="#">Home +</a>
+              <ul class="menu__submenu">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+              </ul>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#">About</a>
@@ -33,6 +46,10 @@
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#">Pages +</a>
+              <ul class="menu__submenu">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+              </ul>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#">News</a>
@@ -42,41 +59,42 @@
             </li>
 
           </ul>
+        </nav>
 
-          <div class="menu__user">
-            <div class="menu__btns">
+        <div class="menu__user">
+          <div class="menu__btns">
 
-              <button class="menu__btn menu__btn--search" type="button">
-                <svg class="menu__btn-icon menu__btn-icon--search">
-                  <use xlink:href="#search"></use>
-                </svg>
-              </button>
+            <button class="menu__btn menu__btn--search" type="button">
+              <svg class="menu__btn-icon menu__btn-icon--search">
+                <use xlink:href="#search"></use>
+              </svg>
+            </button>
 
-              <button class="menu__btn menu__btn--heart" type="button">
-                <svg class="menu__btn-icon menu__btn-icon--heart">
-                  <use xlink:href="#heart"></use>
-                </svg>
-                <span class="menu__num">0</span>
-              </button>
+            <button class="menu__btn menu__btn--heart" type="button">
+              <svg class="menu__btn-icon menu__btn-icon--heart">
+                <use xlink:href="#heart"></use>
+              </svg>
+              <span class="menu__num">0</span>
+            </button>
 
-              <button class="menu__btn menu__btn--cart" type="button">
-                <svg class="menu__btn-icon menu__btn-icon--cart">
-                  <use xlink:href="#cart"></use>
-                </svg>
-                <span class="menu__num menu__num--cart">0</span>
-              </button>
+            <button class="menu__btn menu__btn--cart" type="button">
+              <svg class="menu__btn-icon menu__btn-icon--cart">
+                <use xlink:href="#cart"></use>
+              </svg>
+              <span class="menu__num menu__num--cart">0</span>
+            </button>
 
-              <button class="menu__btn menu__btn--menu-dots" type="button">
-                <svg class="menu__btn-icon menu__btn-icon--menu-dots">
-                  <use xlink:href="#menu-dots"></use>
-                </svg>
-              </button>
-
-            </div>
+            <button class="menu__btn menu__btn--menu-dots" type="button">
+              <svg class="menu__btn-icon menu__btn-icon--menu-dots">
+                <use xlink:href="#menu-dots"></use>
+              </svg>
+            </button>
 
           </div>
 
-        </nav>
+        </div>
+
+
 
       </div>
     </div>
@@ -84,7 +102,7 @@
 
   <main class="main">
 
-    <!-- SLIDER -->
+
     <div class="container">
       <section class="top-slider">
 
@@ -128,14 +146,13 @@
               <a class="top-slider__link" href="#">
                 Shop Now
               </a>
-
             </div>
 
             <div class="top-slider__box">
               <img class="top-slider__img" src="images/slider/bed-2.png" alt="slide image">
             </div>
-          </div>
 
+          </div>
 
           <div class="top-slider__item">
             <div class="top-slider__content">
@@ -161,7 +178,7 @@
       </section>
     </div>
 
-    <!-- SERVICE -->
+
     <div class="container">
       <div class="service">
 
@@ -184,7 +201,7 @@
             </div>
           </li>
 
-          <li class="service__item service__item--border">
+          <li class="service__item">
             <span class="service__img">
               <svg class="service__icon service__icon--truck">
                 <use xlink:href="#truck"></use>
@@ -222,7 +239,7 @@
       </div>
     </div>
 
-    <!-- PRODUCTS -->
+
     <section class="products">
       <div class="narrow-container">
         <h2 class="title products__title">Products of the week</h2>
@@ -241,7 +258,7 @@
 
           <article class="product-card mix category-a">
 
-            <div class="product-card__img product-card__img--high">
+            <div class="product-card__img">
               <img src="images/products/1.png" alt="furniture">
             </div>
 
@@ -336,7 +353,7 @@
 
           <article class="product-card mix category-d">
 
-            <div class="product-card__img product-card__img--small">
+            <div class="product-card__img">
               <img src="images/products/4.png" alt="furniture">
             </div>
 
@@ -497,13 +514,13 @@
       </div>
     </section>
 
-    <!-- LAMP-PRODUCTS -->
+
     <section class="lamp-products">
       <div class="container">
         <div class="lamp-products__inner">
 
           <article class="lamp-card">
-            <div class="lamp-card__img lamp-card__img--first-lamp">
+            <div class="lamp-card__img">
               <img src="images/lamp-products/lamp-1.png" alt="lamp">
             </div>
 
@@ -522,11 +539,11 @@
           </article>
 
           <article class="lamp-card">
-            <div class="lamp-card__img lamp-card__img--second-lamp">
+            <div class="lamp-card__img">
               <img src="images/lamp-products/lamp-2.png" alt="lamp">
             </div>
 
-            <div class="lamp-card__content lamp-card__content--distance">
+            <div class="lamp-card__content">
               <h3 class="lamp-card__title">
                 Malesuada Tempor Euismod
               </h3>
@@ -546,7 +563,7 @@
       </div>
     </section>
 
-    <!-- DESIGN -->
+
     <section class="design">
       <div class="narrow-container">
         <h2 class="title design__title">New Design</h2>
@@ -596,7 +613,7 @@
                 <h3 class="design-card__name">Rattan Rocking Chair</h3>
                 <span class="design-card__type">Classic</span>
               </div>
-              <img class="design-card__img design-card__img--chair-1" src="images/design/3.png" alt="furniture">
+              <img class="design-card__img" src="images/design/3.png" alt="furniture">
 
             </a>
           </article>
@@ -622,7 +639,7 @@
                 <h3 class="design-card__name">Rattan Rocking Chair</h3>
                 <span class="design-card__type">Classic</span>
               </div>
-              <img class="design-card__img design-card__img--chair-2" src="images/design/5.png" alt="furniture">
+              <img class="design-card__img" src="images/design/5.png" alt="furniture">
 
             </a>
           </article>
@@ -671,6 +688,8 @@
 
             <a class="blog-card__link" href="#">
               <img src="images/blog/1.jpg" alt="flat design" class="blog-card__img">
+            </a>
+            <a class="blog-card__link" href="#">
               <span class="blog-card__category">
                 News
               </span>
@@ -693,10 +712,13 @@
           <article class="blog-card">
             <a class="blog-card__link" href="#">
               <img class="blog-card__img" src="images/blog/2.jpg" alt="flat design" class="blog-card__img">
+            </a>
+            <a class="blog-card__link" href="#">
               <span class="blog-card__category">
                 News
               </span>
             </a>
+
 
             <a class="blog-card__link" href="#">
               <h3 class="blog-card__title">
@@ -715,6 +737,8 @@
           <article class="blog-card">
             <a class="blog-card__link" href="#">
               <img src="images/blog/3.jpg" alt="flat design" class="blog-card__img">
+            </a>
+            <a class="blog-card__link" href="#">
               <span class="blog-card__category">
                 News
               </span>
@@ -737,7 +761,6 @@
       </div>
     </section>
 
-    <!-- PARTNERS -->
     <div class="partners">
       <div class="narrow-container">
         <ul class="partners__list">
@@ -763,29 +786,32 @@
 
   </main>
 
-  <!-- FOOTER -->
+
   <footer class="footer">
     <div class="narrow-container">
       <div class="footer__inner">
 
-        <a class="logo footer__logo" href="#">
-          <img src="images/logo.png" alt="logo">
-        </a>
+        <div class="footer__box">
 
-        <address class="footer__address">
-
-          <a class="footer__contact footer__contact--height" href="#">
-            <span>Address</span>: 4772 Wines Lane
-            Houston, TX 77032
+          <a class="logo footer__logo" href="#">
+            <img src="images/logo.png" alt="logo">
           </a>
 
-          <a class="footer__contact" href="tel:+8323475843"><span>Telephone</span>: +832-347-5843
-          </a>
+          <address class="footer__address">
 
-          <a class="footer__contact" href="mailto:contact@Glee.com"><span>Email</span>: contact@Glee.com
-          </a>
+            <a class="footer__contact footer__contact--height" href="#">
+              <span>Address</span>: 4772 Wines Lane
+              Houston, TX 77032
+            </a>
 
-        </address>
+            <a class="footer__contact" href="tel:+8323475843"><span>Telephone</span>: +832-347-5843
+            </a>
+
+            <a class="footer__contact" href="mailto:contact@Glee.com"><span>Email</span>: contact@Glee.com
+            </a>
+
+          </address>
+        </div>
 
         <div class="footer__services">
           <div class="footer__title">Services</div>

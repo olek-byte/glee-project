@@ -1,0 +1,160 @@
+.blog-card {
+  position: relative;
+  padding-bottom: 78px;
+
+  // width: 33%;
+
+  background-color: #fff;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  border-radius: 5px;
+
+  max-width: 370px;
+  // margin-right: 20px;
+
+  @include r(1200) {
+    margin-bottom: 20px;
+  }
+
+
+
+  @include r(448) {
+    padding-bottom: 50px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+
+    @include r(648) {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    margin-bottom: -10px;
+  }
+
+  &__category {
+    display: inline-block;
+    margin: -10px 0 0 28px;
+    padding: 7px 31px;
+
+    @extend %poppins-700;
+    text-transform: uppercase;
+
+    background-color: $accent;
+    color: #fff;
+    border-radius: 31px;
+
+    transition: color 0.3s;
+
+    &:focus {
+      color: $bg;
+    }
+
+    &:hover {
+      color: #771911;
+    }
+
+    &:active {
+      color: #fcd7b6;
+    }
+  }
+
+  &__title {
+    padding: 23px 55px 0 31px;
+    margin-bottom: 18px;
+
+    font-size: 18px;
+    @extend %dmsans-500;
+
+    color: #262626;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 3;
+
+    transition: color 0.3s;
+
+    @include r(448) {
+      padding: 10px;
+      font-size: 15px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: $footer-links;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 27px;
+    padding: 0 30px;
+
+    font-size: 12px;
+    text-transform: uppercase;
+
+    color: #222933;
+
+    @include r(448) {
+      padding: 0 0 0 10px;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      padding-top: 22px;
+      border-top: 1px solid #e0e0e0;
+      width: 315px;
+      height: 1px;
+
+      @include r(448) {
+        display: none;
+      }
+    }
+  }
+
+  &__time {
+    margin-right: 42px;
+  }
+
+  &__time,
+  &__link--admin {
+    margin-right: 42px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-right: 7px;
+
+      width: 10px;
+      height: 10px;
+      background-image: url('../images/icons/calendar.svg');
+    }
+  }
+
+  &__link {
+    color: #222933;
+
+    &:focus,
+    &:hover {
+      color: $accent;
+
+      &::before {
+        background-image: url('../images/icons/user-accent.svg');
+      }
+
+    }
+
+    &:active {
+      color: $footer-links;
+    }
+
+    &::before {
+      background-image: url('../images/icons/user.svg');
+    }
+  }
+}

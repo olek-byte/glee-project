@@ -1,0 +1,145 @@
+.lamp-card {
+  position: relative;
+  display: flex;
+
+  padding: 90px 0 85px;
+  width: 50%;
+
+  background-color: #feefe2;
+
+  @include r(1200) {
+    width: 100%;
+    justify-content: center;
+    padding: 50px 0;
+  }
+
+     @include r(648) {
+       margin-bottom: 15px;
+       padding: 20px 0;
+     }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+
+    @include r(1200) {
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+
+    @include r(993) {
+      margin-bottom: 25px;
+    }
+
+ 
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 85px;
+    object-fit: cover;
+
+    @include r(1200) {
+      position: relative;
+      bottom: 15px;
+    }
+
+    @include r(648) {
+      display: none;
+    }
+  }
+
+  &__content {
+    align-self: center;
+    max-width: 330px;
+    margin-left: 388px;
+
+    @include r(1630) {
+      margin-left: 250px;
+      padding-right: 10px;
+    }
+
+    @include r(1200) {
+      margin-left: 15px;
+    }
+
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    font-size: 26px;
+    @extend %dmsans-700;
+
+    color: $text;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
+
+    @include r(648) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__descr {
+    margin: -13px 0 25px;
+
+    line-height: 1.9;
+    font-size: 16px;
+
+    color: $text;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 3;
+
+    @include r(648) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+
+    padding: 20px 80px 18px 23px;
+
+    border-radius: 5px;
+    background-color: transparent;
+
+    @extend %rubik-500;
+    font-size: 15px;
+
+    color: $top-links;
+    border: 1px solid #d8d3cc;
+
+    transition: all 0.3s;
+
+    &:focus,
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+
+      &::after {
+        background-image: url('../images/icons/white-arrow.svg');
+      }
+    }
+
+    &:active {
+      color: $footer-links;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 9px;
+      right: 9%;
+
+      background-image: url(../images/icons/blue-arrow.svg);
+      top: 50%;
+
+      transform: translateY(-50%);
+    }
+  }
+}
