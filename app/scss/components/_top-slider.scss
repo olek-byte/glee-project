@@ -1,5 +1,10 @@
 .top-slider {
+  margin-top: 157px;
   background-color: $bg;
+
+      @include r(1100) {
+        margin-top: 92px;
+      }
 
   &__item {
     display: flex !important;
