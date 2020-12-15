@@ -1,7 +1,7 @@
 .video {
   background-size: cover;
   background-repeat: no-repeat;
-
+  background-position: center;
 
   &__link {
     width: 100%;
@@ -15,15 +15,15 @@
 
     min-height: 501px;
 
-    @include r(993) {
+    @include r(991) {
       min-height: 400px;
     }
 
-    @include r(648) {
+    @include r(767) {
       min-height: 300px;
     }
 
-    @include r(448) {
+    @include r(480) {
       min-height: 250px;
     }
   }

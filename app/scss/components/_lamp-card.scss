@@ -7,61 +7,99 @@
 
   background-color: #feefe2;
 
-  @include r(1200) {
+  @include r(1199) {
     width: 100%;
     justify-content: center;
     padding: 50px 0;
   }
 
-     @include r(648) {
-       margin-bottom: 15px;
-       padding: 20px 0;
-     }
+  @include r(991) {
+    min-height: 350px;
+  }
+
+  @include r(767) {
+    margin-bottom: 15px;
+    padding: 20px 0;
+  }
+
+  @include r(480) {
+    min-height: 250px;
+  }
 
   &:not(:last-child) {
     margin-right: 30px;
 
-    @include r(1200) {
+    @include r(1199) {
       margin-right: 0;
       margin-bottom: 50px;
     }
 
-    @include r(993) {
+    @include r(991) {
       margin-bottom: 25px;
     }
-
- 
   }
 
   &__img {
     position: absolute;
     bottom: 85px;
-    object-fit: cover;
+    left: 120px;
 
-    @include r(1200) {
-      position: relative;
-      bottom: 15px;
+    @include r(1400) {
+      left: 50px;
     }
 
-    @include r(648) {
-      display: none;
+    @include r(1199) {
+      bottom: 20px;
+    }
+
+    @include r(991) {
+      bottom: 20%;
+    }
+
+    @include r(480) {
+      left: 10px;
+    }
+
+    img {
+      object-fit: contain;
+      max-width: 233px;
+      max-height: 405px;
+
+      @include r(1400) {
+        max-width: 150px;
+      }
+
+      @include r(1199) {
+        max-width: 125px;
+      }
+
+      @include r(991) {
+        max-width: 100px;
+      }
+
+      @include r(480) {
+        max-width: 70px;
+      }
     }
   }
 
   &__content {
     align-self: center;
-    max-width: 330px;
-    margin-left: 388px;
+    max-width: 38%;
+    margin-left: 56%;
+    padding-right: 20px;
 
-    @include r(1630) {
-      margin-left: 250px;
-      padding-right: 10px;
+    @include r(1400) {
+      max-width: 100%;
     }
 
-    @include r(1200) {
-      margin-left: 15px;
+    @include r(767) {
+      margin-left: 40%;
     }
 
+    @include r(480) {
+      margin-left: 30%;
+    }
   }
 
   &__title {
@@ -75,9 +113,13 @@
     @extend %text-hiding;
     -webkit-line-clamp: 2;
 
-    @include r(648) {
+    @include r(767) {
       font-size: 20px;
       margin-bottom: 15px;
+    }
+
+    @include r(480) {
+      font-size: 16px;
     }
   }
 
@@ -92,7 +134,7 @@
     @extend %text-hiding;
     -webkit-line-clamp: 3;
 
-    @include r(648) {
+    @include r(767) {
       font-size: 14px;
       margin-bottom: 15px;
     }
@@ -136,7 +178,7 @@
       height: 9px;
       right: 9%;
 
-      background-image: url(../images/icons/blue-arrow.svg);
+      background-image: url('../images/icons/blue-arrow.svg');
       top: 50%;
 
       transform: translateY(-50%);

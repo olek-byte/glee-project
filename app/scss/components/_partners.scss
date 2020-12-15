@@ -2,24 +2,75 @@
   padding: 264px 0 85px;
   background-color: #fef7f0;
 
-  @include r(1200) {
-    padding: 210px 0 20px;
+  // @include r(1199) {
+  //   padding: 210px 0 20px;
+  // }
+
+
+  &__slider{
+  
   }
 
   &__list {
-    display: flex;
-    justify-content: space-around;
+    display: flex !important;
+    justify-content: space-between;
     align-items: center;
-
-    @include r(993) {
-      display: block;
-    }
   }
 
   &__item {
-    margin-bottom: 20px;
+    margin-right: 100px;
+
+    img {
+      max-width: 167px;
+      max-height: 84px;
+      object-fit: contain;
+    }
+  }
+
+  ul.slick-dots {
     display: flex;
-    justify-content: center;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    & li+li {
+      margin-left: 12px;
+    }
+
+    & button {
+      padding: 0;
+      width: 30px;
+      height: 30px;
+
+      font-size: 10px;
+      color: $text;
+
+      border-radius: 50%;
+      background-color: #fde3cc;
+      border: none;
+      outline-color: transparent;
+      outline-width: 0;
+
+      transition: color 0.3s;
+
+      &:focus {
+        color: #314b58;
+      }
+
+      &:hover {
+        color: $accent;
+      }
+
+      &:active {
+        color: $footer-links;
+      }
+    }
+
+    & .slick-active button {
+      background-color: #fff;
+    }
   }
 }
 

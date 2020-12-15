@@ -1,47 +1,43 @@
 .top-slider {
-  margin-top: 157px;
   background-color: $bg;
 
-      @include r(1100) {
-        margin-top: 92px;
-      }
 
   &__item {
     display: flex !important;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 213px 0 176px 301px;
 
-    @include r(1630) {
-      padding-left: 200px;
+    padding: 213px 170px 281px 297px;
+
+    @include r(1700) {
+      padding: 213px 150px 181px;
+      justify-content: space-between;
     }
 
-    @include r(1200) {
-      padding-left: 50px;
+    @include r(1400) {
+      padding: 70px;
     }
 
-    @include r(993) {
-      padding: 50px 15px 100px;
-    }
-
-    @include r(448) {
-      padding: 25px 15px 80px;
+    @include r(767) {
+      padding: 0px;
+      justify-content: center;
     }
   }
 
-
   &__content {
     max-width: 411px;
-    margin-right: 123px;
+    margin-right: 115px;
 
-    @include r(1630) {
+    @include r(1700) {
       margin-right: 0;
-      max-width: 318px;
     }
 
-    @include r(992) {
-      max-width: 100%;
-      text-align: center;
-      margin: 0 auto;
+    @include r(991) {
+      max-width: 240px;
+    }
+
+    @include r(767) {
+      display: none;
     }
   }
 
@@ -58,28 +54,21 @@
     @extend %text-hiding;
     -webkit-line-clamp: 3;
 
-    @include r(1630) {
+    @include r(1700) {
+      font-size: 60px;
+    }
+
+    @include r(1400) {
       font-size: 50px;
     }
 
-    @include r(993) {
-      font-size: 45px;
-    }
-
-
-    @include r(648) {
-      font-size: 40px;
-    }
-
-    @include r(448) {
-      font-size: 30px;
-      margin-bottom: 15px;
+    @include r(991) {
+      font-size: 35px;
     }
   }
 
   &__text {
     margin-bottom: 39px;
-    // max-width: 388px;
 
     font-size: 18px;
     line-height: 1.6;
@@ -90,8 +79,9 @@
     @extend %text-hiding;
     -webkit-line-clamp: 4;
 
-    @include r(448) {
+    @include r(991) {
       margin-bottom: 15px;
+      font-size: 14px;
     }
   }
 
@@ -134,49 +124,82 @@
   }
 
   &__box {
-    display: flex;
-    align-items: flex-end;
     position: relative;
+    display: flex;
+    align-self: flex-end;
 
-    @include r(1630) {
-      align-items: center;
+
+    @include r(1400) {
+      align-self: center;
     }
 
-    @include r(992) {
-      display: none;
+    @include r(767) {
+      margin-top: 40px;
+      margin-bottom: 68px;
     }
 
     &::after {
-      display: block;
-
       content: '';
+      position: absolute;
+      top: -63%;
+      right: -21%;
+      width: 100%;
+      height: 241%;
+      
       // width: 634px;
       // height: 634px;
-      width: 100%;
-      height: 199%;
 
-      position: absolute;
-      right: -140px;
-      top: -120px;
+      background-image: url(../images/decor/slider-decor.png);
+      background-size: contain;
+      background-repeat: no-repeat;
 
       z-index: -1;
 
-      background-image: url('../images/decor/slider-decor.png');
-      background-repeat: no-repeat;
-      background-size: contain;
 
-      @include r(1150) {
-        right: -50px;
+      @include r(1700) {
+        top: -82%;
+      }
+
+      @include r(1400) {
+        height: 145%;
+        top: -23%;
+        left: 10%;
+      }
+
+      @include r(767) {
+        height: 100%;
+        top: 0%;
+        left: 35%;
+      }
+
+      @include r(480) {
+        height: 75%;
+        top: 13%;
+        left: 20%;
       }
     }
   }
 
   &__img {
-    max-width: 640px;
-    object-fit: cover;
 
-    @include r(1630) {
-      max-width: 500px;
+    object-fit: contain;
+    width: 600px;
+    height: 264px;
+
+    @include r(1400) {
+      width: 400px;
+    }
+
+    @include r(991) {
+      width: 350px;
+    }
+
+    @include r(767) {
+      width: 330px;
+    }
+
+    @include r(480) {
+      width: 220px;
     }
   }
 
@@ -184,15 +207,14 @@
   ul.slick-dots {
     display: flex;
     position: absolute;
-    bottom: 42px;
+    bottom: 48px;
     left: 50%;
 
     transform: translateX(-50%);
 
-    @include r(448) {
-      bottom: 26px;
+    @include r(767) {
+      bottom: 25px;
     }
-
 
     & li+li {
       margin-left: 12px;

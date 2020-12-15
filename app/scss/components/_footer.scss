@@ -3,7 +3,7 @@
   background-color: #fff;
   position: relative;
 
-  @include r(1200) {
+  @include r(1199) {
     padding-top: 25px;
   }
 
@@ -16,9 +16,12 @@
     @extend %rubik-400;
     color: $footer-links;
 
-    @include r(1200) {
-      margin-bottom: 10px;
+    @include r(1199) {
       justify-content: space-between;
+    }
+
+    @include r(767) {
+      margin-bottom: 15px;
     }
   }
 
@@ -29,17 +32,18 @@
     max-width: 200px;
     font-style: normal;
 
-    @include r(1200) {
+    @include r(1199) {
       margin-right: 30px;
     }
 
-    @include r(648) {
+    @include r(767) {
       margin-right: 10px;
     }
- @include r(448) {
-  max-width: 100%;
-  margin-right: 0;
- }
+
+    @include r(480) {
+      max-width: 100%;
+      margin-right: 0;
+    }
 
     & span {
       text-transform: uppercase;
@@ -48,7 +52,6 @@
   }
 
   &__contact {
-
     margin-bottom: 16px;
     display: block;
 
@@ -83,9 +86,10 @@
     font-size: 16px;
     text-transform: uppercase;
     color: #1f2044;
-         @include r(648) {
-           margin-bottom: 15px;
-         }
+
+    @include r(767) {
+      margin-bottom: 15px;
+    }
   }
 
   &__item {
@@ -112,11 +116,11 @@
     max-width: 120px;
     margin: 0 206px 0 182px;
 
-    @include r(1200) {
+    @include r(1199) {
       margin: 0 30px 0 30px;
     }
 
-    @include r(648) {
+    @include r(767) {
       margin: 0 10px 0 10px;
     }
   }
@@ -124,9 +128,9 @@
   &__newsletter {
     max-width: 274px;
 
- @include r(448) {
-   max-width: 100%;
- }
+    @include r(480) {
+      max-width: 100%;
+    }
   }
 
   &__text {
@@ -136,9 +140,9 @@
     @extend %text-hiding;
     -webkit-line-clamp: 2;
 
-     @include r(648) {
+    @include r(767) {
       margin-bottom: 15px;
-     }
+    }
   }
 
   &__form {
@@ -188,32 +192,37 @@
 }
 
 .footer-copyright {
+  padding: 34px 0 39px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  min-height: 90px;
-
   color: $footer-links;
   border-top: 1px solid #dae4e9;
 
-  @include r(648) {
-    padding-top: 5px;
-    min-height: 50px;
+  @include r(767) {
+    padding: 15px 0;
     display: block;
+    text-align: center;
   }
 
   &__list {
     display: flex;
+    @include r(767){
+      margin-top: 15px;
+      justify-content: center;
+    }
   }
 
   &__item {
     padding: 0 14px;
     border-right: 1px solid $footer-links;
 
-      @include r(648) {
-margin-top: 5px;
-      }
+    @include r(767) {
+      margin-top: 5px;
+    }
+
     &:first-child {
       padding-left: 0;
     }

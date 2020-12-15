@@ -22,6 +22,12 @@
   &__img {
     position: absolute;
     top: 15%;
+    padding: 5%;
+
+    img {
+      object-fit: contain;
+      max-height: 206px;
+    }
   }
 
   &__btns {
@@ -35,6 +41,11 @@
     opacity: 0;
 
     transition: all 0.4s;
+
+    @include r(1199) {
+      opacity: 1;
+      transform: translateY(-254%);
+    }
   }
 
   &__icon {
@@ -107,9 +118,7 @@
 
     color: $accent;
 
+    @extend %text-hiding;
     -webkit-line-clamp: 1;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 }

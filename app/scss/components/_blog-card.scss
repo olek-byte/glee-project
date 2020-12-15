@@ -2,35 +2,32 @@
   position: relative;
   padding-bottom: 78px;
 
-  // width: 33%;
-
   background-color: #fff;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   border-radius: 5px;
 
   max-width: 370px;
-  // margin-right: 20px;
 
-  @include r(1200) {
+  @include r(1199) {
     margin-bottom: 20px;
   }
 
-
-
-  @include r(448) {
+  @include r(480) {
     padding-bottom: 50px;
   }
 
   &:not(:last-child) {
     margin-right: 20px;
 
-    @include r(648) {
+    @include r(767) {
       margin-right: 0;
     }
   }
 
   &__img {
     object-fit: cover;
+    // max-width: 370px;
+    height: 250px;
     margin-bottom: -10px;
   }
 
@@ -75,7 +72,7 @@
 
     transition: color 0.3s;
 
-    @include r(448) {
+    @include r(480) {
       padding: 10px;
       font-size: 15px;
     }
@@ -99,7 +96,7 @@
 
     color: #222933;
 
-    @include r(448) {
+    @include r(480) {
       padding: 0 0 0 10px;
     }
 
@@ -111,14 +108,10 @@
       width: 315px;
       height: 1px;
 
-      @include r(448) {
+      @include r(480) {
         display: none;
       }
     }
-  }
-
-  &__time {
-    margin-right: 42px;
   }
 
   &__time,
@@ -134,6 +127,10 @@
       height: 10px;
       background-image: url('../images/icons/calendar.svg');
     }
+
+    @include r(480) {
+      margin-right: 20px;
+    }
   }
 
   &__link {
@@ -146,7 +143,6 @@
       &::before {
         background-image: url('../images/icons/user-accent.svg');
       }
-
     }
 
     &:active {
