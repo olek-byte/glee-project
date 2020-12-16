@@ -6,19 +6,25 @@
   //   padding: 210px 0 20px;
   // }
 
+  &__slider {
+    padding-left: 51px;
 
-  &__slider{
-  
+    // @include r(991) {
+    //   padding: 0 100px;
+    // }
   }
 
   &__list {
     display: flex !important;
-    justify-content: space-between;
     align-items: center;
+    // flex-wrap: wrap;
+
   }
 
   &__item {
     margin-right: 100px;
+    // display: flex !important;
+    // align-self: center;
 
     img {
       max-width: 167px;
@@ -27,55 +33,34 @@
     }
   }
 
-  ul.slick-dots {
-    display: flex;
+
+  .slick-prev,
+  .slick-next {
+    /* обнуление */
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    /* в .slick-slider по умолчанию position: relative; */
     position: absolute;
-    bottom: -50%;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    & li+li {
-      margin-left: 12px;
-    }
-
-    & button {
-      padding: 0;
-      width: 30px;
-      height: 30px;
-
-      font-size: 10px;
-      color: $text;
-
-      border-radius: 50%;
-      background-color: #fde3cc;
-      border: none;
-      outline-color: transparent;
-      outline-width: 0;
-
-      transition: color 0.3s;
-
-      &:focus {
-        color: #314b58;
-      }
-
-      &:hover {
-        color: $accent;
-      }
-
-      &:active {
-        color: $footer-links;
-      }
-    }
-
-    & .slick-active button {
-      background-color: #fff;
-    }
+    /* расположение по центру */
+    top: 50%;
+    transform: translateY(-50%);
   }
-}
 
-.login-page {
-  &__partners {
-    padding-top: 78px;
+  .slick-prev {
+    left: -50px;
+  }
+
+
+  .slick-next {
+    right: 70px;
+  }
+
+
+  .login-page {
+    &__partners {
+      padding-top: 78px;
+    }
   }
 }

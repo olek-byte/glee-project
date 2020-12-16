@@ -1,69 +1,82 @@
 $(function(){
 
-  // console.log("rabotaet!");
-
   // Nav button click
   $('.menu__nav-btn').on('click', function(){
    	$('.header__inner').toggleClass('header__inner--active')
   });
 
-
   // Fixed header
   let header = $('.header');
-  let topSlider = $('.top-slider');
-  let topSliderH = topSlider.innerHeight();
+  let products = $('.products');
+  let productsH = products.innerHeight();
   let scrollPos = $(window).scrollTop();
 
-  $(window).on("scroll", function(){
+  document.body.addEventListener('scroll', function() {
     scrollPos = $(this).scrollTop();
-    console.log(scrollPos);
 
-    if( scrollPos > topSliderH ) {
+    if( scrollPos > productsH ) {
       header.addClass('fixed');
       } else {
         header.removeClass('fixed');
       }
-
   });
+
+  // Smooth scroll
+  $(".menu__link, .logo").on("click", function (e) {
+		e.preventDefault();
+		var id  = $(this).attr('href'),
+		top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top - 70 }, 1500);
+	});
+
 
 
   // Slider
   $('.top-slider__inner').slick({
     dots: true,
     arrows: false,
-    // fade: true,
-    // autoplay: true,
-    // autoplaySpeed: 3000
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 3000
   });
 
 
   $('.partners__list').slick({
-    // settings: "unslick",
-  // dots: false,
-  // infinite: false,
-  slidesToShow: 5,
-  slidesToScroll: 5,
-    dots: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
         arrows: false,
-    responsive: [
-     {
-      breakpoint: 993,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        dots: true,
-        arrows: false,
-        
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }
-    ]
+        prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/left.svg" alt="arrow left"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="images/icons/right.svg" alt="arrow right"></button>',
+        responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+             
+          }
+        },
+
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true
+          }
+        },
+                {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true
+          }
+        }
+
+      ]
   });
 
 

@@ -9,7 +9,7 @@
 
 </head>
 
-<body>
+<body id="body">
 
   <!-- HEADER -->
   <header class="header">
@@ -34,41 +34,41 @@
             <li class="menu__item">
               <a class="menu__link" href="#">Home <span>+</span></a>
 
-              <ul class="submenu__list">
+              <ul class="menu__submenu-list">
                 <li>
-                  <a class="submenu__link" href="#">Item 1</a>
+                  <a class="menu__submenu-link" href="login.html">Login</a>
                 </li>
                 <li>
-                  <a class="submenu__link" href="#">Item 2</a>
+                  <a class="menu__submenu-link" href="terms.html">Terms</a>
                 </li>
               </ul>
             </li>
 
             <li class="menu__item">
-              <a class="menu__link" href="#">About</a>
+              <a class="menu__link" href="about.html">About</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Services</a>
+              <a class="menu__link" href="#service">Services</a>
             </li>
 
             <li class="menu__item">
               <a class="menu__link" href="#">Pages <span>+</span></a>
 
-              <ul class="submenu__list">
+              <ul class="menu__submenu-list">
                 <li>
-                  <a class="submenu__link" href="#">Item 3</a>
+                  <a class="menu__submenu-link" href="#">Item 3</a>
                 </li>
                 <li>
-                  <a class="submenu__link" href="#">Item 4</a>
+                  <a class="menu__submenu-link" href="#">Item 4</a>
                 </li>
               </ul>
             </li>
 
             <li class="menu__item">
-              <a class="menu__link" href="#">News</a>
+              <a class="menu__link" href="#news">News</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Contact</a>
+              <a class="menu__link" href="#contact">Contact</a>
             </li>
 
           </ul>
@@ -167,7 +167,7 @@
 
             <div class="top-slider__box">
               <a class="top-slider__img-link" href="#">
-                <img class="top-slider__img" src="images/slider/bed-2.png" alt="slide image">
+                <img class="top-slider__img" src="images/slider/bed-4.png" alt="slide image">
               </a>
             </div>
 
@@ -201,7 +201,7 @@
 
 
     <div class="container">
-      <div class="service">
+      <div class="service" id="service">
 
         <ul class="service__list">
 
@@ -693,7 +693,7 @@
       </a>
     </div>
 
-    <section class="blog">
+    <section class="blog" id="news">
       <div class="narrow-container">
 
         <div class="blog__top">
@@ -785,7 +785,9 @@
     <div class="partners">
       <div class="narrow-container">
         <div class="partners__slider">
+
           <ul class="partners__list">
+
             <li class="partners__item">
               <img src="images/partners/1.png" alt="partners logo">
             </li>
@@ -801,10 +803,11 @@
             <li class="partners__item">
               <img src="images/partners/5.png" alt="partners logo">
             </li>
+
           </ul>
+
         </div>
       </div>
-    </div>
 
   </main>
 
@@ -815,11 +818,11 @@
 
         <div class="footer__box">
 
-          <a class="logo footer__logo" href="#">
+          <a class="logo footer__logo" href="#body">
             <img src="images/logo.png" alt="logo">
           </a>
 
-          <address class="footer__address">
+          <address class="footer__address" id="contact">
 
             <a class="footer__contact footer__contact--height" href="#">
               <span>Address</span>: 4772 Wines Lane

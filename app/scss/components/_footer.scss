@@ -78,6 +78,10 @@
 
   &__services {
     max-width: 120px;
+
+    @include r(767) {
+      margin: 0 10px;
+    }
   }
 
   &__title {
@@ -127,6 +131,10 @@
 
   &__newsletter {
     max-width: 274px;
+
+       @include r(767) {
+         margin-right: 10px;
+       }
 
     @include r(480) {
       max-width: 100%;
@@ -209,7 +217,8 @@
 
   &__list {
     display: flex;
-    @include r(767){
+
+    @include r(767) {
       margin-top: 15px;
       justify-content: center;
     }

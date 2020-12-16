@@ -35,26 +35,16 @@
   }
 }
 
-// .fixed {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-// }
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
+}
 
-// .sticky + .main {
-//   padding-top: 105px;
-// }
-
-// .header.fixed {
-//   position: fixed;
-//   height: auto;
-//   background-color: rgb(31, 84, 90);
-// }
-
-// .header.fixed .header__inner {
-//   padding-top: 0;
-// }
 
 // MENU
 .menu {
@@ -64,6 +54,7 @@
   &__list {
     display: flex;
     justify-content: center;
+    position: relative;
 
     @include r(1199) {
       position: absolute;
@@ -80,10 +71,80 @@
       z-index: 20;
 
       transition: all 0.4s;
+
+      padding: 5px 0 15px;
+      margin: -20px;
+    }
+
+    li {
+      position: relative;
     }
   }
 
+  &__submenu-list {
+    display: none;
+    min-width: 70px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    padding: 20px 0px 0px 0px;
+    z-index: 100;
+
+    @include r(1199) {
+      left: 55%;
+      top: 9%;
+    }
+  }
+
+  &__list>li:hover .menu__submenu-list {
+    display: block;
+    background-color: #fef7f0;
+    z-index: 100;
+  }
+
+  &__submenu-list li {
+    margin: 5px 0;
+    padding: 0 10px;
+
+    @include r(1199) {
+      margin: -5px 0;
+    }
+  }
+
+  &__link,
+  &__submenu-link {
+    display: block;
+    @extend %rubik-500;
+    font-size: 15px;
+
+    color: $top-links;
+    outline-color: pink;
+
+    transition: color 0.3s;
+
+    @include r(1199) {
+
+      padding: 15px 0;
+      color: #fff;
+      font-size: 17px;
+    }
+
+    &:focus {
+      color: $bg;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: $footer-links;
+    }
+  }
+
+
   &__item {
+    
     @include r(1199) {
       display: block;
     }
@@ -184,7 +245,7 @@
       border-radius: 50%;
       fill: #fff;
       background-color: $accent;
-      z-index: 100;
+      
 
       transition: fill 0.3s;
 
@@ -247,3 +308,4 @@
     }
   }
 }
+
