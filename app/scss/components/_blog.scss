@@ -4,11 +4,12 @@
   background-color: #fff;
 
   @include r(1199) {
-    padding-top: 80px;
+    padding-top: 40px;
   }
 
   @include r(480) {
-    padding-top: 40px;
+    padding-top: 30px;
+    margin-bottom: -160px;
   }
 
   &__top {

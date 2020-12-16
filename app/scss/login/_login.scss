@@ -3,6 +3,14 @@
   max-width: 470px;
   margin: 0 auto;
 
+  @include r(991) {
+    padding: 60px 10px;
+  }
+
+    @include r(480) {
+      padding: 20px 10px;
+    }
+
   &__label {
     display: block;
     padding-bottom: 3px;
@@ -27,7 +35,7 @@
   &__link {
     display: block;
     margin-bottom: 32px;
-    padding: 17px 211px 17px 212px;
+    padding: 17px 0;
     width: 100%;
 
     font-size: 18px;
@@ -75,8 +83,8 @@
 
   &__link {
     &--white {
-      padding: 18px 150px 18px 156px;
       margin-bottom: 0;
+      text-align: center;
 
       border: 2px solid $accent;
       color: $text;

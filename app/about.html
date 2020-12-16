@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="body">
 
   <!-- HEADER -->
   <header class="header">
@@ -20,65 +20,91 @@
         </a>
 
         <nav class="menu">
+
+          <div class="menu__nav-btn" id="menuToggle">
+            <input type="checkbox" />
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+          </div>
+
           <ul class="menu__list">
 
             <li class="menu__item">
-              <a class="menu__link" href="#">Home +</a>
+              <a class="menu__link" href="#">Home <span>+</span></a>
+
+              <ul class="menu__submenu-list">
+                <li>
+                  <a class="menu__submenu-link" href="login.html">Login</a>
+                </li>
+                <li>
+                  <a class="menu__submenu-link" href="terms.html">Terms</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="about.html">About</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">About</a>
+              <a class="menu__link" href="#service">Services</a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">Pages <span>+</span></a>
+
+              <ul class="menu__submenu-list">
+                <li>
+                  <a class="menu__submenu-link" href="#">Shop 1</a>
+                </li>
+                <li>
+                  <a class="menu__submenu-link" href="#">Shop 2</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#news">News</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Services</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Pages +</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">News</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Contact</a>
+              <a class="menu__link" href="#contact">Contact</a>
             </li>
 
           </ul>
+        </nav>
 
-          <div class="menu__user">
-            <div class="menu__btns">
+        <div class="menu__user">
+          <div class="menu__btns">
 
-              <button class="menu__btn menu__btn--search" type="button">
+            <button class="menu__btn menu__btn--search" type="button">
+              <svg class="menu__btn-icon menu__btn-icon--search">
+                <use xlink:href="#search"></use>
+              </svg>
+            </button>
 
-                <svg class="menu__btn-icon menu__btn-icon--search">
-                  <use xlink:href="#search"></use>
-                </svg>
+            <button class="menu__btn menu__btn--heart" type="button">
+              <svg class="menu__btn-icon menu__btn-icon--heart">
+                <use xlink:href="#heart"></use>
+              </svg>
+              <span class="menu__num">0</span>
+            </button>
 
-              </button>
+            <button class="menu__btn menu__btn--cart" type="button">
+              <svg class="menu__btn-icon menu__btn-icon--cart">
+                <use xlink:href="#cart"></use>
+              </svg>
+              <span class="menu__num menu__num--cart">0</span>
+            </button>
 
-              <button class="menu__btn menu__btn--heart" type="button">
-                <svg class="menu__btn-icon menu__btn-icon--heart">
-                  <use xlink:href="#heart"></use>
-                </svg>
-                <span class="menu__num">0</span>
-              </button>
-
-              <button class="menu__btn menu__btn--cart" type="button">
-                <svg class="menu__btn-icon menu__btn-icon--cart">
-                  <use xlink:href="#cart"></use>
-                </svg>
-                <span class="menu__num menu__num--cart">0</span>
-              </button>
-
-              <button class="menu__btn menu__btn--menu-dots" type="button">
-                <svg class="menu__btn-icon menu__btn-icon--menu-dots">
-                  <use xlink:href="#menu-dots"></use>
-                </svg>
-              </button>
-
-            </div>
+            <button class="menu__btn menu__btn--menu-dots" type="button">
+              <svg class="menu__btn-icon menu__btn-icon--menu-dots">
+                <use xlink:href="#menu-dots"></use>
+              </svg>
+            </button>
 
           </div>
 
-        </nav>
+        </div>
 
       </div>
     </div>
@@ -109,51 +135,52 @@
 
     <section class="mission">
       <div class="narrow-container">
-        <div class="mission__bg" style="background-image: url(images/mission-bg.jpg)">
 
-          <div class="mission__inner">
+        <div class="mission__inner">
 
-            <div class="mission__content">
+          <img class="mission__img" src="images/mission-bg.jpg">
 
-              <div class="mission__experience">
-                <span class="mission__number">12</span>
-                <ul class="mission__list">
-                  <li class="mission__item">Years</li>
-                  <li class="mission__item">Experience</li>
-                  <li class="mission__item">Working</li>
-                </ul>
-              </div>
+          <div class="mission__content">
 
-              <h2 class="mission__title title">Mission of our creative house</h2>
-
-              <div class="mission__text">
-                <p>
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim
-                  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis
-                  aute irure dolor in reprehenderit in voluptate velit esse cillum
-                </p>
-              </div>
-
-              <ul class="mission__icon-list">
-                <li class="mission__icon-item mission__icon-item--projects">
-                  <span class="mission__icon-number">520+</span>
-                  <span class="mission__name">Projects</span>
-                </li>
-                <li class="mission__icon-item mission__icon-item--revenue">
-                  <span class="mission__icon-number">$4M</span>
-                  <span class="mission__name">Revenue</span>
-                </li>
-                <li class="mission__icon-item mission__icon-item--awards">
-                  <span class="mission__icon-number">250</span>
-                  <span class="mission__name">Awards</span>
-                </li>
+            <div class="mission__experience">
+              <span class="mission__number">12</span>
+              <ul class="mission__list">
+                <li class="mission__item">Years</li>
+                <li class="mission__item">Experience</li>
+                <li class="mission__item">Working</li>
               </ul>
-
             </div>
+
+            <h2 class="mission__title title">Mission of our creative house</h2>
+
+            <div class="mission__text">
+              <p>
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum
+              </p>
+            </div>
+
+            <ul class="mission__icon-list">
+              <li class="mission__icon-item mission__icon-item--projects">
+                <span class="mission__icon-number">520+</span>
+                <span class="mission__name">Projects</span>
+              </li>
+              <li class="mission__icon-item mission__icon-item--revenue">
+                <span class="mission__icon-number">$4M</span>
+                <span class="mission__name">Revenue</span>
+              </li>
+              <li class="mission__icon-item mission__icon-item--awards">
+                <span class="mission__icon-number">250</span>
+                <span class="mission__name">Awards</span>
+              </li>
+            </ul>
+
           </div>
         </div>
+      </div>
 
       </div>
     </section>
@@ -402,7 +429,7 @@
                     </a>
                   </li>
 
-                
+
                 </ul>
               </div>
 
@@ -415,7 +442,7 @@
 
 
 
-    <section class="blog">
+    <section class="blog" id="news">
       <div class="narrow-container">
 
         <div class="blog__top">
@@ -430,7 +457,9 @@
           <article class="blog-card">
 
             <a class="blog-card__link" href="#">
-              <img class="blog-card__img" src="images/blog/1.jpg" alt="flat design">
+              <img src="images/blog/1.jpg" alt="flat design" class="blog-card__img">
+            </a>
+            <a class="blog-card__link" href="#">
               <span class="blog-card__category">
                 News
               </span>
@@ -450,13 +479,16 @@
           </article>
 
 
-          <article class="blog-card">
+          <article class="blog-card blog-card--middle">
             <a class="blog-card__link" href="#">
-              <img class="blog-card__img" src="images/blog/2.jpg" alt="flat design">
+              <img class="blog-card__img" src="images/blog/2.jpg" alt="flat design" class="blog-card__img">
+            </a>
+            <a class="blog-card__link" href="#">
               <span class="blog-card__category">
                 News
               </span>
             </a>
+
 
             <a class="blog-card__link" href="#">
               <h3 class="blog-card__title">
@@ -475,6 +507,8 @@
           <article class="blog-card">
             <a class="blog-card__link" href="#">
               <img src="images/blog/3.jpg" alt="flat design" class="blog-card__img">
+            </a>
+            <a class="blog-card__link" href="#">
               <span class="blog-card__category">
                 News
               </span>
@@ -497,55 +531,61 @@
       </div>
     </section>
 
-    <!-- PARTNERS -->
     <div class="partners">
       <div class="narrow-container">
-        <ul class="partners__list">
-          <li class="partners__item">
-            <img src="images/partners/1.png" alt="partners logo">
-          </li>
-          <li class="partners__item">
-            <img src="images/partners/2.png" alt="partners logo">
-          </li>
-          <li class="partners__item">
-            <img src="images/partners/3.png" alt="partners logo">
-          </li>
-          <li class="partners__item">
-            <img src="images/partners/4.png" alt="partners logo">
-          </li>
-          <li class="partners__item">
-            <img src="images/partners/5.png" alt="partners logo">
-          </li>
-        </ul>
+        <div class="partners__slider">
 
+          <ul class="partners__list">
+
+            <li class="partners__item">
+              <img src="images/partners/1.png" alt="partners logo">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/2.png" alt="partners logo">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/3.png" alt="partners logo">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/4.png" alt="partners logo">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/5.png" alt="partners logo">
+            </li>
+
+          </ul>
+
+        </div>
       </div>
-    </div>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+
+  <footer class="footer" id="contact">
     <div class="narrow-container">
       <div class="footer__inner">
 
-        <a class="logo footer__logo" href="#">
-          <img src="images/logo.png" alt="logo">
-        </a>
+        <div class="footer__box">
 
-        <address class="footer__address">
-
-          <a class="footer__contact footer__contact--height" href="#">
-            <span>Address</span>: 4772 Wines Lane
-            Houston, TX 77032
+          <a class="logo footer__logo" href="#body">
+            <img src="images/logo.png" alt="logo">
           </a>
 
-          <a class="footer__contact" href="tel:+8323475843"><span>Telephone</span>: +832-347-5843
-          </a>
+          <address class="footer__address">
 
-          <a class="footer__contact" href="mailto:contact@Glee.com"><span>Email</span>: contact@Glee.com
-          </a>
+            <a class="footer__contact footer__contact--height" href="#">
+              <span>Address</span>: 4772 Wines Lane
+              Houston, TX 77032
+            </a>
 
-        </address>
+            <a class="footer__contact" href="tel:+8323475843"><span>Telephone</span>: +832-347-5843
+            </a>
+
+            <a class="footer__contact" href="mailto:contact@Glee.com"><span>Email</span>: contact@Glee.com
+            </a>
+
+          </address>
+        </div>
 
         <div class="footer__services">
           <div class="footer__title">Services</div>

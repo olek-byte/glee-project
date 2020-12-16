@@ -46,15 +46,15 @@ $(function(){
         slidesToScroll: 1,
         dots: false,
         arrows: false,
-        prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/left.svg" alt="arrow left"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="images/icons/right.svg" alt="arrow right"></button>',
+        // prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/left.svg" alt="arrow left"></button>',
+        // nextArrow: '<button type="button" class="slick-next"><img src="images/icons/right.svg" alt="arrow right"></button>',
         responsive: [
         {
           breakpoint: 991,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            arrows: true,
+            arrows: false,
              
           }
         },
@@ -64,7 +64,7 @@ $(function(){
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            arrows: true
+            arrows: false,
           }
         },
                 {
@@ -72,7 +72,7 @@ $(function(){
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: true
+            arrows: false
           }
         }
 
@@ -80,7 +80,42 @@ $(function(){
   });
 
 
- 
+  $('.mission-info__list').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        
+        responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+             
+          }
+        },
+
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+          }
+        },
+                {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false
+          }
+        }
+
+      ]
+  });
 
   // Mixitup
   var mixer = mixitup('.products__inner');

@@ -2,18 +2,15 @@
   padding: 78px 0;
   background-color: $bg;
 
-  &__list {
-    display: flex;
-    justify-content: space-around;
+  @include r(1199) {
+    padding: 20px 0;
   }
 
   &__item {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    
-    max-width: 187px;
 
     @extend %dmsans-700;
     color: $text;
@@ -53,6 +50,11 @@
 
     @extend %text-hiding;
     -webkit-line-clamp: 1;
+
+    @include r(767) {
+      font-size: 25px;
+    }
+
   }
 
   &__name {
