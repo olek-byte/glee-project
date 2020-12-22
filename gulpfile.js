@@ -8,26 +8,19 @@ const imagemin     = require('gulp-imagemin');
 const del          = require('del');
 const browserSync  = require('browser-sync').create();
 
-// const fileinclude = require('gulp-file-include');
+const fileinclude = require('gulp-file-include');
 // const gulp = require('gulp');
 
-// function include(){
-//   return src(['app/**/*.html'])
-//   .pipe(fileinclude({
-//       prefix: '@@',
-//       basepath: '@file'
-//   }))
-//   .pipe(concat('*.html'))
-// }
+function html(){
+  return src(['app/html/pages/*.html'])
+  .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+  }))
+  .pipe(dest('app'))
+  .pipe(browserSync.stream());
+}
  
-// gulp.task('fileinclude', function() {
-//   gulp.src(['index.html'])
-//     .pipe(fileinclude({
-//       prefix: '@@',
-//       basepath: '@file'
-//     }))
-//     .pipe(gulp.dest('./'));
-// });
 
 function browsersync() {
   browserSync.init({
@@ -56,6 +49,8 @@ function scripts() {
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/rateyo/src/jquery.rateyo.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
@@ -97,8 +92,11 @@ function cleanDist() {
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch(['app/html/**/*.html'], html);
+  // watch(['app/**/*.html']).on('change', browserSync.reload);
 }
+
+exports.html = html;
 
 exports.styles = styles;
 
@@ -114,7 +112,7 @@ exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(html, styles, scripts, browsersync, watching);
 
 // exports.default = includeHTML;
 

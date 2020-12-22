@@ -1,0 +1,48 @@
+.filter-brand {
+  padding-bottom: 70px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    display: block;
+    cursor: pointer;
+
+    display: flex;
+    margin-bottom: 2px;
+    cursor: pointer;
+    flex-direction: column;
+    width: 272px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked+.filter-brand__checkbox {
+      background-color: #edf1f4;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+
+    display: inline-flex;
+    // justify-content: center;
+    align-items: center;
+
+    padding: 16px 210px 13px 14px;
+
+    color: $text;
+    border-radius: 5px;
+  }
+
+  &__number {
+    position: absolute;
+    right: 24px;
+  }
+}

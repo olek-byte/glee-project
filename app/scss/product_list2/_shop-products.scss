@@ -1,0 +1,171 @@
+.shop-products {
+  padding-bottom: 75px;
+
+  @include r(767) {
+    padding-bottom: 40px;
+  }
+
+  @include r(480) {
+    padding-bottom: 5px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    margin-bottom: 40px;
+
+    @include r(480) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img-box {
+    border: 2px solid #f2f2f2;
+    width: 370px;
+    height: 501px;
+    background-color: #fefefe;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include r(991) {
+      width: 200px;
+      height: 340px;
+    }
+
+    @include r(480) {
+      height: 300px;
+    }
+  }
+
+  &__img {
+    max-width: 323px;
+    max-height: 338px;
+
+    @include r(991) {
+      padding: 10px;
+
+      max-width: 200px;
+      max-height: 270px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 80px;
+
+    @include r(1199) {
+      margin-left: 20px;
+    }
+  }
+
+  &__name {
+    font-size: 40px;
+    color: $border;
+    margin-bottom: 25px;
+
+    @include r(991) {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    @include r(480) {
+      display: none;
+    }
+  }
+
+  &__star {
+    margin-bottom: 37px;
+
+    @include r(991) {
+      margin-bottom: 10px;
+    }
+
+    @include r(480) {
+      display: none;
+    }
+  }
+
+  &__price {
+    font-size: 30px;
+    color: $border;
+    margin-bottom: 36px;
+
+    @include r(991) {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    @include r(480) {
+      display: none;
+    }
+  }
+
+  &__desc {
+    font-size: 16px;
+    color: $text;
+    margin-bottom: 34px;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 6;
+
+    @include r(991) {
+      font-size: 14px;
+    }
+
+    @include r(480) {
+      display: none;
+    }
+  }
+
+  &__btns {
+    @include r(767) {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+    }
+  }
+
+  &__btn {
+    padding: 16px 14px;
+    margin-right: 11px;
+
+    fill: $accent;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
+
+    transition: all 0.3s;
+
+    &:focus {
+      fill: #e6d96d;
+    }
+
+    &:hover {
+      background-color: #a2bac7;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    &:active {
+      fill: $footer-links;
+
+    }
+
+    @include r(767) {
+      display: inline-flex;
+      border-radius: 50%;
+    }
+  }
+}

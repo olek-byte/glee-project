@@ -99,9 +99,9 @@ body {
   padding: 19px 0 34px;
   background-color: #edf1f4;
 
-      @include r(480) {
-        padding: 10px 0;
-      }
+  @include r(480) {
+    padding: 10px 0;
+  }
 
   &__title {
     margin-bottom: 7px;
@@ -110,6 +110,10 @@ body {
     font-size: 36px;
     text-align: center;
     color: #222933;
+
+    @include r(480) {
+      font-size: 30px;
+    }
   }
 }
 
@@ -161,6 +165,92 @@ body {
     }
   }
 }
+
+// FILTER-TITLE (SHOP)
+.filter-title {
+  display: inline-block;
+  padding-right: 60px;
+
+  color: $text;
+  @extend %dmsans-700;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 13px;
+
+    border-bottom: 3px solid $accent;
+    width: 39px;
+    border-radius: 1px;
+  }
+}
+
+// FILTER-PRICE
+.filter-price {
+  padding-bottom: 90px;
+
+  &__label {
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 6px;
+  height: 3px;
+  background-color: #c2d2db;
+  border-radius: 1px;
+}
+
+.irs--flat .irs-handle {
+  top: 0px;
+  width: 15px;
+  height: 15px;
+  background-color: $accent;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-bar {
+  top: 6px;
+  height: 4px;
+  background-color: $accent;
+}
+
+.irs-from,
+.irs-to,
+.irs-single {
+  display: none;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+
+.jq-ry-container {
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // menu-burger
 #menuToggle {

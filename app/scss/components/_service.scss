@@ -1,6 +1,6 @@
 .service {
   padding: 48px 0;
-  background-color: #fef7f0;
+  background-color: $bg-add;
   position: relative;
 
   @include r(1199) {
@@ -45,9 +45,6 @@
 
     @include r(991) {
       width: 100%;
-    }
-
-    @include r(991) {
 
       &--border:before,
       &--border:after {
@@ -58,7 +55,7 @@
         right: 50%;
         transform: translateX(50%);
 
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid $border;
         width: 50%;
       }
 
@@ -105,10 +102,10 @@
 
     @include r(991) {
       max-width: 100%;
-      text-align: center;
       margin: 0 auto;
-
       padding-top: 15px;
+
+      text-align: center;
     }
   }
 

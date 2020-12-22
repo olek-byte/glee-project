@@ -1,16 +1,17 @@
 .page-content {
-  
+
   p {
     margin-bottom: 50px;
     font-size: 16px;
     line-height: 1.9;
     color: $text;
-       @include r(1200) {
-         margin-bottom: 20px;
-       }
+
+    @include r(1200) {
+      margin-bottom: 20px;
+    }
 
     &:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 
@@ -28,6 +29,7 @@
 
     @extend %rubik-300;
     font-size: 36px;
+
     text-align: center;
 
     color: #222933;
@@ -45,6 +47,7 @@
 
     @extend %rubik-500;
     font-size: 24px;
+     
     line-height: 1.6;
 
     color: $text;
@@ -52,10 +55,13 @@
     &:first-child {
       padding-top: 110px;
       margin-bottom: 15px;
-          @include r(1200) {
-           padding-top: 20px;
-           margin-bottom: 10px;
-          }
+
+      @include r(1200) {
+        padding-top: 20px;
+        margin-bottom: 10px;
+
+        font-size: 1.5vw;
+      }
     }
   }
 
@@ -91,9 +97,9 @@
     padding-left: 35px;
     list-style-type: decimal-leading-zero;
 
-              @include r(1200) {
-                margin-bottom: 20px;
-              }
+    @include r(1200) {
+      margin-bottom: 20px;
+    }
 
     li {
       margin-bottom: 20px;
@@ -103,17 +109,4 @@
     }
   }
 
-  // img {}
-
-  // blockquote {}
-
-  // hr {}
-
-  // table {
-  //   th {}
-
-  //   tr {}
-
-  //   td {}
-  // }
 }

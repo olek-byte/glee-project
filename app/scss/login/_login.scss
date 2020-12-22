@@ -7,9 +7,9 @@
     padding: 60px 10px;
   }
 
-    @include r(480) {
-      padding: 20px 10px;
-    }
+  @include r(480) {
+    padding: 20px 10px;
+  }
 
   &__label {
     display: block;

@@ -1,5 +1,35 @@
 $(function(){
 
+  $('.filter-price__input').ionRangeSlider({
+     type: "double",
+      prefix: "$",
+      onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+      },
+     onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+  });
+
+ $(".star--small").rateYo({
+    rating: 3.6,
+    starWidth: "12px",
+    spacing: "6px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00"
+  });
+
+   $(".star--big").rateYo({
+    rating: 3.6,
+    starWidth: "18px",
+    spacing: "12px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00"
+  });
+
+
   // Nav button click
   $('.menu__nav-btn').on('click', function(){
    	$('.header__inner').toggleClass('header__inner--active')
@@ -42,10 +72,14 @@ $(function(){
 
 
   $('.partners__list').slick({
+       
         slidesToShow: 5,
         slidesToScroll: 1,
         dots: false,
         arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+
         // prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/left.svg" alt="arrow left"></button>',
         // nextArrow: '<button type="button" class="slick-next"><img src="images/icons/right.svg" alt="arrow right"></button>',
         responsive: [
@@ -54,8 +88,7 @@ $(function(){
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            arrows: false,
-             
+            arrows: false, 
           }
         },
 
@@ -72,19 +105,21 @@ $(function(){
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false
+            arrows: false,
           }
         }
-
       ]
   });
 
 
   $('.mission-info__list').slick({
+   
         slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
         arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
         
         responsive: [
         {
@@ -93,7 +128,6 @@ $(function(){
             slidesToShow: 3,
             slidesToScroll: 1,
             arrows: false,
-             
           }
         },
 
@@ -113,7 +147,6 @@ $(function(){
             arrows: false
           }
         }
-
       ]
   });
 

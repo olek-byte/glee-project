@@ -8,11 +8,11 @@
     padding-right: 150px;
     padding-left: 37px;
 
-    @include r(1200) {
+    @include r(1199) {
       padding-right: 0;
     }
 
-    @include r(993) {
+    @include r(991) {
       padding-bottom: 50px;
     }
   }
@@ -22,11 +22,10 @@
 
     font-size: 20px;
     @extend %dmsans-700;
+    color: #1a1a1a;
 
     @extend %text-hiding;
     -webkit-line-clamp: 2;
-
-    color: #1a1a1a;
   }
 
   &__type {

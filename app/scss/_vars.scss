@@ -3,6 +3,8 @@ $bg: #fcd7b6;
 $accent: #a3bbc8;
 $text: #243f4d;
 $footer-links: #7b7b7b;
+$border: #333333;
+$bg-add: #fef7f0;
 
 
 %dmsans-700 {
@@ -55,6 +57,14 @@ $footer-links: #7b7b7b;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
 
 // for video

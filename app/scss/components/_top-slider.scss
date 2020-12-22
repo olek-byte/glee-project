@@ -1,7 +1,6 @@
 .top-slider {
   background-color: $bg;
 
-
   &__item {
     display: flex !important;
     align-items: center;
@@ -45,7 +44,6 @@
     margin-bottom: 21px;
 
     font-size: 72px;
-    line-height: 1;
     @extend %rubik-500;
     text-transform: uppercase;
 
@@ -134,8 +132,7 @@
     }
 
     @include r(767) {
-      margin-top: 40px;
-      margin-bottom: 68px;
+      margin: 40px 0 68px;
     }
 
     &::after {
@@ -152,9 +149,7 @@
       background-image: url(../images/decor/slider-decor.png);
       background-size: contain;
       background-repeat: no-repeat;
-
       z-index: -1;
-
 
       @include r(1700) {
         top: -82%;

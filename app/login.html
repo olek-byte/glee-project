@@ -11,11 +11,11 @@
 <body id="body">
 
   <!-- HEADER -->
- <header class="header">
+   <header class="header">
    <div class="container">
      <div class="header__inner">
 
-       <a class="logo header__logo">
+       <a class="logo header__logo" href="index.html">
          <img src="images/logo.png" alt="logo">
        </a>
 
@@ -44,7 +44,7 @@
            </li>
 
            <li class="menu__item">
-             <a class="menu__link" href="about.html">About</a>
+             <a class="menu__link" href="#">About</a>
            </li>
            <li class="menu__item">
              <a class="menu__link" href="#service">Services</a>
@@ -55,10 +55,10 @@
 
              <ul class="menu__submenu-list">
                <li>
-                 <a class="menu__submenu-link" href="#">Shop 1</a>
+                 <a class="menu__submenu-link" href="#shop_1.html">Shop 1</a>
                </li>
                <li>
-                 <a class="menu__submenu-link" href="#">Shop 2</a>
+                 <a class="menu__submenu-link" href="#shop_2.html">Shop 2</a>
                </li>
              </ul>
            </li>
@@ -112,10 +112,9 @@
    </div>
  </header>
 
-
   <main class="main login-page">
 
-
+    <!-- PAGE-TOP -->
     <section class="page-top">
       <h1 class="title page-top__title">Log in</h1>
 
@@ -136,6 +135,7 @@
       </div>
     </section>
 
+    <!-- LOGIN -->
     <div class="login">
 
       <form class="login__form" action="#">
@@ -169,154 +169,150 @@
 
     </div>
 
-   
     <!-- PARTNERS -->
     <div class="partners login-page__partners">
-      <div class="narrow-container">
-        <div class="partners__slider">
+  <div class="narrow-container">
+    
+    <ul class="partners__list">
+      <li class="partners__item">
+        <img src="images/partners/1.png" alt="partners logo">
+      </li>
+      <li class="partners__item">
+        <img src="images/partners/2.png" alt="partners logo">
+      </li>
+      <li class="partners__item">
+        <img src="images/partners/3.png" alt="partners logo">
+      </li>
+      <li class="partners__item">
+        <img src="images/partners/4.png" alt="partners logo">
+      </li>
+      <li class="partners__item">
+        <img src="images/partners/5.png" alt="partners logo">
+      </li>
+    </ul>
 
-          <ul class="partners__list">
+  </div>
+</div>
 
-            <li class="partners__item">
-              <img src="images/partners/1.png" alt="partners logo">
+  </main>
+
+  <!-- FOOTER -->
+    <footer class="footer" id="contact">
+    <div class="narrow-container">
+      <div class="footer__inner">
+
+        <div class="footer__box">
+
+          <a class="logo footer__logo" href="#body">
+            <img src="images/logo.png" alt="logo">
+          </a>
+
+          <address class="footer__address">
+
+            <a class="footer__contact footer__contact--height" href="#">
+              <span>Address</span>: 4772 Wines Lane
+              Houston, TX 77032
+            </a>
+
+            <a class="footer__contact" href="tel:+8323475843"><span>Telephone</span>: +832-347-5843
+            </a>
+
+            <a class="footer__contact" href="mailto:contact@Glee.com"><span>Email</span>: contact@Glee.com
+            </a>
+
+          </address>
+        </div>
+
+        <div class="footer__services">
+          <div class="footer__title">Services</div>
+
+          <ul class="footer__list">
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">About Us</a>
             </li>
-            <li class="partners__item">
-              <img src="images/partners/2.png" alt="partners logo">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Return Policy</a>
             </li>
-            <li class="partners__item">
-              <img src="images/partners/3.png" alt="partners logo">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Our Blog</a>
             </li>
-            <li class="partners__item">
-              <img src="images/partners/4.png" alt="partners logo">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Contact Us</a>
             </li>
-            <li class="partners__item">
-              <img src="images/partners/5.png" alt="partners logo">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Terms & Condition</a>
             </li>
 
           </ul>
 
         </div>
+
+        <div class="footer__account">
+          <div class="footer__title">Account</div>
+
+          <ul class="footer__list">
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">Your Account</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Checkout</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Login</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Register</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="footer__newsletter">
+          <div class="footer__title">Newsletter</div>
+          <p class="footer__text">
+            Subscribe by our newsletter and get
+            update protidin.
+          </p>
+
+          <form class="footer__form" action="#">
+            <input id="footer__input" class="footer__input" type="email" name="subscribe[email]"
+              placeholder="Email address" required>
+            <label class="footer__label">Email address</label>
+            <button class="footer__btn" type="submit">Subscribe</button>
+          </form>
+
+        </div>
+
       </div>
-  </main>
 
-  <!-- FOOTER -->
-   <footer class="footer" id="contact">
-     <div class="narrow-container">
-       <div class="footer__inner">
+      <div class="footer-copyright">
 
-         <div class="footer__box">
+        <p class="footer-copyright__text">
+          ©2020 CopyRight Example. All rights reserved.
+        </p>
 
-           <a class="logo footer__logo" href="#body">
-             <img src="images/logo.png" alt="logo">
-           </a>
+        <ul class="footer-copyright__list">
 
-           <address class="footer__address">
+          <li class="footer-copyright__item">
+            <a class="footer-copyright__link" href="#">Home</a>
+          </li>
+          <li class="footer-copyright__item">
+            <a class="footer-copyright__link" href="#">About</a>
+          </li>
+          <li class="footer-copyright__item">
+            <a class="footer-copyright__link" href="#">Blog</a>
+          </li>
+          <li class="footer-copyright__item">
+            <a class="footer-copyright__link" href="#">Contact</a>
+          </li>
 
-             <a class="footer__contact footer__contact--height" href="#">
-               <span>Address</span>: 4772 Wines Lane
-               Houston, TX 77032
-             </a>
+        </ul>
+      </div>
 
-             <a class="footer__contact" href="tel:+8323475843"><span>Telephone</span>: +832-347-5843
-             </a>
-
-             <a class="footer__contact" href="mailto:contact@Glee.com"><span>Email</span>: contact@Glee.com
-             </a>
-
-           </address>
-         </div>
-
-         <div class="footer__services">
-           <div class="footer__title">Services</div>
-
-           <ul class="footer__list">
-
-             <li class="footer__item">
-               <a class="footer__link" href="#">About Us</a>
-             </li>
-             <li class="footer__item">
-               <a class="footer__link" href="#">Return Policy</a>
-             </li>
-             <li class="footer__item">
-               <a class="footer__link" href="#">Our Blog</a>
-             </li>
-             <li class="footer__item">
-               <a class="footer__link" href="#">Contact Us</a>
-             </li>
-             <li class="footer__item">
-               <a class="footer__link" href="#">Terms & Condition</a>
-             </li>
-
-           </ul>
-
-         </div>
-
-         <div class="footer__account">
-           <div class="footer__title">Account</div>
-
-           <ul class="footer__list">
-
-             <li class="footer__item">
-               <a class="footer__link" href="#">Your Account</a>
-             </li>
-             <li class="footer__item">
-               <a class="footer__link" href="#">Checkout</a>
-             </li>
-             <li class="footer__item">
-               <a class="footer__link" href="#">Login</a>
-             </li>
-             <li class="footer__item">
-               <a class="footer__link" href="#">Register</a>
-             </li>
-
-           </ul>
-         </div>
-
-         <div class="footer__newsletter">
-           <div class="footer__title">Newsletter</div>
-           <p class="footer__text">
-             Subscribe by our newsletter and get
-             update protidin.
-           </p>
-
-           <form class="footer__form" action="#">
-             <input id="footer__input" class="footer__input" type="email" name="subscribe[email]"
-               placeholder="Email address" required>
-             <label class="footer__label">Email address</label>
-             <button class="footer__btn" type="submit">Subscribe</button>
-           </form>
-
-         </div>
-
-       </div>
-
-       <div class="footer-copyright">
-
-         <p class="footer-copyright__text">
-           ©2020 CopyRight Example. All rights reserved.
-         </p>
-
-         <ul class="footer-copyright__list">
-
-           <li class="footer-copyright__item">
-             <a class="footer-copyright__link" href="#">Home</a>
-           </li>
-           <li class="footer-copyright__item">
-             <a class="footer-copyright__link" href="#">About</a>
-           </li>
-           <li class="footer-copyright__item">
-             <a class="footer-copyright__link" href="#">Blog</a>
-           </li>
-           <li class="footer-copyright__item">
-             <a class="footer-copyright__link" href="#">Contact</a>
-           </li>
-
-         </ul>
-       </div>
-
-     </div>
-   </footer>
-
+    </div>
+  </footer>
 
   <!-- SPRITE -->
   <svg display="none">
@@ -342,7 +338,6 @@
     </symbol>
 
   </svg>
-
 
   <script src="js/main.min.js"></script>
 

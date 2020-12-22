@@ -6,12 +6,15 @@
     padding: 20px 0;
   }
 
-  &__item {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+  &__list {
+    .slick-track {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+  }
 
+  &__item {
     @extend %dmsans-700;
     color: $text;
 
@@ -44,9 +47,7 @@
 
   &__number {
     margin-bottom: 12px;
-
     font-size: 36px;
-    line-height: 0.9;
 
     @extend %text-hiding;
     -webkit-line-clamp: 1;
@@ -54,7 +55,6 @@
     @include r(767) {
       font-size: 25px;
     }
-
   }
 
   &__name {

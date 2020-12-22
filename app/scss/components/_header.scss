@@ -53,7 +53,7 @@
   left: 0;
   right: 0;
   padding: 20px 0;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid $border;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
 
   @include r(767) {
@@ -117,12 +117,11 @@ ul.menu__list {
     @include r(767) {
       left: 60%;
     }
-
   }
 
   &__list>li:hover .menu__submenu-list {
     display: block;
-    background-color: #fef7f0;
+    background-color: $bg-add;
     z-index: 100;
   }
 
@@ -142,7 +141,7 @@ ul.menu__list {
     font-size: 15px;
 
     color: $top-links;
-    outline-color: pink;
+    outline-color: $bg-add;
 
     transition: color 0.3s;
 

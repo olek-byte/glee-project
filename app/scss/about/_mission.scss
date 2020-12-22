@@ -6,37 +6,37 @@
     padding: 20px 0;
   }
 
-  &__img {
-    margin-right: 51px;
-    object-fit: cover;
-    max-width: 570px;
-    max-height: 676px;
+  // &__img {
+  //   margin-right: 51px;
+  //   object-fit: cover;
+  //   max-width: 570px;
+  //   height: 676px;
 
-    @include r(1199) {
-      margin-right: 0;
-    }
+  //   @include r(1199) {
+  //     margin-right: 0;
+  //   }
 
-    @include r(767) {
-      max-width: 400px;
-      max-height: 600px;
-    }
+  //   @include r(767) {
+  //     max-width: 400px;
+  //     height: 600px;
+  //   }
 
-    @include r(480) {
-      max-width: 250px;
-      max-height: 400px;
-    }
-  }
+  //   @include r(480) {
+  //     max-width: 250px;
+  //     height: 400px;
+  //   }
+  // }
 
   &__inner {
     display: flex;
-
-
     justify-content: flex-end;
     align-items: flex-end;
 
+    background-repeat: no-repeat;
+    background-position: left center;
+
     @include r(1199) {
-      justify-content: center;
-      flex-wrap: wrap;
+      background-size: 0;
     }
   }
 
@@ -45,16 +45,18 @@
 
     @include r(1199) {
       max-width: 100%;
-      // padding-left: 20px;
+      padding-left: 20px;
     }
   }
 
   &__experience {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 79px 0 34px;
 
     @include r(1199) {
-      margin-top: 20px;
+      margin: 0;
       justify-content: center;
     }
 
@@ -64,12 +66,10 @@
   }
 
   &__number {
-    align-self: center;
     margin-right: 25px;
 
     font-size: 140px;
     @extend %rubik-700;
-    line-height: 0.2;
 
     color: $accent;
 
@@ -86,6 +86,10 @@
     margin-top: 21px;
     @extend %text-hiding;
     -webkit-line-clamp: 3;
+
+    @include r(1199) {
+      margin-top: 0;
+    }
   }
 
   &__item {
@@ -108,7 +112,6 @@
     @include r(480) {
       margin-bottom: 15px;
     }
-
   }
 
   &__text {
@@ -149,8 +152,6 @@
     }
 
     @include r(767) {
-      //  display: block;
-      //  text-align: center;
       margin-bottom: 20px;
     }
 
@@ -241,8 +242,6 @@
     margin-bottom: 3px;
 
     font-size: 36px;
-    line-height: 1.1;
-
     color: $text;
 
     @extend %text-hiding;
