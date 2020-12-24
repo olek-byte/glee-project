@@ -1,17 +1,93 @@
 $(function(){
 
+  $('.product-tabs__link').on('click', function(e){
+    e.preventDefault();
+    $('.product-tabs__link').removeClass('product-tabs__link--active');
+    $(this).addClass('product-tabs__link--active');
+
+    $('.product-tabs__item').removeClass('product-tabs__item--active');
+     $($(this).attr('href')).addClass('product-tabs__item--active');
+  });
+
+
+  $('.details-filter__num').styler();
+
+  // related-products__inner
+
+    $('.related-products__inner').slick({
+       
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+
+        prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/left-rel.svg" alt="arrow left"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="images/icons/right-rel.svg" alt="arrow right"></button>',
+                responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false, 
+          }
+        },
+
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+          }
+        },
+                {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+          }
+        }
+      ]
+    });
+
+
+  $('.product-slide__small-list').slick({
+    asNavFor: '.product-slide__big-list',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false
+
+  });
+
+  $('.product-slide__big-list').slick({
+    asNavFor: '.product-slide__small-list',
+    draggable: false,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+
+
   $('.filter-price__input').ionRangeSlider({
-     type: "double",
+      type: "double",
       prefix: "$",
-      onStart: function (data) {
-      $('.filter-price__from').text(data.from);
-      $('.filter-price__to').text(data.to);
+    onStart: function(data) {
+      $('.filter-price__from').text(data.from.toFixed(2));
+      $('.filter-price__to').text(data.to.toFixed(2));
       },
      onChange: function (data) {
-      $('.filter-price__from').text(data.from);
-      $('.filter-price__to').text(data.to);
-    },
+      $('.filter-price__from').text(data.from.toFixed(2));
+      $('.filter-price__to').text(data.to.toFixed(2));
+    }
   });
+
 
  $(".star--small").rateYo({
     rating: 3.6,
