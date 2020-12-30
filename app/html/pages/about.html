@@ -1,11 +1,9 @@
 @@include('../parts/_doctype&head.html')
 
-<body id="body">
-
   <!-- HEADER -->
   @@include('../parts/_header.html')
 
-  <main class="main">
+  <main class="main-page">
 
     <!-- PAGE-TOP -->
     <section class="page-top">
@@ -19,9 +17,9 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" title="we are on this page">
+            <span class="breadcrumbs__link">
               About us
-            </a>
+            </span>
           </li>
 
         </ul>
@@ -33,8 +31,6 @@
       <div class="narrow-container">
 
         <div class="mission__inner" style="background-image: url('images/mission-bg.jpg')">
-
-          <!-- <img class="mission__img" src="images/mission-bg.jpg"> -->
 
           <div class="mission__content">
 
@@ -332,7 +328,9 @@
     </section>
 
     <!-- BLOG & PARTNERS -->
-    @@include('../parts/_blog&partners.html')
+    @@include('../parts/_blog.html')
+
+    @@include('../parts/_partners.html')
 
   </main>
 
@@ -430,7 +428,3 @@
   </svg>
 
   <script src="js/main.min.js"></script>
-
-</body>
-
-</html>

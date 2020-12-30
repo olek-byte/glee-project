@@ -38,19 +38,19 @@ body {
 
   color: #191919;
 
-  @include r(1200) {
+  @include r(1199) {
     font-size: 30px;
   }
 
-  @include r(993) {
+  @include r(991) {
     font-size: 28px;
   }
 
-  @include r(648) {
+  @include r(767) {
     font-size: 25px;
   }
 
-  @include r(448) {
+  @include r(480) {
     font-size: 20px;
   }
 }
@@ -67,7 +67,7 @@ body {
     color: #8b8b8b;
     transition: color 0.3s;
 
-    @include r(448) {
+    @include r(480) {
       display: block;
       margin-bottom: 20px;
     }
@@ -178,6 +178,11 @@ body {
 
   position: relative;
 
+  // width: 100px;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
+
   &::after {
     content: '';
     position: absolute;
@@ -193,6 +198,14 @@ body {
 // FILTER-PRICE
 .filter-price {
   padding-bottom: 90px;
+
+  &__title {
+    margin-bottom: 30px;
+    width: 112px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
   &__label {
     padding-top: 22px;
@@ -239,17 +252,6 @@ body {
 .jq-ry-container {
   padding: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 // menu-burger

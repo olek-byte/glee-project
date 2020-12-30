@@ -4,11 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glee.</title>
+  <title>Glee</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body id="body">
+
+
+
+
+
 
   <!-- HEADER -->
    <header class="header">
@@ -28,23 +33,23 @@
            <span id="span3"></span>
          </div>
 
-         <ul class="menu__list">
+         <ul class="menu__list" id="main-menu">
 
            <li class="menu__item">
              <a class="menu__link" href="#">Home <span>+</span></a>
 
-             <ul class="menu__submenu-list">
+             <ul class="submenu">
                <li>
-                 <a class="menu__submenu-link" href="login.html">Login</a>
+                 <a href="login.html">Login</a>
                </li>
                <li>
-                 <a class="menu__submenu-link" href="terms.html">Terms</a>
+                 <a href="terms.html">Terms</a>
                </li>
              </ul>
            </li>
 
            <li class="menu__item">
-             <a class="menu__link" href="#">About</a>
+             <a class="menu__link" href="about.html">About</a>
            </li>
            <li class="menu__item">
              <a class="menu__link" href="#service">Services</a>
@@ -53,14 +58,12 @@
            <li class="menu__item">
              <a class="menu__link" href="#">Pages <span>+</span></a>
 
-             <ul class="menu__submenu-list">
+             <ul class="submenu">
                <li>
-                 <a class="menu__submenu-link" href="#shop_1.html">Shop 1</a>
-               </li>
-               <li>
-                 <a class="menu__submenu-link" href="#shop_2.html">Shop 2</a>
+                 <a href="shop_1.html">Shop page</a>
                </li>
              </ul>
+
            </li>
 
            <li class="menu__item">
@@ -112,7 +115,7 @@
    </div>
  </header>
 
-  <main class="main">
+  <main class="main-page">
 
     <!-- PAGE-TOP -->
     <section class="page-top">
@@ -126,9 +129,9 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" title="we are on this page">
+            <span class="breadcrumbs__link">
               Terms & Conditions
-            </a>
+            </span>
           </li>
 
         </ul>
@@ -279,37 +282,34 @@
    </div>
  </section>
 
- <div class="partners">
-   <div class="narrow-container">
-     <div class="partners__slider">
+    <div class="partners">
+  <div class="narrow-container">
+    
+    <ul class="partners__list">
+      <li class="partners__item">
+        <img src="images/partners/1.png" alt="partners logo">
+      </li>
+      <li class="partners__item">
+        <img src="images/partners/2.png" alt="partners logo">
+      </li>
+      <li class="partners__item">
+        <img src="images/partners/3.png" alt="partners logo">
+      </li>
+      <li class="partners__item">
+        <img src="images/partners/4.png" alt="partners logo">
+      </li>
+      <li class="partners__item">
+        <img src="images/partners/5.png" alt="partners logo">
+      </li>
+    </ul>
 
-       <ul class="partners__list">
-
-         <li class="partners__item">
-           <img src="images/partners/1.png" alt="partners logo">
-         </li>
-         <li class="partners__item">
-           <img src="images/partners/2.png" alt="partners logo">
-         </li>
-         <li class="partners__item">
-           <img src="images/partners/3.png" alt="partners logo">
-         </li>
-         <li class="partners__item">
-           <img src="images/partners/4.png" alt="partners logo">
-         </li>
-         <li class="partners__item">
-           <img src="images/partners/5.png" alt="partners logo">
-         </li>
-
-       </ul>
-
-     </div>
-   </div>
+  </div>
+</div>
 
   </main>
 
   <!-- FOOTER -->
-    <footer class="footer" id="contact">
+     <footer class="footer" id="contact">
     <div class="narrow-container">
       <div class="footer__inner">
 
@@ -424,7 +424,11 @@
       </div>
 
     </div>
-  </footer>
+    </footer>
+
+  </body>
+
+</html>
 
   <!-- SPRITE -->
   <svg display="none">
@@ -492,7 +496,3 @@
   </svg>
 
   <script src="js/main.min.js"></script>
-
-</body>
-
-</html>

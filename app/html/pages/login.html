@@ -1,11 +1,9 @@
 @@include('../parts/_doctype&head.html')
 
-<body id="body">
-
   <!-- HEADER -->
   @@include('../parts/_header.html')
 
-  <main class="main login-page">
+  <main class="main">
 
     <!-- PAGE-TOP -->
     <section class="page-top">
@@ -19,9 +17,9 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" title="we are on this page">
+            <span class="breadcrumbs__link">
               Log in
-            </a>
+            </span>
           </li>
 
         </ul>
@@ -63,7 +61,29 @@
     </div>
 
     <!-- PARTNERS -->
-    @@include('../parts/_partners.html')
+    <div class="partners main__partners">
+      <div class="narrow-container">
+
+        <ul class="partners__list">
+          <li class="partners__item">
+            <img src="images/partners/1.png" alt="partners logo">
+          </li>
+          <li class="partners__item">
+            <img src="images/partners/2.png" alt="partners logo">
+          </li>
+          <li class="partners__item">
+            <img src="images/partners/3.png" alt="partners logo">
+          </li>
+          <li class="partners__item">
+            <img src="images/partners/4.png" alt="partners logo">
+          </li>
+          <li class="partners__item">
+            <img src="images/partners/5.png" alt="partners logo">
+          </li>
+        </ul>
+
+      </div>
+    </div>
 
   </main>
 
@@ -96,7 +116,3 @@
   </svg>
 
   <script src="js/main.min.js"></script>
-
-</body>
-
-</html>

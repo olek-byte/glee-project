@@ -4,11 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glee.</title>
+  <title>Glee</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="body">
+
+
+
+
+
+
   <!-- HEADER -->
    <header class="header">
    <div class="container">
@@ -27,23 +33,23 @@
            <span id="span3"></span>
          </div>
 
-         <ul class="menu__list">
+         <ul class="menu__list" id="main-menu">
 
            <li class="menu__item">
              <a class="menu__link" href="#">Home <span>+</span></a>
 
-             <ul class="menu__submenu-list">
+             <ul class="submenu">
                <li>
-                 <a class="menu__submenu-link" href="login.html">Login</a>
+                 <a href="login.html">Login</a>
                </li>
                <li>
-                 <a class="menu__submenu-link" href="terms.html">Terms</a>
+                 <a href="terms.html">Terms</a>
                </li>
              </ul>
            </li>
 
            <li class="menu__item">
-             <a class="menu__link" href="#">About</a>
+             <a class="menu__link" href="about.html">About</a>
            </li>
            <li class="menu__item">
              <a class="menu__link" href="#service">Services</a>
@@ -52,14 +58,12 @@
            <li class="menu__item">
              <a class="menu__link" href="#">Pages <span>+</span></a>
 
-             <ul class="menu__submenu-list">
+             <ul class="submenu">
                <li>
-                 <a class="menu__submenu-link" href="#shop_1.html">Shop 1</a>
-               </li>
-               <li>
-                 <a class="menu__submenu-link" href="#shop_2.html">Shop 2</a>
+                 <a href="shop_1.html">Shop page</a>
                </li>
              </ul>
+
            </li>
 
            <li class="menu__item">
@@ -111,7 +115,7 @@
    </div>
  </header>
 
-  <main class="main">
+  <main class="main-page">
 
     <!-- PAGE-TOP -->
     <section class="page-top">
@@ -125,17 +129,106 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" title="we are on this page">
+            <span class="breadcrumbs__link">
               Product list 2
-            </a>
+            </span>
           </li>
 
         </ul>
       </div>
     </section>
 
-    <!-- PARTNERS -->
-    <div class="partners login-page__partners">
+      <!-- BLOG & PARTNERS -->
+       <section class="blog" id="news">
+   <div class="narrow-container">
+
+     <div class="blog__top">
+       <h2 class="title blog__title">Our Insights & Articles</h2>
+       <a class="blog__top-link" href="#">
+         View All
+       </a>
+     </div>
+
+     <div class="blog__inner">
+
+       <article class="blog-card">
+
+         <a class="blog-card__link" href="#">
+           <img src="images/blog/1.jpg" alt="flat design" class="blog-card__img">
+         </a>
+         <a class="blog-card__link" href="#">
+           <span class="blog-card__category">
+             News
+           </span>
+         </a>
+
+         <a class="blog-card__link" href="#">
+           <h3 class="blog-card__title">
+             Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+           </h3>
+         </a>
+
+         <div class="blog-card__bottom">
+           <time class="blog-card__time">28 January, 2020</time>
+           <a class="blog-card__link blog-card__link--admin" href="#">By admin</a>
+
+         </div>
+       </article>
+
+
+       <article class="blog-card blog-card--middle">
+         <a class="blog-card__link" href="#">
+           <img class="blog-card__img" src="images/blog/2.jpg" alt="flat design" class="blog-card__img">
+         </a>
+         <a class="blog-card__link" href="#">
+           <span class="blog-card__category">
+             News
+           </span>
+         </a>
+
+
+         <a class="blog-card__link" href="#">
+           <h3 class="blog-card__title">
+             Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+           </h3>
+         </a>
+
+         <div class="blog-card__bottom">
+           <time class="blog-card__time">28 January, 2020</time>
+           <a class="blog-card__link blog-card__link--admin" href="#">By admin</a>
+
+         </div>
+       </article>
+
+
+       <article class="blog-card">
+         <a class="blog-card__link" href="#">
+           <img src="images/blog/3.jpg" alt="flat design" class="blog-card__img">
+         </a>
+         <a class="blog-card__link" href="#">
+           <span class="blog-card__category">
+             News
+           </span>
+         </a>
+         <a class="blog-card__link" href="#">
+           <h3 class="blog-card__title">
+             Rncididunt ut labore et dolore magna aliqua. Ut enim
+           </h3>
+         </a>
+
+         <div class="blog-card__bottom">
+           <time class="blog-card__time">28 January, 2020</time>
+           <a class="blog-card__link blog-card__link--admin" href="#">By admin</a>
+
+         </div>
+       </article>
+
+
+     </div>
+   </div>
+ </section>
+
+      <div class="partners">
   <div class="narrow-container">
     
     <ul class="partners__list">
@@ -162,7 +255,7 @@
   </main>
 
   <!-- FOOTER -->
-    <footer class="footer" id="contact">
+     <footer class="footer" id="contact">
     <div class="narrow-container">
       <div class="footer__inner">
 
@@ -277,7 +370,11 @@
       </div>
 
     </div>
-  </footer>
+    </footer>
+
+  </body>
+
+</html>
 
 
   <!-- SPRITE -->
@@ -346,7 +443,3 @@
   </svg>
 
   <script src="js/main.min.js"></script>
-
-</body>
-
-</html>

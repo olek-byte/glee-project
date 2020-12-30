@@ -1,11 +1,9 @@
 @@include('../parts/_doctype&head.html')
 
-<body id="body">
-
   <!-- HEADER -->
   @@include('../parts/_header.html')
 
-  <main class="main">
+  <main class="main-page">
 
     <!-- PAGE-TOP -->
     <section class="page-top">
@@ -19,9 +17,9 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" title="we are on this page">
+            <span class="breadcrumbs__link">
               Terms & Conditions
-            </a>
+            </span>
           </li>
 
         </ul>
@@ -83,7 +81,9 @@
     </section>
 
     <!-- BLOG & PARTNERS -->
-    @@include('../parts/_blog&partners.html')
+    @@include('../parts/_blog.html')
+
+    @@include('../parts/_partners.html')
 
   </main>
 
@@ -156,7 +156,3 @@
   </svg>
 
   <script src="js/main.min.js"></script>
-
-</body>
-
-</html>

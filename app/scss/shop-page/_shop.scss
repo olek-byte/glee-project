@@ -1,0 +1,88 @@
+.shop {
+  padding: 120px 0 0;
+
+  background-color: #fff;
+
+  @include r(991) {
+    padding: 60px 0;
+  }
+
+  @include r(767) {
+    padding: 30px 0;
+  }
+
+  @include r(480) {
+    padding: 20px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    overflow-x: hidden;
+
+  }
+
+  &__filters {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+  }
+
+  @include r(991) {
+    .filters-menu {
+      padding: 10px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 990;
+      width: 40%;
+      // height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: #fff;
+      transition: 0.5s;
+      transform: translateX(-100%);
+
+      @include r(767) {
+        width: 50%;
+      }
+
+      @include r(480) {
+        width: 80%;
+      }
+    }
+
+    .filters-menu--active {
+      transform: translateX(0%);
+      border: 1px solid #000;
+
+      .filters-menu__btn {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .filters-menu__btn {
+      width: 30px;
+      height: 30px;
+      background-image: url('../images/icons/small-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $accent;
+      position: absolute;
+      right: -39px;
+      top: 6px;
+    }
+
+    .shop-filters--active {
+      transform: translateX(100%);
+    }
+  }
+
+}

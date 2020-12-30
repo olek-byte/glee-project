@@ -1,10 +1,9 @@
 @@include('../parts/_doctype&head.html')
 
-<body>
   <!-- HEADER -->
   @@include('../parts/_header.html')
 
-  <main class="main">
+  <main class="main-page">
 
     <!-- PAGE-TOP -->
     <section class="page-top">
@@ -18,17 +17,19 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" title="we are on this page">
+            <span class="breadcrumbs__link">
               Product list 2
-            </a>
+            </span>
           </li>
 
         </ul>
       </div>
     </section>
 
-    <!-- PARTNERS -->
-    @@include('../parts/_partners.html')
+      <!-- BLOG & PARTNERS -->
+      @@include('../parts/_blog.html')
+
+      @@include('../parts/_partners.html')
 
   </main>
 
@@ -102,7 +103,3 @@
   </svg>
 
   <script src="js/main.min.js"></script>
-
-</body>
-
-</html>
