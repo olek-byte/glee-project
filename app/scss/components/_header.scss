@@ -94,45 +94,7 @@ ul.menu__list {
 
       transition: all 0.4s;
     }
-
-    // li {
-    //   position: relative;
-    // }
   }
-
-  // &__submenu-list {
-  //   display: none;
-  //   min-width: 70px;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 20px;
-  //   padding: 20px 0px 0px 0px;
-  //   z-index: 100;
-
-  //   @include r(1199) {
-  //     left: 55%;
-  //     top: 9%;
-  //   }
-
-  //   @include r(767) {
-  //     left: 60%;
-  //   }
-  // }
-
-  // &__list>li:hover .menu__submenu-list {
-  //   display: block;
-  //   background-color: $bg-add;
-  //   z-index: 100;
-  // }
-
-  // &__submenu-list li {
-  //   margin: 5px 0;
-  //   padding: 0 10px;
-
-  //   @include r(1199) {
-  //     margin: -10px 0;
-  //   }
-  // }
 
   &__link {
     display: block;
@@ -331,7 +293,7 @@ ul.menu__list {
 }
 
 
-
+// SUBMENU
 .menu__list>ul li {
   position: relative;
 }
@@ -393,6 +355,70 @@ ul.menu__list {
   top: 0;
 }
 
-// .menu__list li:hover>ul {
-//   display: block;
-// }
+
+// MENU-BURGER
+#menuToggle {
+  overflow: hidden;
+  position: absolute;
+  // width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+
+  @include r(1199) {
+    display: flex;
+  }
+}
+
+#menuToggle input {
+  display: flex;
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  /* hide input */
+  z-index: 1;
+  /* top of the menu */
+}
+
+#menuToggle span {
+  width: 35px;
+  height: 2px;
+  margin-bottom: 10px;
+  background: #7f8fa6;
+  border-radius: 4px;
+  -webkit-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+  -moz-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+  -ms-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+  -o-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+  transition: all .5s cubic-bezier(.08, .81, .87, .71);
+}
+
+#span1 {
+  transform-origin: 4px 0px;
+}
+
+#span3 {
+  transform-origin: bottom right;
+  margin-bottom: 0;
+}
+
+#menuToggle input:checked~#span1 {
+  background-color: #0c2461;
+  transform: rotate(45deg) translate(5px);
+}
+
+#menuToggle input:checked~#span2 {
+  background-color: #0c2461;
+  transform: rotate(495deg) translate(1px);
+}
+
+#menuToggle input:checked~#span3 {
+  background-color: #0c2461;
+  transform: rotate(45deg);
+  opacity: 0;
+}

@@ -1,7 +1,7 @@
 $(function(){
 
 
-$('.shop-content__filter-btn').on('click', function() {
+  $('.shop-content__filter-btn').on('click', function() {
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
     $(this).addClass('shop-content__filter-btn--active');
   });
@@ -15,8 +15,7 @@ $('.shop-content__filter-btn').on('click', function() {
     $('.product-card').removeClass('product-card--list');
   });
 
-
-
+  // SUBMENU
   $('#main-menu').find('> li').click(function(){
     $(this).find('ul')
     .stop(true, true).slideToggle(400); 
@@ -28,11 +27,7 @@ $('.shop-content__filter-btn').on('click', function() {
   e.preventDefault();
   $('.filters-menu').toggleClass('filters-menu--active');
   $('.shop-filters').toggleClass('shop-filters--active');
-  })
-
-
-
-
+  });
 
 
   $('.product-tabs__link').on('click', function(e){
@@ -47,10 +42,7 @@ $('.shop-content__filter-btn').on('click', function() {
 
   $('.details-filter__num').styler();
 
-  // related-products__inner
-
-    $('.related-products__inner').slick({
-       
+  $('.related-products__inner').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
@@ -60,7 +52,8 @@ $('.shop-content__filter-btn').on('click', function() {
 
         prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/left-rel.svg" alt="arrow left"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="images/icons/right-rel.svg" alt="arrow right"></button>',
-                responsive: [
+      
+        responsive: [
         {
           breakpoint: 991,
           settings: {
@@ -69,7 +62,6 @@ $('.shop-content__filter-btn').on('click', function() {
             arrows: false, 
           }
         },
-
         {
           breakpoint: 767,
           settings: {
@@ -78,16 +70,16 @@ $('.shop-content__filter-btn').on('click', function() {
             arrows: false,
           }
         },
-                {
+        {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
+            arrows: false
           }
         }
       ]
-    });
+  });
 
 
   $('.product-slide__small').slick({
@@ -97,7 +89,6 @@ $('.shop-content__filter-btn').on('click', function() {
     slidesToScroll: 1,
     vertical: true,
     draggable: false
-
   });
 
   $('.product-slide__big').slick({
@@ -124,7 +115,7 @@ $('.shop-content__filter-btn').on('click', function() {
   });
 
 
- $(".star--small").rateYo({
+  $(".star--small").rateYo({
     rating: 3.6,
     starWidth: "12px",
     spacing: "6px",
@@ -132,14 +123,13 @@ $('.shop-content__filter-btn').on('click', function() {
     ratedFill: "#ffcc00"
   });
 
-   $(".star--big").rateYo({
+  $(".star--big").rateYo({
     rating: 3.6,
     starWidth: "18px",
     spacing: "12px",
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00"
   });
-
 
   // Nav button click
   $('.menu__nav-btn').on('click', function(){
@@ -153,13 +143,14 @@ $('.shop-content__filter-btn').on('click', function() {
   let scrollPos = $(window).scrollTop();
 
   document.body.addEventListener('scroll', function() {
-    scrollPos = $(this).scrollTop();
+  scrollPos = $(this).scrollTop();
 
     if( scrollPos > productsH ) {
       header.addClass('fixed');
       } else {
         header.removeClass('fixed');
-      }
+    }
+
   });
 
   // Smooth scroll
@@ -169,7 +160,6 @@ $('.shop-content__filter-btn').on('click', function() {
 		top = $(id).offset().top;
 		$('body,html').animate({scrollTop: top - 70 }, 1500);
 	});
-
 
 
   // Slider
@@ -183,7 +173,6 @@ $('.shop-content__filter-btn').on('click', function() {
 
 
   $('.partners__list').slick({
-       
         slidesToShow: 5,
         slidesToScroll: 1,
         dots: false,
@@ -193,7 +182,7 @@ $('.shop-content__filter-btn').on('click', function() {
 
         // prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/left.svg" alt="arrow left"></button>',
         // nextArrow: '<button type="button" class="slick-next"><img src="images/icons/right.svg" alt="arrow right"></button>',
-        responsive: [
+      responsive: [
         {
           breakpoint: 991,
           settings: {
@@ -211,7 +200,7 @@ $('.shop-content__filter-btn').on('click', function() {
             arrows: false,
           }
         },
-                {
+        {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
@@ -224,7 +213,6 @@ $('.shop-content__filter-btn').on('click', function() {
 
 
   $('.mission-info__list').slick({
-   
         slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
@@ -232,7 +220,7 @@ $('.shop-content__filter-btn').on('click', function() {
         autoplay: true,
         autoplaySpeed: 2000,
         
-        responsive: [
+      responsive: [
         {
           breakpoint: 991,
           settings: {
@@ -250,7 +238,7 @@ $('.shop-content__filter-btn').on('click', function() {
             arrows: false,
           }
         },
-                {
+        {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,

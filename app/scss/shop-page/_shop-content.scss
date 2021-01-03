@@ -84,6 +84,7 @@
 
       @include r(767) {
         justify-content: space-around;
+        flex-direction: column;
       }
 
       .product-card__img-box {
@@ -99,14 +100,10 @@
           padding: 32px 16px;
         }
 
-        @include r(747) {
+        @include r(767) {
           padding: 5px;
           width: 250px;
           height: 350px;
-        }
-
-        @include r(480) {
-          width: 100%;
         }
       }
 
@@ -120,7 +117,7 @@
           min-width: 250px;
         }
 
-        @include r(747) {
+        @include r(767) {
           min-width: 200px;
           min-height: 220px;
           object-fit: contain;
@@ -130,18 +127,14 @@
       .product-card__box {
         align-self: center;
         justify-content: center;
-
-        @include r(480) {
-          // align-self: start;
-          // justify-content: start;
-        }
       }
 
       .product-card__content {
         text-align: left;
 
-        @include r(480) {
-          display: none;
+        @include r(767) {
+         margin-top: 15px;
+         text-align: center;
         }
       }
 
@@ -151,12 +144,12 @@
         color: $border;
         margin-bottom: 25px;
 
-        @include r(747) {
+        @include r(767) {
           font-size: 25px;
           margin-bottom: 15px;
         }
 
-        @include r(747) {
+        @include r(767) {
           font-size: 25px;
           margin-bottom: 15px;
         }
@@ -166,7 +159,7 @@
         display: block;
         margin-bottom: 37px;
 
-        @include r(747) {
+        @include r(746) {
           margin-bottom: 15px;
         }
       }
@@ -177,7 +170,7 @@
         color: $border;
         margin-bottom: 36px;
 
-        @include r(747) {
+        @include r(767) {
           font-size: 20px;
           margin-bottom: 15px;
         }
@@ -190,7 +183,7 @@
         margin-bottom: 140px;
         max-width: 404px;
 
-        @include r(747) {
+        @include r(767) {
           display: none;
         }
       }
@@ -200,15 +193,15 @@
         bottom: 71px;
         left: 49%;
 
-        @include r(747) {
-          bottom: 67px;
-          left: 20%;
-        }
+         @include r(1199){
+          bottom: 0;
+         }
 
-        @include r(480) {
-          left: 37%;
+        @include r(767) {
+          bottom: 35%;
+          left: 50%;
+          transform: translateX(-50%);
         }
-
       }
 
       a {
@@ -244,7 +237,6 @@
       max-width: 238px;
       // height: 206px;
       // width: 238px;
-
 
       @include r(1199) {
         max-height: 200px;
