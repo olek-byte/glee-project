@@ -3,10 +3,15 @@
 
   &__title {
     margin-bottom: 30px;
-    width: 121px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    padding-right: 133px;
+
+    span {
+      left: 33%;
+
+      @include r(480) {
+        left: 45%;
+      }
+    }
   }
 
   &__list {
@@ -29,13 +34,15 @@
     align-items: center;
     justify-content: space-between;
 
-
     padding: 16px 10px 13px 13px;
 
     color: $text;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
 
     &:focus {
       background-color: #aec3bd;
@@ -49,22 +56,10 @@
       background-color: $footer-links;
     }
 
-    span:nth-child(1) {
-      width: 100px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+    span {
+      padding-right: 22px;
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
     }
-
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   right: 10px;
-
-    //   width: 6px;
-    //   height: 10px;
-    //   background-image: url('../images/icons/angle-right.svg');
-    // }
   }
-
 }

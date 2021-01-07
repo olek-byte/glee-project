@@ -1,10 +1,14 @@
 .recent-products {
   &__title {
     margin-bottom: 37px;
-    width: 231px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+
+    span {
+      left: 85%;
+
+      @include r(480) {
+        display: none;
+      }
+    }
   }
 
   &__inner {

@@ -31,9 +31,15 @@
 @import 'shop-page/shop';
 @import 'shop-page/shop-content';
 @import 'shop-page/filter-category';
+@import 'shop-page/filter-price';
 @import 'shop-page/filter-brand';
 @import 'shop-page/recent-products';
 @import 'shop-page/pagination';
 @import 'shop-page/main-products';
 
-@import 'prod_details/details-page';
+
+@import 'prod_details/details-slider';
+@import 'prod_details/product-slide';
+@import 'prod_details/details-filter';
+@import 'prod_details/product-tabs';
+@import 'prod_details/related-products';

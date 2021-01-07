@@ -21,17 +21,23 @@
 
     position: relative;
     overflow-x: hidden;
-
   }
 
   &__filters {
     display: inline-flex;
     flex-direction: column;
     margin-right: 30px;
-    max-width: 270px;
-    width: 100%;
+    width: 270px;
     position: relative;
     padding: 10px;
+
+    @include r(480) {
+      width: 200px;
+    }
+  }
+
+  .filters-menu__btn {
+    display: none;
   }
 
   @include r(991) {
@@ -51,33 +57,52 @@
       transform: translateX(-100%);
 
       @include r(767) {
-        width: 50%;
+        width: 60%;
       }
 
       @include r(480) {
-        width: 80%;
+        width: 82%;
+      }
+
+      &__btn {
+        display: none;
+
+        @include r(991) {
+          display: block;
+        }
       }
     }
+
 
     .filters-menu--active {
       transform: translateX(0%);
       border: 1px solid #000;
 
-      .filters-menu__btn {
+      .filters-menu__btn-icon {
         transform: rotate(-180deg);
       }
     }
 
-    .filters-menu__btn {
-      width: 30px;
-      height: 30px;
-      background-image: url('../images/icons/small-arrow.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: $accent;
+    .filters-menu__btn-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       position: absolute;
-      right: -39px;
-      top: 6px;
+      right: -48px;
+      top: 5px;
+      fill: $bg;
+
+      transition: transform 0.6s, fill 0.5s;
+
+      &:hover {
+        fill: $top-links;
+      }
+
+      @include r(480) {
+        right: -60px;
+        background-color: $accent;
+        fill: $text;
+      }
     }
 
     .shop-filters--active {

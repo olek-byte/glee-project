@@ -4,10 +4,14 @@
 
   &__title {
     margin-bottom: 30px;
-    width: 156px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+
+    span {
+      left: 50%;
+
+      @include r(480) {
+        left: 65%;
+      }
+    }
   }
 
   &__list {
@@ -26,11 +30,11 @@
   &__link {
     position: relative;
     width: 100%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
 
     // padding: 16px 210px 13px 14px;
-    padding: 16px 0 13px 13px;
+    padding: 16px 22px 13px 13px;
 
     color: $text;
     border-radius: 5px;
@@ -50,10 +54,8 @@
     }
 
     span {
-      width: 100px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
     }
 
     &::after {
