@@ -1,17 +1,8 @@
 .filter-category {
-  padding-top: 0;
-  padding-bottom: 75px;
+  padding: 0 0 75px;
 
   &__title {
     margin-bottom: 30px;
-
-    span {
-      left: 50%;
-
-      @include r(480) {
-        left: 65%;
-      }
-    }
   }
 
   &__list {
@@ -23,30 +14,27 @@
     }
   }
 
-  &__item {
-    max-width: 270px;
-  }
-
   &__link {
     position: relative;
     width: 100%;
+
     display: flex;
     align-items: center;
-
-    // padding: 16px 210px 13px 14px;
     padding: 16px 22px 13px 13px;
 
     color: $text;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 
     &:focus {
       background-color: #aec3bd;
+      color: #fff;
     }
 
     &:hover {
       background-color: $accent;
+      color: #fff;
     }
 
     &:active {

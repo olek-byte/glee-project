@@ -27,12 +27,7 @@
 }
 
 .main {
-  &__partners {
-    padding-top: 78px;
-
-    @include r(767) {
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
+  .partners {
+    padding: 70px 0 85px;
   }
 }

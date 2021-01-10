@@ -14,13 +14,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     margin-bottom: 60px;
 
     .slick-prev,
     .slick-next {
       padding: 20px 14px;
       border-radius: 5px;
-      border: 2px solid #a3bbc8;
+      border: 2px solid $accent;
       outline-color: #edf1f4;
       transition: background-color 0.4s;
 
@@ -30,7 +31,7 @@
     }
 
     .slick-prev {
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
 
@@ -51,6 +52,7 @@
     background-color: #fff;
     box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
     border-radius: 10px;
+    transition: all 0.4s;
 
     &:hover {
       .product-card__btns {
@@ -137,6 +139,10 @@
 
     &__content {
       text-align: center;
+
+      h2 {
+        @extend %visually-hidden;
+      }
     }
 
     &__name {

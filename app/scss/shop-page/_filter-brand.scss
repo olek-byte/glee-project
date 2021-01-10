@@ -5,12 +5,8 @@
     margin-bottom: 30px;
     padding-right: 133px;
 
-    span {
-      left: 33%;
-
-      @include r(480) {
-        left: 45%;
-      }
+    &::after {
+      left: 75px;
     }
   }
 
@@ -23,13 +19,10 @@
     }
   }
 
-  &__item {
-    max-width: 270px;
-  }
-
   &__link {
     position: relative;
     width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,17 +32,19 @@
     color: $text;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-
     @extend %text-hiding;
     -webkit-line-clamp: 1;
 
+    transition: all 0.3s;
+
     &:focus {
       background-color: #aec3bd;
+      color: #fff;
     }
 
     &:hover {
       background-color: $accent;
+      color: #fff;
     }
 
     &:active {
@@ -57,9 +52,17 @@
     }
 
     span {
-      padding-right: 22px;
       @extend %text-hiding;
       -webkit-line-clamp: 1;
+    }
+
+    span:first-child {
+      max-width: 150px;
+
+    }
+
+    span:nth-child(2) {
+      max-width: 40px;
     }
   }
 }

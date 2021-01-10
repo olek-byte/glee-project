@@ -1,25 +1,27 @@
 .shop-content {
   &__filter {
-    border: 1px solid $accent;
-    padding: 25px;
-    margin-bottom: 40px;
+    position: relative;
+
     display: flex;
     align-items: center;
 
-    position: relative;
+    padding: 25px;
+    margin-bottom: 40px;
+
+    border: 1px solid $accent;
 
     @include r(480) {
-     margin: 0 10px 30px 10px;
+      margin: 0 10px 30px 10px;
     }
   }
 
   &__filter-btns {
-    display: flex;
-    align-items: center;
-
     position: absolute;
     right: 25px;
     bottom: 16px;
+
+    display: flex;
+    align-items: center;
 
     span {
       line-height: 0;
@@ -28,15 +30,16 @@
 
   &__filter-btn {
     padding: 0;
-    background-color: transparent;
     margin-left: 15px;
+
     line-height: 0;
+    background-color: transparent;
     cursor: pointer;
-    fill: grey;
+    fill: $footer-links;
     transition: fill 0.3s;
 
     &:hover {
-      fill: #fe3e57;
+      fill: $bg;
     }
 
     &.shop-content__filter-btn--active {
@@ -53,4 +56,3 @@
     }
   }
 }
-

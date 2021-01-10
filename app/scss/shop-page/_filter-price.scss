@@ -5,13 +5,48 @@
     margin-bottom: 30px;
     padding-right: 166px;
 
-    span {
-      left: 30%;
-
-      @include r(480) {
-        left: 35%;
-      }
+    &::after {
+      left: 65px;
     }
+  }
+
+  .irs--flat .irs-line {
+    top: 6px;
+    height: 3px;
+    background-color: #c2d2db;
+    border-radius: 1px;
+  }
+
+  .irs--flat .irs-handle {
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    background-color: $accent;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    display: none;
+  }
+
+  .irs--flat .irs-bar {
+    top: 6px;
+    height: 4px;
+    background-color: $accent;
+  }
+
+  .irs-from,
+  .irs-to,
+  .irs-single {
+    display: none;
+  }
+
+  .irs--flat .irs-min,
+  .irs--flat .irs-max {
+    display: none;
+  }
+
+  .jq-ry-container {
+    padding: 0;
   }
 
   &__label {
@@ -19,43 +54,4 @@
     display: flex;
     justify-content: space-between;
   }
-}
-
-.irs--flat .irs-line {
-  top: 6px;
-  height: 3px;
-  background-color: #c2d2db;
-  border-radius: 1px;
-}
-
-.irs--flat .irs-handle {
-  top: 0px;
-  width: 15px;
-  height: 15px;
-  background-color: $accent;
-}
-
-.irs--flat .irs-handle>i:first-child {
-  display: none;
-}
-
-.irs--flat .irs-bar {
-  top: 6px;
-  height: 4px;
-  background-color: $accent;
-}
-
-.irs-from,
-.irs-to,
-.irs-single {
-  display: none;
-}
-
-.irs--flat .irs-min,
-.irs--flat .irs-max {
-  display: none;
-}
-
-.jq-ry-container {
-  padding: 0;
 }

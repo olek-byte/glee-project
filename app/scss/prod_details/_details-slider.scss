@@ -21,25 +21,24 @@
   &__inner {
     display: flex;
 
-    @include r(767) {
+    @include r(991) {
       flex-wrap: wrap;
     }
   }
 
   &__content {
-    max-width: 550px;
-    margin-left: 70px;
-    // max-height: 530px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    max-width: 550px;
+    margin-left: 70px;
 
     @include r(1199) {
       margin-left: 20px;
     }
 
-    @include r(767) {
+    @include r(991) {
       max-width: 100%;
       align-items: center;
       margin-left: 0;
@@ -72,10 +71,9 @@
   }
 
   &__price {
+    margin-bottom: 36px;
     font-size: 30px;
     color: $border;
-    margin-bottom: 36px;
-    // display: inline-block;
 
     @extend %text-hiding;
     -webkit-line-clamp: 1;
@@ -90,9 +88,10 @@
   }
 
   &__text {
+    margin-bottom: 34px;
+
     font-size: 16px;
     line-height: 1.8;
-    margin-bottom: 34px;
 
     p {
       @extend %text-hiding;

@@ -20,6 +20,70 @@
     left: 0;
     right: 0;
     z-index: 1000;
+
+    // MENU-BURGER
+    .menuToggle {
+      overflow: hidden;
+      position: absolute;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      z-index: 1000;
+
+      @include r(1199) {
+        display: flex;
+      }
+    }
+
+    .menuToggle input {
+      display: flex;
+      width: 35px;
+      height: 40px;
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .menuToggle span {
+      width: 35px;
+      height: 2px;
+      margin-bottom: 10px;
+      background: #7f8fa6;
+      border-radius: 4px;
+      -webkit-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+      -moz-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+      -ms-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+      -o-transition: all .5s cubic-bezier(.08, .81, .87, .71);
+      transition: all .5s cubic-bezier(.08, .81, .87, .71);
+    }
+
+    .span1 {
+      transform-origin: 4px 0px;
+    }
+
+    .span3 {
+      transform-origin: bottom right;
+      margin-bottom: 0;
+    }
+
+    .menuToggle input:checked~.span1 {
+      background-color: #0c2461;
+      transform: rotate(45deg) translate(5px);
+    }
+
+    .menuToggle input:checked~.span2 {
+      background-color: #0c2461;
+      transform: rotate(495deg) translate(1px);
+    }
+
+    .menuToggle input:checked~.span3 {
+      background-color: #0c2461;
+      transform: rotate(45deg);
+      opacity: 0;
+    }
   }
 
   &__logo {
@@ -55,7 +119,7 @@
   padding: 20px 0;
   border-bottom: 1px solid $border;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
-  z-index: 100;
+  z-index: 1000;
 
   @include r(767) {
     padding: 5px 0;
@@ -64,7 +128,7 @@
 
 ul.menu__list {
   @include r(1199) {
-    padding: 20px 0 15px;
+    padding: 62px 0 15px;
     margin: -20px -15px;
   }
 }
@@ -95,6 +159,69 @@ ul.menu__list {
 
       transition: all 0.4s;
     }
+
+    // SUBMENU
+
+    .submenu {
+      position: absolute;
+      display: none;
+
+      @include r(1199) {
+        position: relative;
+      }
+    }
+
+    .submenu__item {
+      position: relative;
+    }
+
+    a .submenu__link {
+      position: absolute;
+      top: 15px;
+      left: 12px;
+      font-size: 18px;
+
+    }
+
+    // .menu__item>ul li 
+    .submenu .submenu__item {
+      border: 1px solid #c7c8ca;
+      margin-bottom: 0;
+      min-width: 80px;
+      background-color: #e4e4e5;
+
+      margin: 5px 0;
+      padding: 0 10px;
+    }
+
+    .submenu__link {
+      display: block;
+      padding: 13px;
+      color: $top-links;
+      outline-color: $bg-add;
+      @extend %rubik-500;
+      font-size: 15px;
+
+      transition: color 0.3s;
+
+      &:focus {
+        color: $bg;
+      }
+
+      &:hover {
+        color: $accent;
+      }
+
+      &:active {
+        color: $footer-links;
+      }
+    }
+
+    // & .menu__item>ul li ul {
+    //   position: absolute;
+    //   right: -150px;
+    //   top: 0;
+    // }
   }
 
   &__link {
@@ -125,7 +252,6 @@ ul.menu__list {
       color: $footer-links;
     }
   }
-
 
   &__item {
 
@@ -295,128 +421,57 @@ ul.menu__list {
 
 
 // SUBMENU
-.menu__list>ul li {
-  position: relative;
-}
+// .menu__list>.submenu__item {
+//   position: relative;
+// }
 
-.menu__list>ul li>a {
-  position: absolute;
-  top: 15px;
-  left: 12px;
-  font-size: 18px;
-}
+// .menu__list>.submenu__link {
+//   position: absolute;
+//   top: 15px;
+//   left: 12px;
+//   font-size: 18px;
+// }
 
+// .menu__list .submenu {
+//   position: absolute;
+//   display: none;
 
-.menu__list li ul {
-  position: absolute;
-  // top: 30px;
-  // min-width: 150px;
-  display: none;
-  @include r(1199){
-    position: relative;
-  }
-}
+//   @include r(1199) {
+//     position: relative;
+//   }
+// }
 
-.menu__list li>ul li {
-  border: 1px solid #c7c8ca;
-  margin-bottom: 0;
-  min-width: 80px;
-  background-color: #e4e4e5;
+// .menu__list li>ul li {
+//   border: 1px solid #c7c8ca;
+//   margin-bottom: 0;
+//   min-width: 80px;
+//   background-color: #e4e4e5;
 
-  margin: 5px 0;
-  padding: 0 10px;
-}
+//   margin: 5px 0;
+//   padding: 0 10px;
+// }
 
-.menu__list li>ul li a {
-  // padding: 20px;
-  // margin: -20px;
-  // text-transform: none;
-  // padding: 15px;
-  color: $top-links;
-  outline-color: $bg-add;
+// .menu__list li>.submenu__link {
+//   color: $top-links;
+//   outline-color: $bg-add;
 
-  transition: color 0.3s;
+//   transition: color 0.3s;
 
-  &:focus {
-    color: $bg;
-  }
+//   &:focus {
+//     color: $bg;
+//   }
 
-  &:hover {
-    color: $accent;
-  }
+//   &:hover {
+//     color: $accent;
+//   }
 
-  &:active {
-    color: $footer-links;
-  }
-}
+//   &:active {
+//     color: $footer-links;
+//   }
+// }
 
-.menu__list li>ul li ul {
-  position: absolute;
-  right: -150px;
-  top: 0;
-}
-
-
-// MENU-BURGER
-.menuToggle {
-  overflow: hidden;
-  position: absolute;
-  height: 100%;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: 1000;
-
-  @include r(1199) {
-    display: flex;
-  }
-}
-
-.menuToggle input {
-  display: flex;
-  width: 35px;
-  height: 40px;
-  position: absolute;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 1;
-}
-
-.menuToggle span {
-  width: 35px;
-  height: 2px;
-  margin-bottom: 10px;
-  background: #7f8fa6;
-  border-radius: 4px;
-  -webkit-transition: all .5s cubic-bezier(.08, .81, .87, .71);
-  -moz-transition: all .5s cubic-bezier(.08, .81, .87, .71);
-  -ms-transition: all .5s cubic-bezier(.08, .81, .87, .71);
-  -o-transition: all .5s cubic-bezier(.08, .81, .87, .71);
-  transition: all .5s cubic-bezier(.08, .81, .87, .71);
-}
-
-.span1 {
-  transform-origin: 4px 0px;
-}
-
-.span3 {
-  transform-origin: bottom right;
-  margin-bottom: 0;
-}
-
-.menuToggle input:checked~.span1 {
-  background-color: #0c2461;
-  transform: rotate(45deg) translate(5px);
-}
-
-.menuToggle input:checked~.span2 {
-  background-color: #0c2461;
-  transform: rotate(495deg) translate(1px);
-}
-
-.menuToggle input:checked~.span3 {
-  background-color: #0c2461;
-  transform: rotate(45deg);
-  opacity: 0;
-}
+// .menu__list li>ul li ul {
+//   position: absolute;
+//   right: -150px;
+//   top: 0;
+// }

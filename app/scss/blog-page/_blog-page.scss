@@ -1,0 +1,267 @@
+.blog-page {
+  position: relative;
+
+  padding: 120px 0;
+  background-color: #fff;
+  overflow-x: hidden;
+
+  @include r(991) {
+    padding: 60px 0;
+  }
+
+  @include r(991) {
+    padding-bottom: 30px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    margin-right: 70px;
+
+    @include r(991) {
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    padding-bottom: 50px;
+
+    @include r(767) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    max-height: 500px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .blog-box {
+    position: absolute;
+    display: inline-flex;
+    padding: 30px 30px 22px;
+    margin-top: -67px;
+
+    font-size: 12px;
+    text-transform: uppercase;
+
+    background-color: $accent;
+    color: #fff;
+
+    @include r(480) {
+      margin-top: -35px;
+      padding: 10px;
+    }
+
+    span {
+      margin-left: 7px;
+      max-width: 125px;
+
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
+    }
+
+    &__time {
+      margin-right: 24px;
+      display: flex;
+    }
+
+    &__link {
+      display: flex;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $bg;
+
+        svg {
+          fill: $bg;
+        }
+      }
+    }
+
+    &__icon {
+      width: 10px;
+      height: 10px;
+      fill: #fff;
+    }
+  }
+
+  &__item-box {
+    padding-top: 40px;
+    text-align: left;
+
+    @include r(991) {
+      padding-top: 20px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 34px;
+    font-size: 36px;
+    color: $border;
+
+    @include r(991) {
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
+
+    @include r(767) {
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+
+    @include r(480) {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+  }
+
+  &__item-text {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: $text;
+
+    @include r(767) {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__link-btn {
+    position: relative;
+    display: inline-block;
+    padding: 23px 86px 26px 20px;
+
+    @extend %rubik-700;
+    font-size: 15px;
+
+    background-color: transparent;
+    color: $accent;
+    border: 1px solid #d8d3cc;
+
+    transition: all 0.3s;
+
+    &:focus,
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+
+      &::after {
+        background-image: url('../images/icons/blue-arrow.svg');
+      }
+    }
+
+    &:active {
+      color: $footer-links;
+    }
+
+    @include r(480) {
+      padding: 15px 49px 15px 20px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 9px;
+      right: 9%;
+
+      background-image: url('../images/icons/blue-arrow.svg');
+      top: 50%;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  .pagination {
+    justify-content: start;
+    margin: 20px 0 0;
+  }
+
+  &__aside {
+    min-width: 270px;
+
+    @include r(991) {
+      min-width: 0;
+    }
+
+    .menu-right {
+      @include r(991) {
+        position: absolute;
+        right: 0;
+        top: 50px;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        padding: 10px;
+        min-width: 31%;
+
+        background-color: #fff;
+        z-index: 990;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+      }
+
+      &__btn {
+        display: none;
+
+        @include r(991) {
+          display: block;
+        }
+      }
+
+      &--active {
+        transform: translateX(0%);
+
+        .menu-right__icon {
+          transform: rotate(-180deg);
+
+          @include r(991) {
+            left: 80%;
+          }
+        }
+      }
+
+      &__icon {
+        position: absolute;
+        left: -20%;
+        top: -4%;
+
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        fill: $bg;
+
+        transition: transform 0.6s, fill 0.5s;
+
+        &:hover {
+          fill: $top-links;
+        }
+
+        &:active {
+          fill: rgb(230, 7, 7);
+        }
+
+        @include r(480) {
+          right: -60px;
+          background-color: $accent;
+          fill: $text;
+        }
+      }
+    }
+  }
+
+  &__filters {
+    @include r(991) {
+      padding: 10px;
+      max-width: 270px;
+      border: 1px solid $accent;
+    }
+  }
+}

@@ -1,32 +1,112 @@
 .details-filter {
   &__btns {
-    @include r(480) {
-      display: flex;
-      flex-direction: column;
-    }
+    display: flex;
+    align-items: center;
 
+    @include r(991) {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
-  &__num {
-    margin-right: 15px;
+  // FILTER NUMBER
+  .jq-number__field {
+    width: 150px;
+    border: 1px solid $accent;
+    transform: translateY(0);
+    padding: 0;
+  }
 
-    @include r(480) {
-      margin-right: 0;
+  .jq-number__field input {
+    width: 100%;
+    height: 54px;
+    padding: 0;
+
+    border: none;
+    color: $text;
+    text-align: center;
+  }
+
+  .jq-number {
+    position: relative;
+    padding: 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 47px;
+      top: 0;
+      bottom: 0;
+      border-left: 1px solid $accent;
+      height: 100%;
+      z-index: 10;
     }
+
+    &::after {
+      right: 48px;
+      border-right: 1px solid $accent;
+    }
+  }
+
+  .jq-number__spin {
+    position: absolute;
+    width: 48px;
+    height: 99%;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .jq-number__spin.minus {
+    left: 0;
+  }
+
+  .jq-number__spin.plus {
+    right: 0;
+  }
+
+  .jq-number__spin::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 18px;
+    background-color: $text;
+    width: 12px;
+    height: 1px;
+  }
+
+  .jq-number__spin.plus::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    background-color: $text;
+    width: 1px;
+    height: 12px;
   }
 
   &__btn {
     display: inline-block;
+    margin-left: 15px;
     padding: 20px 50px;
-    border-radius: 5px;
-    background-color: #a3bbc8;
-    color: #fff;
+
     text-transform: uppercase;
     font-size: 15px;
+
+    border-radius: 5px;
+    background-color: $accent;
+    color: #fff;
+
     transition: background-color 0.3s;
 
     @include r(991) {
-      margin-top: 15px;
+      margin: 15px 0 0 0;
       padding: 20px 28px;
     }
 
@@ -41,7 +121,6 @@
     &:active {
       background-color: $footer-links;
     }
-
   }
 
   &__list {
@@ -51,7 +130,6 @@
       @extend %text-hiding;
       -webkit-line-clamp: 1;
     }
-
 
     @include r(991) {
       margin-top: 18px;
@@ -75,11 +153,11 @@
       transition: color 0.3s;
 
       &:focus {
-        color: $bg;
+        color: $border;
       }
 
       &:hover {
-        color: $border;
+        color: $bg;
       }
 
       &:active {
@@ -87,83 +165,4 @@
       }
     }
   }
-}
-
-.jq-number__field {
-  width: 150px;
-  border: 1px solid #a3bbc8;
-  transform: translateY(1px);
-}
-
-.jq-number__field input {
-  width: 100%;
-  height: 53px;
-  border: none;
-  outline: none;
-  color: $text;
-  text-align: center;
-}
-
-.jq-number {
-  position: relative;
-  padding: 0;
-
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    left: 48px;
-    top: 3px;
-    border-left: 1px solid #a3bbc8;
-    height: 95%;
-    z-index: 100;
-  }
-
-  &::after {
-    right: 48px;
-    border-right: 1px solid #a3bbc8;
-  }
-}
-
-.jq-number__spin {
-  position: absolute;
-  width: 48px;
-  height: 53px;
-  cursor: pointer;
-  top: 52%;
-  transform: translateY(-50%);
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: $footer-links;
-  }
-}
-
-.jq-number__spin.minus {
-  left: 0;
-}
-
-.jq-number__spin.plus {
-  right: 0;
-}
-
-.jq-number__spin::after {
-  content: '';
-  position: absolute;
-  top: 25px;
-  left: 16px;
-  background-color: $text;
-  width: 13px;
-  height: 1px;
-}
-
-.jq-number__spin.plus::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 22px;
-  background-color: $text;
-  width: 1px;
-  height: 12px;
 }

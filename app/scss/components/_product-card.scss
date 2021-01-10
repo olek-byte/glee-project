@@ -110,6 +110,10 @@
 
     &__content {
       text-align: center;
+
+      h2 {
+        @extend %visually-hidden;
+      }
     }
 
     &__name {
