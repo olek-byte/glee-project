@@ -180,7 +180,6 @@ ul.menu__list {
       top: 15px;
       left: 12px;
       font-size: 18px;
-
     }
 
     // .menu__item>ul li 
@@ -235,7 +234,6 @@ ul.menu__list {
     transition: color 0.3s;
 
     @include r(1199) {
-
       padding: 15px 0;
       font-size: 17px;
     }

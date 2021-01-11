@@ -1,6 +1,6 @@
 .blog-card {
   position: relative;
-  padding-bottom: 78px;
+  padding-bottom: 64px;
 
   background-color: #fff;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
@@ -95,28 +95,38 @@
     text-transform: uppercase;
 
     color: #222933;
+  }
 
-    @include r(480) {
-      padding: 0 0 0 10px;
-    }
+  &__bottom-inner {
+    position: relative;
+    padding-top: 22px;
+
+    display: flex;
 
     &::before {
       content: '';
-      display: inline-block;
-      padding-top: 22px;
+      position: absolute;
+      top: 0;
+      right: -29%;
+
       border-top: 1px solid #e0e0e0;
       width: 315px;
-      height: 1px;
 
       @include r(480) {
         display: none;
       }
     }
+
   }
 
   &__time,
   &__link--admin {
     margin-right: 42px;
+
+    max-width: 131px;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
 
     &::before {
       content: '';
@@ -131,6 +141,10 @@
     @include r(480) {
       margin-right: 20px;
     }
+  }
+
+  &__link--admin {
+    margin-right: 0;
   }
 
   &__link {
