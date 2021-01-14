@@ -13,26 +13,26 @@
     }
   }
 
-  &__box-input {
+  &__box{
     display: flex;
     margin-bottom: 20px;
     font-size: 16px;
 
     color: $border;
 
-    @include r(991) {
+    @include r(1199) {
       justify-content: space-between;
     }
 
     @include r(767) {
       flex-wrap: wrap;
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
   }
 
   &__label {
     position: relative;
-    width: 400px;
+    width: 50%;
 
     @include r(767) {
       width: 100%;
@@ -43,40 +43,41 @@
 
       @include r(767) {
         margin-right: 0;
+        margin-bottom: 10px;
       }
     }
 
     span {
       position: absolute;
       right: 4%;
-      top: 27%;
+      top: 32%;
     }
   }
 
-  &__text-input {
+  &__input {
     padding: 18px 45px 18px 20px;
     width: 100%;
     height: 50px;
     border: 1px solid #e5e5e5;
   }
 
-  .input-icon {
+  .icon {
     fill: $top-links;
-  }
 
-  .user-input {
-    width: 14px;
-    height: 14px;
-  }
+    &--user-input {
+      width: 14px;
+      height: 14px;
+    }
 
-  .mail-input {
-    width: 18px;
-    height: 13px;
-  }
+    &--mail-input {
+      width: 18px;
+      height: 13px;
+    }
 
-  .comment {
-    width: 16px;
-    height: 16px;
+    &--comment {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   &__textarea-box {

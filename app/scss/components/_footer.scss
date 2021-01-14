@@ -157,6 +157,13 @@
     align-items: center;
   }
 
+    &__label {
+      span{
+        font-size: 0;
+      }
+      
+    }
+
   &__input {
     padding: 14px 18px;
     max-width: 170px;
@@ -174,9 +181,7 @@
     }
   }
 
-  &__label {
-    font-size: 0;
-  }
+
 
   &__btn {
     padding: 14px 19px 14px 16px;

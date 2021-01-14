@@ -15,12 +15,17 @@
 
   &__inner {
     display: flex;
+
+    @include r(1199) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
   }
 
   &__content {
     margin-right: 70px;
 
-    @include r(991) {
+    @include r(1199) {
       margin-right: 0;
     }
   }
@@ -68,6 +73,13 @@
     &__time {
       margin-right: 24px;
       display: flex;
+
+      .icon {
+        margin-right: 7px;
+        width: 13px;
+        height: 15px;
+        fill: #9a9a9a;
+      }
     }
 
     &__link {
@@ -83,14 +95,14 @@
       }
     }
 
-    &__icon {
+    .icon {
       width: 10px;
       height: 10px;
       fill: #fff;
     }
   }
 
-  &__item-box {
+  &__box {
     padding-top: 40px;
     text-align: left;
 
@@ -99,7 +111,7 @@
     }
   }
 
-  &__item-title {
+  &__title {
     margin-bottom: 34px;
     font-size: 36px;
     color: $border;
@@ -120,7 +132,7 @@
     }
   }
 
-  &__item-text {
+  &__text {
     margin-bottom: 40px;
     font-size: 16px;
     color: $text;
@@ -131,7 +143,7 @@
     }
   }
 
-  &__link-btn {
+  &__btn {
     position: relative;
     display: inline-block;
     padding: 23px 86px 26px 20px;
@@ -179,89 +191,36 @@
 
   .pagination {
     justify-content: start;
-    margin: 20px 0 0;
+    margin: 20px 0;
   }
 
   &__aside {
-    min-width: 270px;
-
-    @include r(991) {
-      min-width: 0;
-    }
-
-    .menu-right {
-      @include r(991) {
-        position: absolute;
-        right: 0;
-        top: 50px;
-
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-
-        padding: 10px;
-        min-width: 31%;
-
-        background-color: #fff;
-        z-index: 990;
-        transform: translateX(100%);
-        transition: transform 0.5s;
-      }
-
-      &__btn {
-        display: none;
-
-        @include r(991) {
-          display: block;
-        }
-      }
-
-      &--active {
-        transform: translateX(0%);
-
-        .menu-right__icon {
-          transform: rotate(-180deg);
-
-          @include r(991) {
-            left: 80%;
-          }
-        }
-      }
-
-      &__icon {
-        position: absolute;
-        left: -20%;
-        top: -4%;
-
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        fill: $bg;
-
-        transition: transform 0.6s, fill 0.5s;
-
-        &:hover {
-          fill: $top-links;
-        }
-
-        &:active {
-          fill: rgb(230, 7, 7);
-        }
-
-        @include r(480) {
-          right: -60px;
-          background-color: $accent;
-          fill: $text;
-        }
-      }
+    @include r(1199) {
+      padding: 20px 0 0;
+      display: flex;
     }
   }
 
   &__filters {
-    @include r(991) {
-      padding: 10px;
-      max-width: 270px;
-      border: 1px solid $accent;
+    @include r(1199) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    @include r(767) {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  &__filters-top {
+    @include r(767) {
+      margin-right: 20px;
+    }
+
+    @include r(480) {
+      margin-right: 0;
     }
   }
 }

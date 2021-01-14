@@ -18,7 +18,7 @@
   &__filter-btns {
     position: absolute;
     right: 25px;
-    bottom: 16px;
+    bottom: 13px;
 
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@
   }
 
   &__filter-btn {
-    padding: 0;
+    padding: 5px;
     margin-left: 15px;
 
     line-height: 0;
@@ -45,14 +45,16 @@
     &.shop-content__filter-btn--active {
       fill: $bg;
     }
-  }
 
-  &__filter-icon {
-    height: 15px;
-    width: 15px;
+    .icon {
+      height: 15px;
+      width: 15px;
 
-    &--list {
-      width: 20px;
+      &--list {
+        width: 20px;
+      }
     }
   }
+
+
 }

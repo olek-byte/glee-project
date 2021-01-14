@@ -8,7 +8,7 @@
     height: 100%;
   }
 
-  &__icon {
+  &__box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,22 +26,26 @@
     @include r(480) {
       min-height: 250px;
     }
+
+    .icon {
+      &--play {
+        fill: #fff;
+        transition: fill 0.3s;
+
+        &:focus {
+          fill: #e6d96d;
+        }
+
+        &:hover {
+          fill: #183b61;
+        }
+
+        &:active {
+          fill: $footer-links;
+        }
+      }
+    }
   }
 
-  &__play {
-    fill: #fff;
-    transition: fill 0.3s;
 
-    &:focus {
-      fill: #e6d96d;
-    }
-
-    &:hover {
-      fill: #183b61;
-    }
-
-    &:active {
-      fill: $footer-links;
-    }
-  }
 }

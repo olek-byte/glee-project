@@ -269,20 +269,22 @@
           opacity: 1;
           top: 47%;
         }
+
+        .icon {
+          height: 20px;
+          width: 22px;
+
+          &--search {
+            width: 20px;
+          }
+
+          &--heart {
+            height: 18px;
+          }
+        }
       }
 
-      &__icon {
-        height: 20px;
-        width: 22px;
 
-        &--search {
-          width: 20px;
-        }
-
-        &--heart {
-          height: 18px;
-        }
-      }
 
       &__link {
         display: flex;

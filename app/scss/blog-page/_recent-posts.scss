@@ -21,7 +21,6 @@
     transition: all 0.4s;
 
     &:hover {
-      border: 1px solid $accent;
       box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
     }
   }
@@ -31,12 +30,13 @@
 
     img {
       max-width: 71px;
+      max-height: 71px;
       object-fit: cover;
     }
   }
 
-  &__content{
-    h2{
+  &__content {
+    h2 {
       @extend %visually-hidden;
     }
   }

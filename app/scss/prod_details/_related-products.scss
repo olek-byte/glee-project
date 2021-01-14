@@ -88,18 +88,17 @@
         opacity: 1;
         transform: translateY(-254%);
       }
-    }
+      .icon {
+        height: 20px;
+        width: 22px;
 
-    &__icon {
-      height: 20px;
-      width: 22px;
+        &--search {
+          width: 20px;
+        }
 
-      &--search {
-        width: 20px;
-      }
-
-      &--heart {
-        height: 18px;
+        &--heart {
+          height: 18px;
+        }
       }
     }
 

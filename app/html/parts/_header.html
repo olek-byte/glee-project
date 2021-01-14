@@ -6,7 +6,9 @@
          <img src="images/logo.png" alt="logo">
        </a>
 
-       <nav class="menu main-menu">
+       <div class="menu__overlay"></div>
+       
+        <nav class="menu main-menu">
 
          <div class="menu__nav-btn menuToggle">
            <input type="checkbox">
@@ -14,13 +16,13 @@
            <span class="span2"></span>
            <span class="span3"></span>
          </div>
-
+         
          <ul class="menu__list">
 
            <li class="menu__item">
-             <a class="menu__link" href="#">Home <span>+</span></a>
+             <a class="menu__link menu-plus home-menu" href="#">Home</a>
 
-             <ul class="submenu">
+             <ul class="submenu home-submenu">
                <li class="submenu__item">
                  <a class="submenu__link" href="login.html">Login</a>
                </li>
@@ -39,9 +41,9 @@
            </li>
 
            <li class="menu__item">
-             <a class="menu__link" href="#">Pages <span>+</span></a>
+             <a class="menu__link menu-plus page-menu" href="#">Pages</a>
 
-             <ul class="submenu">
+             <ul class="submenu page-submenu">
                <li class="submenu__item">
                  <a class="submenu__link" href="shop-page.html">Shop Page</a>
                </li>
@@ -62,46 +64,44 @@
              <a class="menu__link" href="/index.html#news">News</a>
            </li>
            <li class="menu__item">
-             <a class="menu__link" href="#footer">Contact</a>
+             <a class="menu__link" href="contacts.html">Contact</a>
            </li>
 
          </ul>
-       </nav>
 
-       <div class="menu__user">
-         <div class="menu__btns">
 
-           <button class="menu__btn menu__btn--search" type="button">
-             <svg class="menu__btn-icon menu__btn-icon--search">
-               <use xlink:href="#search"></use>
-             </svg>
-           </button>
+         <div class="menu__user">
+           <div class="menu__btns">
 
-           <button class="menu__btn menu__btn--heart" type="button">
-             <svg class="menu__btn-icon menu__btn-icon--heart">
-               <use xlink:href="#heart"></use>
-             </svg>
-             <span class="menu__num">0</span>
-           </button>
+             <button class="menu__btn menu__btn--search" type="button">
+               <svg class="icon icon--search">
+                 <use xlink:href="#search"></use>
+               </svg>
+             </button>
 
-           <button class="menu__btn menu__btn--cart" type="button">
-             <svg class="menu__btn-icon menu__btn-icon--cart">
-               <use xlink:href="#cart"></use>
-             </svg>
-             <span class="menu__num menu__num--cart">0</span>
-           </button>
+             <button class="menu__btn menu__btn--heart" type="button">
+               <svg class="icon icon--heart">
+                 <use xlink:href="#heart"></use>
+               </svg>
+               <span class="menu__num">0</span>
+             </button>
 
-           <button class="menu__btn menu__btn--menu-dots" type="button">
-             <svg class="menu__btn-icon menu__btn-icon--menu-dots">
-               <use xlink:href="#menu-dots"></use>
-             </svg>
-           </button>
+             <button class="menu__btn menu__btn--cart" type="button">
+               <svg class="icon icon--cart">
+                 <use xlink:href="#cart"></use>
+               </svg>
+               <span class="menu__num menu__num--cart">0</span>
+             </button>
 
+             <button class="menu__btn menu__btn--menu-dots" type="button">
+               <svg class="icon icon--menu-dots">
+                 <use xlink:href="#menu-dots"></use>
+               </svg>
+             </button>
+
+           </div>
          </div>
-
-       </div>
-
-
+       </nav>
 
      </div>
    </div>

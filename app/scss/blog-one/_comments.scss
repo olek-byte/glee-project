@@ -1,19 +1,23 @@
 .comments {
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 
-  &--answer {
-    margin: 0 0 32px 130px;
-    padding-top: 30px;
+  &__item {
+    padding-bottom: 20px;
 
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
+    &--answer {
+      margin: 0 0 32px 130px;
+      padding-top: 30px;
 
-    @include r(767) {
-      margin-left: 50px;
-    }
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
 
-    @include r(480) {
-      padding-top: 20px;
+      @include r(767) {
+        margin-left: 50px;
+      }
+
+      @include r(480) {
+        padding-top: 20px;
+      }
     }
   }
 
@@ -21,6 +25,7 @@
     float: left;
     margin-right: 32px;
     max-width: 100px;
+    max-height: 100px;
 
     @include r(767) {
       max-width: 70px;
@@ -31,7 +36,7 @@
     }
   }
 
-  &__content-top {
+  &__top {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -43,7 +48,7 @@
     }
   }
 
-  &__content-name {
+  &__name {
     font-size: 16px;
     @extend %rubik-700;
     color: $top-links;
@@ -53,11 +58,11 @@
     }
   }
 
-  &__content-data {
+  &__data {
     color: #9e9e9e;
   }
 
-  &__content-bottom {
+  &__bottom {
     display: flex;
 
     @include r(767) {
@@ -65,7 +70,7 @@
     }
   }
 
-  &__content-text {
+  &__text {
     p {
       margin-bottom: 26px;
 
@@ -82,7 +87,7 @@
     }
   }
 
-  &__content-reply {
+  &__reply {
     color: #526278;
     transition: all 0.6s;
 
@@ -92,13 +97,19 @@
     }
 
     &:hover {
-      fill: $bg;
+      svg {
+        fill: $bg;
+      }
+
       color: $bg;
       border-bottom: 1px solid $bg;
     }
 
     &:active {
-      fill: $top-links;
+      svg {
+        fill: $top-links;
+      }
+
       color: $top-links;
     }
 
@@ -106,9 +117,10 @@
       padding-right: 5px;
     }
 
-    .reply-icon {
+    .icon {
       width: 10px;
       height: 10px;
+      fill: #526278;
     }
   }
 }

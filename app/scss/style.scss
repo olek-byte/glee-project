@@ -3,54 +3,23 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
-@import 'components/header';
-@import 'components/top-slider';
-@import 'components/service';
-@import 'components/products';
-@import 'components/product-card';
-@import 'components/lamp-products';
-@import 'components/lamp-card';
-@import 'components/design';
-@import 'components/design-card';
 
-@import 'components/video';
-@import 'components/blog';
-@import 'components/blog-card';
-@import 'components/partners';
-@import 'components/footer';
+
+@import 'components/components';
 
 @import 'terms/page-content';
 
 @import 'login/login';
 
-@import 'about/mission';
-@import 'about/mission-info';
-@import 'about/team';
-@import 'about/team-card';
+@import 'about/about';
 
-@import 'shop-page/shop';
-@import 'shop-page/shop-content';
-@import 'shop-page/filter-category';
-@import 'shop-page/filter-price';
-@import 'shop-page/filter-brand';
-@import 'shop-page/recent-products';
-@import 'shop-page/pagination';
-@import 'shop-page/main-products';
+@import 'shop-page/shop-page';
 
+@import 'prod_details/prod_details';
 
-@import 'prod_details/details-slider';
-@import 'prod_details/product-slide';
-@import 'prod_details/details-filter';
-@import 'prod_details/product-tabs';
-@import 'prod_details/related-products';
+@import 'blog-page/blog_page';
 
-
-@import 'blog-page/blog-page';
-@import 'blog-page/recent-posts';
-
-@import 'blog-one/blog-one';
-@import 'blog-one/comments';
-@import 'blog-one/comments-form';
+@import 'blog-one/blog_one';
 
 @import 'contacts/contacts';
 

@@ -1,10 +1,5 @@
 .blog-one {
 
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__content {
     display: flex;
     flex-direction: column;
@@ -73,7 +68,7 @@
         padding-right: 30px;
       }
 
-      @include r(767){
+      @include r(767) {
         margin-bottom: 20px;
       }
     }
@@ -102,6 +97,7 @@
       float: left;
       margin-right: 30px;
       max-width: 322px;
+      max-height: 210px;
 
       @include r(767) {
         max-width: 250px;
@@ -141,11 +137,12 @@
     }
   }
 
-  &__author-img {
+  &__img {
     max-width: 76px;
+    max-height: 76px;
   }
 
-  &__author-info {
+  &__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,7 +153,7 @@
     }
   }
 
-  &__author-name {
+  &__name {
     margin-bottom: 18px;
 
     @extend %rubik-500;
@@ -164,7 +161,7 @@
     color: $border;
   }
 
-  &__author-position {
+  &__position {
     font-size: 16px;
     color: #666666;
   }
@@ -195,7 +192,7 @@
     }
   }
 
-  &__tags-link {
+  &__link {
     color: #b6b6b6;
     transition: color 0.3s;
 
@@ -224,7 +221,7 @@
     }
   }
 
-  &__icon {
+  .icon {
     width: 15px;
     fill: #a1a1a1;
     transition: color 0.6s;

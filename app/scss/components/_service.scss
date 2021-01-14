@@ -18,7 +18,7 @@
     left: 35%;
 
     @include r(1199) {
-      left: 27%;
+      left: 33%;
     }
 
     @include r(991) {
@@ -33,7 +33,7 @@
 
   &__list {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -67,33 +67,30 @@
   }
 
   &__img {
-    @include r(1199) {
-      width: 100%;
-    }
-
     @include r(991) {
       display: none;
     }
-  }
 
-  &__icon {
-    margin-right: 25px;
-    fill: $accent;
 
-    &--support {
-      width: 52px;
-      height: 54px;
-    }
+    .icon {
+      margin-right: 25px;
+      fill: $accent;
 
-    &--truck {
-      width: 55px;
-      height: 37px;
-    }
+      &--support {
+        width: 52px;
+        height: 54px;
+      }
 
-    &--payment {
-      margin-right: 35px;
-      width: 54px;
-      height: 53px;
+      &--truck {
+        width: 55px;
+        height: 37px;
+      }
+
+      &--payment {
+        margin-right: 35px;
+        width: 54px;
+        height: 53px;
+      }
     }
   }
 

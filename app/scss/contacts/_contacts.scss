@@ -49,6 +49,20 @@
     @include r(767) {
       margin-bottom: 40px;
     }
+
+    a {
+      &:focus {
+        color: $bg;
+      }
+
+      &:hover {
+        color: $accent;
+      }
+
+      &:active {
+        color: $footer-links;
+      }
+    }
   }
 
   &__item {
@@ -60,6 +74,7 @@
     width: 370px;
     padding: 70px 5px 80px;
     background-color: #fbfbfb;
+    border: 2px solid transparent;
 
     transition: all 0.5s;
 
@@ -96,7 +111,7 @@
         background-color: $accent;
       }
 
-      .contacts__icon {
+      .icon {
         fill: #fff;
       }
     }
@@ -121,15 +136,11 @@
     @include r(767) {
       margin-bottom: 35px;
     }
-  }
 
-  &__icon {
-    width: 37px;
-    height: 44px;
-    fill: $accent;
-
-    &--location {
-      width: 31px;
+    .icon {
+      width: 37px;
+      height: 44px;
+      fill: $accent;
     }
   }
 
@@ -155,7 +166,23 @@
       color: #565872;
 
       @extend %text-hiding;
-      -webkit-line-clamp: 1;
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  &__link {
+    p {
+      &:focus {
+        color: $bg;
+      }
+
+      &:hover {
+        color: $accent;
+      }
+
+      &:active {
+        color: $footer-links;
+      }
     }
   }
 
@@ -172,6 +199,7 @@
   &__form {
     max-width: 620px;
     margin-right: 50px;
+    width: 100%;
 
     @include r(1199) {
       margin: 0 0 30px;
@@ -195,11 +223,21 @@
       }
     }
 
+    .comments-form__label {
+      width: 50%;
+
+      @include r(767) {
+        width: 100%;
+      }
+    }
+
     .comments-form__btn {
       border-radius: 5px;
       min-width: 200px;
     }
   }
+
+
 
   #map {
     min-width: 500px;

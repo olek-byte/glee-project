@@ -103,13 +103,17 @@
     }
   }
 
-  &__insta {
-    width: 18px;
-    height: 18px;
+  .icon {
+    &--insta {
+      width: 18px;
+      height: 18px;
+    }
+
+    &--google {
+      width: 23px;
+      height: 15px;
+    }
+
   }
 
-  &__google {
-    width: 23px;
-    height: 15px;
-  }
 }

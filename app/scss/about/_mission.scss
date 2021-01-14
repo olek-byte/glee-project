@@ -6,27 +6,6 @@
     padding: 20px 0;
   }
 
-  // &__img {
-  //   margin-right: 51px;
-  //   object-fit: cover;
-  //   max-width: 570px;
-  //   height: 676px;
-
-  //   @include r(1199) {
-  //     margin-right: 0;
-  //   }
-
-  //   @include r(767) {
-  //     max-width: 400px;
-  //     height: 600px;
-  //   }
-
-  //   @include r(480) {
-  //     max-width: 250px;
-  //     height: 400px;
-  //   }
-  // }
-
   &__inner {
     display: flex;
     justify-content: flex-end;
@@ -160,7 +139,7 @@
     }
   }
 
-  &__icon-item {
+  &__icon {
     position: relative;
     @extend %dmsans-700;
 
@@ -183,7 +162,7 @@
 
         background-image: url('../images/icons/about/projects.svg');
 
-        @include r(767) {
+        @include r(480) {
           display: none;
         }
       }
@@ -196,7 +175,7 @@
         height: 40px;
         background-image: url('../images/icons/about/Revenue.svg');
 
-        @include r(767) {
+        @include r(480) {
           display: none;
         }
       }
@@ -209,7 +188,7 @@
         height: 42px;
         background-image: url('../images/icons/about/Awards.svg');
 
-        @include r(767) {
+        @include r(480) {
           display: none;
         }
       }
@@ -225,7 +204,7 @@
         border-right: 1px solid#edf0f5;
         height: 81px;
 
-        @include r(767) {
+        @include r(1199) {
           display: none;
         }
       }
