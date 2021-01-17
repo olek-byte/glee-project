@@ -15,6 +15,10 @@ body {
   background-color: #fff;
 }
 
+.locked {
+  overflow: hidden;
+}
+
 .main {
   flex-grow: 1;
 }

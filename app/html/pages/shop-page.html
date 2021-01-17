@@ -1,29 +1,19 @@
-@@include('../parts/_doctype&head.html')
+@@loop('../parts/_doctype&head.html',[
+{
+"title":"Shop Page"
+}])
 
 <!-- HEADER -->
 @@include('../parts/_header.html')
 
 <main class="main">
 
-  <section class="page-top">
-    <h1 class="title page-top__title">Product list 1</h1>
 
-    <div class="breadcrumbs">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">
-            Home
-          </a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span class="breadcrumbs__span">
-            Product list 1
-          </span>
-        </li>
 
-      </ul>
-    </div>
-  </section>
+  @@loop('../parts/_page-top.html',[
+  {
+  "title":"Shop Page"
+  }])
 
   <section class="shop">
     <div class="narrow-container">
@@ -163,7 +153,7 @@
                     </div>
 
                     <div class="recent-products__content">
-                      
+
                       <h3 class="recent-products__name">Pendant lamp</h3>
                       <div class="recent-products__star star star--small" data-rateyo-rating="4"></div>
                       <span class="recent-products__price">23$</span>
@@ -179,7 +169,7 @@
                     </div>
 
                     <div class="recent-products__content">
-                     
+
                       <h3 class="recent-products__name">Pendant lamp</h3>
                       <div class="recent-products__star star star--small" data-rateyo-rating="4"></div>
                       <span class="recent-products__price">23$</span>

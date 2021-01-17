@@ -1,4 +1,7 @@
-@@include('../parts/_doctype&head.html')
+@@loop('../parts/_doctype&head.html',[
+{
+"title":"Blog Page"
+}])
 
 <!-- HEADER -->
 @@include('../parts/_header.html')
@@ -6,25 +9,10 @@
 <main class="main">
 
   <!-- PAGE-TOP -->
-  <section class="page-top">
-    <h1 class="title page-top__title">Blog</h1>
-
-    <div class="breadcrumbs">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">
-            Home
-          </a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span class="breadcrumbs__span">
-            Blog
-          </span>
-        </li>
-
-      </ul>
-    </div>
-  </section>
+  @@loop('../parts/_page-top.html',[
+  {
+  "title":"Blog"
+  }])
 
 
   <section class="blog-page">

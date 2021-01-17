@@ -1,93 +1,82 @@
-@@include('../parts/_doctype&head.html')
+@@loop('../parts/_doctype&head.html',[
+{
+"title":"Terms"
+}])
 
-  <!-- HEADER -->
-  @@include('../parts/_header.html')
+<!-- HEADER -->
+@@include('../parts/_header.html')
 
-  <main class="main-page">
+<main class="main-page">
 
-    <!-- PAGE-TOP -->
-    <section class="page-top">
-      <h1 class="title page-top__title">Terms & Conditions</h1>
+  <!-- PAGE-TOP -->
+  @@loop('../parts/_page-top.html',[
+  {
+  "title":"Terms & Conditions"
+  }])
 
-      <div class="breadcrumbs">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">
-              Home
-            </a>
-          </li>
-          <li class="breadcrumbs__item">
-            <span class="breadcrumbs__span">
-              Terms & Conditions
-            </span>
-          </li>
 
-        </ul>
-      </div>
-    </section>
+  <!-- PAGE-CONTENT -->
+  <section class="page-content">
+    <div class="narrow-container">
 
-    <!-- PAGE-CONTENT -->
-    <section class="page-content">
-      <div class="narrow-container">
+      <h3>Types of Personal Information We Collect</h3>
 
-        <h3>Types of Personal Information We Collect</h3>
+      <ol>
+        <li>
+          Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+          dolor in
+          reprehenderit in voluptate velit esse cillum dolore
+        </li>
+        <li>
+          Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+          dolor in
+          reprehenderit in voluptate velit esse cillum dolore
+        </li>
+        <li>
+          Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </li>
+        <li>
+          Dagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo
+          consequat.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        </li>
 
-        <ol>
-          <li>
-            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in
-            reprehenderit in voluptate velit esse cillum dolore
-          </li>
-          <li>
-            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in
-            reprehenderit in voluptate velit esse cillum dolore
-          </li>
-          <li>
-            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </li>
-          <li>
-            Dagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo
-            consequat.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          </li>
+      </ol>
 
-        </ol>
+      <h3>How marketpmss.com Collects Personal Infonnation</h3>
+      <p>
+        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore
+      </p>
 
-        <h3>How marketpmss.com Collects Personal Infonnation</h3>
-        <p>
-          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure
-          dolor in reprehenderit in voluptate velit esse cillum dolore
-        </p>
+      <h3>How marketprosscom Uses Personal Information</h3>
+      <p>
+        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore
+      </p>
 
-        <h3>How marketprosscom Uses Personal Information</h3>
-        <p>
-          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure
-          dolor in reprehenderit in voluptate velit esse cillum dolore
-        </p>
+    </div>
+  </section>
 
-      </div>
-    </section>
+  <!-- BLOG & PARTNERS -->
+  @@include('../parts/_blog.html')
 
-    <!-- BLOG & PARTNERS -->
-    @@include('../parts/_blog.html')
+  @@include('../parts/_partners.html')
 
-    @@include('../parts/_partners.html')
+</main>
 
-  </main>
+<!-- FOOTER -->
+@@include('../parts/_footer.html')
 
-  <!-- FOOTER -->
-  @@include('../parts/_footer.html')
-
-  <script src="js/main.min.js"></script>
+<script src="js/main.min.js"></script>

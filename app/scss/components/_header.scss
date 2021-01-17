@@ -114,9 +114,7 @@
   }
 }
 
-.body--active {
-  overflow: hidden;
-}
+
 
 .fixed {
   position: fixed;
@@ -260,6 +258,7 @@ ul.menu__list {
 
     color: $top-links;
     outline-color: $bg-add;
+    cursor: pointer;
 
     transition: color 0.3s;
 
@@ -281,7 +280,8 @@ ul.menu__list {
     }
   }
 
-  .menu-plus {
+  .home-menu,
+  .page-menu {
     position: relative;
     margin-right: 5px;
 
@@ -291,13 +291,11 @@ ul.menu__list {
       z-index: 1200;
       position: absolute;
     }
+  }
 
-    &.menu-plus--active {
-      &::after {
-        content: '-';
-        z-index: 1200;
-      }
-    }
+  .is-active::after {
+    content: '-';
+    z-index: 1200;
   }
 
 
