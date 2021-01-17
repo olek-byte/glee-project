@@ -104,16 +104,14 @@
   }
 }
 
-.header__inner.header__inner--active .menu__list {
+.header__inner.active .menu__list {
   transform: translateY(0%);
 }
 
-.header__inner.header__inner--active {
-  .menu__overlay {
-    display: block;
-  }
-}
 
+.locked .menu__overlay {
+  display: block;
+}
 
 
 .fixed {

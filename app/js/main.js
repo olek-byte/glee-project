@@ -34,14 +34,14 @@ $(function(){
   });
 
   // SETTINGS Icon in Shop Page
-  $('.filters-menu__btn-icon').on('click', function() {
+  $('.js__btn-icon').on('click', function() {
     $('.filters-menu').toggleClass('filters-menu--active');
   });
 
-    // FILTER BTN
-  $('.shop-content__filter-btn').on('click', function() {
-    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
-    $(this).addClass('shop-content__filter-btn--active');
+    // FILTER BTNs
+  $('.js__filter-btn').on('click', function() {
+    $('.js__filter-btn').removeClass('active');
+    $(this).addClass('active');
   });
 
   // GRID BTNS
@@ -77,7 +77,7 @@ $(function(){
     autoplaySpeed: 2000
   });
 
-  
+
   // Numbers filter
   $('.details-filter__num').styler();
 
@@ -171,8 +171,8 @@ $(function(){
   // INDEX
 
   // Nav button click
-  $('.menu__nav-btn').on('click', function(){
-     $('.header__inner').toggleClass('header__inner--active')
+  $('.js-menu__nav-btn').on('click', function(){
+     $('.header__inner').toggleClass('active')
      $('body').toggleClass('locked')
   });
 
@@ -227,8 +227,6 @@ $(function(){
         menuBtns.removeClass('is-active');
     };
   });
-
-
 
 
   // Fixed header
