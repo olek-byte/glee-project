@@ -57,7 +57,7 @@ function scripts() {
   .pipe(concat('main.min.js'))
   .pipe(uglify())
   .pipe(dest('app/js'))
-  .pipe(browserSync.stream())
+  // .pipe(browserSync.stream())
 }
 
 function images() {
@@ -92,7 +92,7 @@ function cleanDist() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js'], scripts);
+  watch(['app/js/main.js'], scripts);
   watch(['app/html/**/*.html'], html);
   // watch(['app/**/*.html']).on('change', browserSync.reload);
 }
