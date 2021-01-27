@@ -1,0 +1,295 @@
+@@loop('../parts/_doctype&head.html',[
+{
+"title":"Contacts"
+}])
+
+<!-- HEADER -->
+@@include('../parts/_header.html')
+
+<main class="main-page">
+
+  <!-- PAGE-TOP -->
+   @@loop('../parts/_page-top.html',[
+   {
+   "title":"Contacts"
+   }])
+
+
+
+  <section class="contacts">
+    <div class="narrow-container">
+      <span class="contacts__title">Write Here</span>
+      <span class="contacts__subtitle">Get In Touch</span>
+
+      <ul class="contacts__list">
+        <li class="contacts__item">
+
+          <span class="contacts__icon-box">
+            <svg class="icon icon--location">
+              <use xlink:href="#location-icon"></use>
+            </svg>
+          </span>
+
+          <address class="contacts__address contacts__box">
+          
+            <span>Address</span>
+          <a class="contacts__link" href="#">
+            <p>2416 Mapleview Drive<br>
+           Tampa, FL 33634</p>
+          </a>
+          </address>
+        </li>
+
+        <li class="contacts__item">
+
+          <span class="contacts__icon-box">
+            <svg class="icon icon--email">
+              <use xlink:href="#email-icon"></use>
+            </svg>
+          </span>
+
+          <div class="contacts__email contacts__box">
+            <span>Our Email</span>
+
+            <p>
+              Main Email :
+              <a class="contacts__link" href="mailto:contact@website.com">contact@website.com</a>
+            </p>
+
+
+            <p>Inquiries : <a class="contacts__link" href="mailto:info@mail.com">info@mail.com</a> </p>
+
+        </li>
+
+        <li class="contacts__item">
+
+          <span class="contacts__icon-box">
+            <svg class="icon icon--dots">
+              <use xlink:href="#icon-dots"></use>
+            </svg>
+          </span>
+
+          <div class="contacts__phone contacts__box">
+            <span>Our Phone</span>
+
+            <p>
+              Office Telephone :
+              <a class="contacts__link" href="tel:0029129102320">0029129102320</a>
+            </p>
+
+            <p>
+              Mobile : <a class="contacts__link" href="tel:000232439493">000 2324 39493</a>
+            </p>
+
+        </li>
+      </ul>
+
+
+      <div class="contacts__inner">
+
+        <form class="contacts__form comments-form" action="#">
+
+          <div class="comments-form__box">
+
+            <label class="comments-form__label">
+              <input class="comments-form__input" type="text" placeholder="NAME">
+              <span>
+                <svg class="icon icon--user-input">
+                  <use xlink:href="#user-input"></use>
+                </svg>
+              </span>
+
+            </label>
+
+            <label class="comments-form__label">
+              <input class="comments-form__input" type="email" placeholder="EMAIL">
+              <span>
+
+                <svg class="icon icon--mail-input">
+                  <use xlink:href="#mail-input"></use>
+                </svg>
+
+              </span>
+            </label>
+          </div>
+
+          <div class="comments-form__textarea-box">
+            <textarea class="comments-form__textarea" placeholder="MESSAGE"></textarea>
+            <span>
+              <svg class="icon icon--comment">
+                <use xlink:href="#comment"></use>
+              </svg>
+            </span>
+          </div>
+
+          <button class="comments-form__btn" type="submit">Send message</button>
+
+        </form>
+
+
+        <div id="map"></div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- BLOG & PARTNERS -->
+  @@include('../parts/_blog.html')
+
+  @@include('../parts/_partners.html')
+
+</main>
+
+<!-- FOOTER -->
+@@include('../parts/_footer.html')
+
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" defer>
+</script>
+
+<script>
+  let map;
+
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: {
+        lat: 40.8363469328567,
+        lng: -74.01196321010859
+      },
+      zoom: 9,
+      styles: [{
+          "elementType": "geometry",
+          "stylers": [{
+              "hue": "#ff4400"
+            },
+            {
+              "saturation": -68
+            },
+            {
+              "lightness": -4
+            },
+            {
+              "gamma": 0.72
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "elementType": "labels.icon"
+        },
+        {
+          "featureType": "landscape.man_made",
+          "elementType": "geometry",
+          "stylers": [{
+              "hue": "#0077ff"
+            },
+            {
+              "gamma": 3.1
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "stylers": [{
+              "hue": "#00ccff"
+            },
+            {
+              "gamma": 0.44
+            },
+            {
+              "saturation": -33
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "stylers": [{
+              "hue": "#44ff00"
+            },
+            {
+              "saturation": -23
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+              "hue": "#007fff"
+            },
+            {
+              "gamma": 0.77
+            },
+            {
+              "saturation": 65
+            },
+            {
+              "lightness": 99
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels.text.stroke",
+          "stylers": [{
+              "gamma": 0.11
+            },
+            {
+              "weight": 5.6
+            },
+            {
+              "saturation": 99
+            },
+            {
+              "hue": "#0091ff"
+            },
+            {
+              "lightness": -86
+            }
+          ]
+        },
+        {
+          "featureType": "transit.line",
+          "elementType": "geometry",
+          "stylers": [{
+              "lightness": -48
+            },
+            {
+              "hue": "#ff5e00"
+            },
+            {
+              "gamma": 1.2
+            },
+            {
+              "saturation": -23
+            }
+          ]
+        },
+        {
+          "featureType": "transit",
+          "elementType": "labels.text.stroke",
+          "stylers": [{
+              "saturation": -64
+            },
+            {
+              "hue": "#ff9100"
+            },
+            {
+              "lightness": 16
+            },
+            {
+              "gamma": 0.47
+            },
+            {
+              "weight": 2.7
+            }
+          ]
+        }
+      ]
+    });
+  }
+</script>
+
+
+<script src="js/main.min.js"></script>
