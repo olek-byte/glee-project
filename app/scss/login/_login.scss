@@ -29,6 +29,11 @@
 
     border: 2px solid #f6f6f6;
     background-color: #fff;
+    transition: box-shadow 0.4s;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    }
   }
 
   &__btn,

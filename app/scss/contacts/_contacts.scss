@@ -78,6 +78,7 @@
 
     transition: all 0.5s;
 
+
     &:not(:last-child) {
       margin-right: 30px;
     }
@@ -106,6 +107,8 @@
 
     &:hover {
       border: 2px solid $accent;
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+
 
       .contacts__icon-box {
         background-color: $accent;
@@ -209,6 +212,11 @@
     input,
     textarea {
       background-color: #f5f5f5;
+      transition: box-shadow 0.4s;
+
+      &:hover {
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+      }
     }
 
     input {

@@ -62,11 +62,14 @@
     }
 
     &__img {
-      position: absolute;
-      top: 15%;
-      padding: 5%;
+
 
       img {
+       position: absolute;
+       top: 15%;
+       right: 50%;
+       transform:translateX(50%);
+       padding: 5%;
         object-fit: contain;
         max-height: 206px;
       }
@@ -88,6 +91,7 @@
         opacity: 1;
         transform: translateY(-254%);
       }
+
       .icon {
         height: 20px;
         width: 22px;

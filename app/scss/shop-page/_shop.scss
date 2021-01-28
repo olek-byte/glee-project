@@ -87,7 +87,7 @@
 
   &__btn-icon {
     position: absolute;
-    right: -48px;
+    right: -55px;
     top: 5px;
 
     width: 40px;
@@ -110,9 +110,9 @@
     }
 
     @include r(767) {
-      right: -60px;
-      background-color: $accent;
-      fill: $text;
+      // right: -60px;
+      background-color: $bg-add;
+      // fill: $text;
     }
   }
 }

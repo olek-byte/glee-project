@@ -288,6 +288,8 @@ ul.menu__list {
       margin-left: 5px;
       z-index: 1200;
       position: absolute;
+      top: 50%;
+      transform: translateY(-56%);
     }
   }
 

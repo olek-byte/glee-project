@@ -4,10 +4,6 @@
 
     &::after {
       left: 182px;
-
-      @include r(480) {
-        left: 100px;
-      }
     }
   }
 

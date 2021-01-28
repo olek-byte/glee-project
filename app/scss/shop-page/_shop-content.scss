@@ -1,4 +1,5 @@
 .shop-content {
+   overflow: hidden;
   &__filter {
     position: relative;
 
@@ -6,12 +7,12 @@
     align-items: center;
 
     padding: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     border: 1px solid $accent;
 
     @include r(480) {
-      margin: 0 10px 30px 10px;
+      margin: 0 10px 15px 10px;
     }
   }
 
