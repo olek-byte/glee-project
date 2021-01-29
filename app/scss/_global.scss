@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -63,7 +64,8 @@ body {
 .filter {
   text-align: center;
 
-  &__btn {
+  &__btn,
+  &__btn2 {
     font-size: 16px;
     @extend %dmsans-700;
 

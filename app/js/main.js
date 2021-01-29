@@ -298,22 +298,19 @@ $(function () {
   });
 
   // Mixitup
-  
-  var mixer = mixitup('.products__inner');
 
-  var mixer2 = mixitup('.design__inner');
+  var mixer = mixitup('.products__inner', {
+    selectors: {
+      target: '.product-card',
+      control: '.filter__btn'
+    }
+  });
 
-  // $('.products__inner').mixItUp({
-  //   selectors: {
-  //     filter: '.filter__btn'
-  //   }
-
-  // });
-
-  // $('.design__inner').mixItUp({
-  //   selectors: {
-  //     filter: '.filter__btn2'
-  //   }
-  // });
+  var mixer2 = mixitup('.design__inner', {
+    selectors: {
+      target: '.design-card',
+      control: '.filter__btn2'
+    }
+  });
 
 });
