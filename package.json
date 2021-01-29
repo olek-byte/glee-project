@@ -13,15 +13,20 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.2.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0",
     "install": "^0.13.0",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
-    "mixitup": "^3.3.1"
+    "jquery-form-styler": "^2.0.2",
+    "mixitup": "^3.3.1",
+    "rateyo": "^2.3.2"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "jquery-zoom": "^1.7.21",
     "slick-carousel": "^1.8.1"
   },
   "description": ""

@@ -1,0 +1,238 @@
+.blog-page {
+  position: relative;
+
+  padding: 120px 0;
+  background-color: #fff;
+  overflow-x: hidden;
+
+  @include r(991) {
+    padding: 60px 0;
+  }
+
+  @include r(991) {
+    padding-bottom: 30px;
+  }
+
+  &__inner {
+    display: flex;
+
+    @include r(1199) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    margin-right: 70px;
+
+    @include r(1199) {
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    padding-bottom: 50px;
+
+    @include r(767) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    max-height: 500px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .blog-box {
+    position: absolute;
+    display: inline-flex;
+    padding: 30px 30px 22px;
+    margin-top: -67px;
+
+    font-size: 12px;
+    text-transform: uppercase;
+
+    background-color: $accent;
+    color: #fff;
+
+    @include r(480) {
+      margin-top: -35px;
+      padding: 10px;
+    }
+
+    span {
+      margin-left: 7px;
+      max-width: 130px;
+
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
+    }
+
+    &__time {
+      margin-right: 24px;
+      display: flex;
+
+      .icon {
+        margin-right: 7px;
+        width: 13px;
+        height: 15px;
+        fill: #9a9a9a;
+      }
+    }
+
+    &__link {
+      display: flex;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $bg;
+
+        svg {
+          fill: $bg;
+        }
+      }
+    }
+
+    .icon {
+      width: 10px;
+      height: 10px;
+      fill: #fff;
+    }
+  }
+
+  &__box {
+    padding-top: 40px;
+    text-align: left;
+
+    @include r(991) {
+      padding-top: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 34px;
+    font-size: 36px;
+    color: $border;
+
+    @include r(991) {
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
+
+    @include r(767) {
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+
+    @include r(480) {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: $text;
+
+    @include r(767) {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: inline-block;
+    padding: 23px 86px 26px 20px;
+
+    @extend %rubik-700;
+    font-size: 15px;
+
+    background-color: transparent;
+    color: $accent;
+    border: 1px solid #d8d3cc;
+
+    transition: all 0.3s;
+
+    &:focus,
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+
+      &::after {
+        background-image: url('../images/icons/blue-arrow.svg');
+      }
+    }
+
+    &:active {
+      color: $footer-links;
+    }
+
+    @include r(480) {
+      padding: 15px 49px 15px 20px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 9px;
+      right: 9%;
+
+      background-image: url('../images/icons/blue-arrow.svg');
+      top: 50%;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  .pagination {
+    justify-content: start;
+    margin: 20px 0;
+  }
+
+  &__aside {
+    @include r(1199) {
+      padding: 20px 0 0;
+      display: flex;
+    }
+  }
+
+  &__filters {
+    @include r(1199) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    @include r(767) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .filter-search {
+    &__input {
+      min-width: 100%;
+      display: block;
+      transition: box-shadow 0.4s;
+
+      &:hover {
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  &__filters-top {
+    @include r(767) {
+      margin-right: 20px;
+    }
+
+    @include r(480) {
+      margin-right: 0;
+    }
+  }
+}

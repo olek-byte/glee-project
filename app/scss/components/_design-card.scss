@@ -1,0 +1,57 @@
+.design-card {
+  position: relative;
+  padding: 38px 0 129px;
+
+  max-width: 372px;
+  margin-bottom: 38px;
+
+  background-color: #f8f8f8;
+
+  transition: box-shadow 0.4s;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &__content {
+    padding: 0 150px 0 37px;
+
+    @include r(991) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    @extend %dmsans-700;
+    color: #1a1a1a;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
+  }
+
+  &__type {
+    display: block;
+    max-width: 69px;
+
+    font-size: 16px;
+    @extend %dmsans-700;
+
+    color: $accent;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+
+    object-fit: contain;
+    min-width: 269px;
+    max-height: 135px;
+  }
+}

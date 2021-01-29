@@ -1,0 +1,326 @@
+@@loop('../parts/_doctype&head.html',[
+{
+"title":"Product Details"
+}])
+
+<!-- HEADER -->
+@@include('../parts/_header.html')
+
+<main class="main-page">
+
+  <!-- PAGE-TOP -->
+  @@loop('../parts/_page-top.html',[
+  {
+  "title":"Product Details"
+  }])
+
+  <section class="details-slider">
+    <div class="narrow-container">
+
+      <div class="details-slider__product">
+        <div class="details-slider__inner">
+
+          <div class="details-slider__item product-slide">
+
+            <ul class="product-slide__small">
+
+              <li class="product-slide__small-item">
+                <img src="images/products/slide-item/1.jpg" alt="product">
+              </li>
+              <li class="product-slide__small-item">
+                <img src="images/products/slide-item/2.jpg" alt="product">
+              </li>
+              <li class="product-slide__small-item">
+                <img src="images/products/slide-item/3.jpg" alt="product">
+              </li>
+            </ul>
+
+            <ul class="product-slide__big">
+
+              <li class="product-slide__big-item" data-fancybox="images" data-caption="My caption">
+                <img src="images/products/slide-item/1.jpg" alt="product">
+              </li>
+
+              <li class="product-slide__big-item" data-fancybox="images">
+                <img src="images/products/slide-item/2.jpg" alt="product">
+              </li>
+
+              <li class="product-slide__big-item" data-fancybox="images">
+                <img src="images/products/slide-item/3.jpg" alt="product">
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="details-slider__content">
+
+            <h2 class="details-slider__title">Pendant lamp</h2>
+
+            <div class="details-slider__star star star--big"></div>
+
+            <span class="details-slider__price">23$</span>
+
+            <div class="details-slider__text">
+              <p>
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              </p>
+            </div>
+
+            <form class="details-slider__form details-filter" action="#">
+
+              <div class="details-filter__btns">
+                <input class="details-filter__num" type="number" value="1" min="1">
+
+                <button class="details-filter__btn">Add to cart</button>
+              </div>
+
+              <ul class="details-filter__list">
+                <li class="details-filter__item">
+                  SKU: <span>014</span>
+                </li>
+                <li class="details-filter__item">
+                  Category: <span>Lights</span>
+                </li>
+                <li class="details-filter__item">
+                  Tag: <a href="#">Decorative</a>
+                </li>
+              </ul>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <div class="narrow-container">
+    <div class="product-tabs">
+      <div class="product-tabs__top">
+        <button href="#tab-1" class="product-tabs__link product-tabs__link--active">
+          Description
+        </button>
+        <button href="#tab-2" class="product-tabs__link">
+          Additional information
+        </button>
+        <button href="#tab-3" class="product-tabs__link">
+          Reviews <span>(2)</span>
+        </button>
+
+      </div>
+      <div class="product-tabs__content">
+        <div class="product-tabs__item product-tabs__item--active" id="tab-1">
+
+          <div class="product-tabs__text">
+            <p>
+              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+          </div>
+
+        </div>
+        <div class="product-tabs__item" id="tab-2">
+          content 2
+        </div>
+        <div class="product-tabs__item" id="tab-3">
+          content 3
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <section class="related-products">
+    <div class="narrow-container">
+
+      <div class="related-products__top">
+        <h2 class="related-products__title title">Related products</h2>
+        <div class="related-products__btns"></div>
+      </div>
+
+      <div class="related-products__inner">
+
+        <article class="product-card">
+
+          <div class="product-card__img">
+            <img src="images/products/1.png" alt="furniture">
+          </div>
+
+          <div class="product-card__btns">
+
+            <a class="product-card__link" href="#">
+              <svg class="icon icon--search">
+                <use xlink:href="#search"></use>
+              </svg>
+            </a>
+            <button class="product-card__link" type="button">
+              <svg class="icon icon--cart">
+                <use xlink:href="#cart"></use>
+              </svg>
+            </button>
+            <button class="product-card__link" type="button">
+              <svg class="icon icon--heart">
+                <use xlink:href="#heart"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="product-card__content">
+            <h2>Super Product</h2>
+            <h3 class="product-card__name">Wooden radio</h3>
+            <span class="product-card__price">$29.00</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+
+          <div class="product-card__img">
+            <img src="images/products/2.png" alt="furniture">
+          </div>
+
+          <div class="product-card__btns">
+
+            <a class="product-card__link" href="#">
+              <svg class="icon icon--search">
+                <use xlink:href="#search"></use>
+              </svg>
+            </a>
+            <button class="product-card__link" type="button">
+              <svg class="icon icon--cart">
+                <use xlink:href="#cart"></use>
+              </svg>
+            </button>
+            <button class="product-card__link" type="button">
+              <svg class="icon icon--heart">
+                <use xlink:href="#heart"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="product-card__content">
+            <h2>Super Product</h2>
+            <h3 class="product-card__name">Wooden radio</h3>
+            <span class="product-card__price">$29.00</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+
+          <div class="product-card__img">
+            <img src="images/products/3.png" alt="furniture">
+          </div>
+
+          <div class="product-card__btns">
+
+            <a class="product-card__link" href="#">
+              <svg class="icon icon--search">
+                <use xlink:href="#search"></use>
+              </svg>
+            </a>
+            <button class="product-card__link" type="button">
+              <svg class="icon icon--cart">
+                <use xlink:href="#cart"></use>
+              </svg>
+            </button>
+            <button class="product-card__link" type="button">
+              <svg class="icon icon--heart">
+                <use xlink:href="#heart"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="product-card__content">
+            <h2>Super Product</h2>
+            <h3 class="product-card__name">Wooden radio</h3>
+            <span class="product-card__price">$29.00</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+
+          <div class="product-card__img">
+            <img src="images/products/4.png" alt="furniture">
+          </div>
+
+          <div class="product-card__btns">
+
+            <a class="product-card__link" href="#">
+              <svg class="icon icon--search">
+                <use xlink:href="#search"></use>
+              </svg>
+            </a>
+            <button class="product-card__link" type="button">
+              <svg class="icon icon--cart">
+                <use xlink:href="#cart"></use>
+              </svg>
+            </button>
+            <button class="product-card__link" type="button">
+              <svg class="icon icon--heart">
+                <use xlink:href="#heart"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="product-card__content">
+            <h2>Super Product</h2>
+            <h3 class="product-card__name">Wooden radio</h3>
+            <span class="product-card__price">$29.00</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+
+          <div class="product-card__img">
+            <img src="images/products/1.png" alt="furniture">
+          </div>
+
+          <div class="product-card__btns">
+
+            <a class="product-card__link" href="#">
+              <svg class="icon icon--search">
+                <use xlink:href="#search"></use>
+              </svg>
+            </a>
+            <button class="product-card__link" type="button">
+              <svg class="icon icon--cart">
+                <use xlink:href="#cart"></use>
+              </svg>
+            </button>
+            <button class="product-card__link" type="button">
+              <svg class="icon icon--heart">
+                <use xlink:href="#heart"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="product-card__content">
+            <h2>Super Product</h2>
+            <h3 class="product-card__name">Wooden radio</h3>
+            <span class="product-card__price">$29.00</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BLOG & PARTNERS -->
+  @@include('../parts/_blog.html')
+
+  @@include('../parts/_partners.html')
+
+</main>
+
+<!-- FOOTER -->
+@@include('../parts/_footer.html')
+
+<script src="js/main.min.js"></script>

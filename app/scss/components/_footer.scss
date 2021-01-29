@@ -1,30 +1,46 @@
-// FOOTER
 .footer {
   padding-top: 100px;
   background-color: #fff;
+  position: relative;
+
+  @include r(1199) {
+    padding-top: 25px;
+  }
 
   &__inner {
     display: flex;
+    flex-wrap: wrap;
 
-    position: relative;
     margin-bottom: 50px;
 
     @extend %rubik-400;
     color: $footer-links;
-  }
 
-  &__logo {
-    position: absolute;
-    top: -18px;
-    left: 0;
-    z-index: 100;
+    @include r(1199) {
+      justify-content: space-between;
+    }
+
+    @include r(767) {
+      margin-bottom: 15px;
+    }
   }
 
   &__address {
-    margin-top: 38px;
-    margin-right: 100px;
+    margin: 20px 100px 0 0;
     max-width: 200px;
     font-style: normal;
+
+    @include r(1199) {
+      margin-right: 30px;
+    }
+
+    @include r(767) {
+      margin-right: 10px;
+    }
+
+    @include r(480) {
+      max-width: 100%;
+    }
 
     & span {
       text-transform: uppercase;
@@ -36,12 +52,20 @@
     margin-bottom: 16px;
     display: block;
 
+    outline-color: transparent;
+
     transition: color 0.3s;
 
-    &:focus,
-    &:hover,
+    &:focus {
+      color: $bg;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
     &:active {
-      color: $top-links;
+      color: $footer-links;
     }
 
     &--height {
@@ -51,14 +75,24 @@
 
   &__services {
     max-width: 120px;
+
+    @include r(767) {
+      margin-right: 10px;
+    }
   }
 
   &__title {
     margin-bottom: 20px;
+
     @extend %dmsans-700;
     font-size: 16px;
     text-transform: uppercase;
+
     color: #1f2044;
+
+    @include r(767) {
+      margin-bottom: 15px;
+    }
   }
 
   &__item {
@@ -68,30 +102,68 @@
   &__link {
     transition: color 0.3s;
 
-    &:focus,
-    &:hover,
+    &:focus {
+      color: $bg;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
     &:active {
-      color: $top-links;
+      color: $footer-links;
     }
   }
 
   &__account {
     max-width: 120px;
     margin: 0 206px 0 182px;
+
+    @include r(1199) {
+      margin: 0 30px;
+    }
+
+    @include r(767) {
+      margin: 0 10px;
+    }
   }
 
   &__newsletter {
     max-width: 274px;
+
+    @include r(767) {
+      margin-right: 10px;
+    }
+
+    @include r(480) {
+      max-width: 100%;
+    }
   }
 
   &__text {
     margin-bottom: 30px;
     line-height: 1.7;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
+
+    @include r(767) {
+      margin-bottom: 15px;
+    }
   }
 
   &__form {
     display: flex;
     align-items: center;
+  }
+
+  &__label {
+    display: flex;
+
+    span {
+      font-size: 0;
+    }
+
   }
 
   &__input {
@@ -100,16 +172,18 @@
     width: 100%;
 
     color: #234969;
-    background-color: #fef7f0;
+    background-color: $bg-add;
+    transition: box-shadow 0.4s;
 
-    border: none;
-    outline-color: transparent;
-    outline-width: 0;
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    }
 
     &::placeholder {
       @extend %dmsans-400;
       font-size: 12px;
       line-height: 1.3;
+
       color: #234969;
     }
   }
@@ -121,39 +195,51 @@
     color: #fff;
     background-color: $accent;
 
-    border: none;
-    cursor: pointer;
-
     transition: background-color 0.3s;
 
     &:focus,
-    &:hover,
-    &:active {
+    &:hover {
       background-color: $text;
+    }
+
+    &:active {
+      background-color: $footer-links;
     }
   }
 }
 
 .footer-copyright {
+  padding: 34px 0 39px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  min-height: 90px;
-  @extend %rubik-400;
-
   color: $footer-links;
   border-top: 1px solid #dae4e9;
 
+  @include r(767) {
+    padding: 15px 0;
+    display: block;
+    text-align: center;
+  }
+
   &__list {
     display: flex;
+
+    @include r(767) {
+      margin-top: 15px;
+      justify-content: center;
+    }
   }
 
   &__item {
     padding: 0 14px;
     border-right: 1px solid $footer-links;
 
-
+    @include r(767) {
+      margin-top: 5px;
+    }
 
     &:first-child {
       padding-left: 0;
@@ -166,13 +252,18 @@
   }
 
   &__link {
-    cursor: pointer;
     transition: color 0.3s;
 
-    &:focus,
-    &:hover,
+    &:focus {
+      color: $bg;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
     &:active {
-      color: $text;
+      color: $footer-links;
     }
   }
 }

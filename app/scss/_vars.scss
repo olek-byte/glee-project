@@ -3,6 +3,8 @@ $bg: #fcd7b6;
 $accent: #a3bbc8;
 $text: #243f4d;
 $footer-links: #7b7b7b;
+$border: #333333;
+$bg-add: #fef7f0;
 
 
 %dmsans-700 {
@@ -20,6 +22,11 @@ $footer-links: #7b7b7b;
   font-weight: 400;
 }
 
+%rubik-700 {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+}
+
 %rubik-500 {
   font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
@@ -30,15 +37,64 @@ $footer-links: #7b7b7b;
   font-weight: 400;
 }
 
+%rubik-300 {
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+
+%poppins-400 {
+  font-family: 'Poppins-Regular', sans-serif;
+  font-weight: 400;
+}
+
 %poppins-700 {
   font-family: 'Poppins-Bold', sans-serif;
   font-weight: 700;
 }
 
+
+%text-hiding {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+%visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+
+
+// for video
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
 
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
+}
+
+// for media
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content;
+  }
 }

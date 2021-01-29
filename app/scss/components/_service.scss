@@ -1,69 +1,143 @@
-// SERVICE
 .service {
-  padding-bottom: 66px;
+  padding: 48px 0;
+  background-color: $bg-add;
+  position: relative;
+
+  @include r(1199) {
+    padding: 10px 0;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    border-left: 1px solid #e8e5e0;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 35%;
+
+    @include r(1199) {
+      left: 33%;
+    }
+
+    @include r(991) {
+      display: none;
+    }
+  }
+
+  &::after {
+    right: 35%;
+    border-right: 1px solid #e8e5e0;
+  }
 
   &__list {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-evenly;
-
-    min-height: 171px;
-    background-color: #fef7f0;
+    flex-wrap: wrap;
   }
 
   &__item {
     display: flex;
+    flex-wrap: wrap;
+    position: relative;
 
-    &--border {
-      align-items: center;
+    @include r(991) {
+      width: 100%;
 
-      padding: 0 152px 0 160px;
+      &--border:before,
+      &--border:after {
 
-      max-width: 602px;
-      min-height: 171px;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translateX(50%);
 
-      border-right: 1px solid #e8e4df;
-      border-left: 1px solid #e8e4df;
+        border-bottom: 1px solid $border;
+        width: 50%;
+      }
+
+      &--border:after {
+        bottom: 0;
+      }
     }
+
   }
 
-  &__icon {
-    margin-right: 20px;
-    fill: $accent;
-
-    &-support {
-      width: 52px;
-      height: 54px;
+  &__img {
+    @include r(991) {
+      display: none;
     }
 
-    &-delivery-truck {
-      width: 55px;
-      height: 37px;
-    }
 
-    &-payment-secure {
-      width: 54px;
-      height: 53px;
+    .icon {
+      margin-right: 25px;
+      fill: $accent;
+
+      &--support {
+        width: 52px;
+        height: 54px;
+      }
+
+      &--truck {
+        width: 55px;
+        height: 37px;
+      }
+
+      &--payment {
+        margin-right: 35px;
+        width: 54px;
+        height: 53px;
+      }
     }
   }
 
   &__content {
-    max-width: 220px;
+    max-width: 214px;
+
+    @include r(991) {
+      max-width: 100%;
+      margin: 0 auto;
+      padding-top: 15px;
+
+      text-align: center;
+    }
   }
 
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 
     @extend %dmsans-700;
     font-size: 18px;
 
     color: #414141;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
+
+    @include r(480) {
+      font-size: 16px;
+    }
   }
 
   &__text {
     @extend %dmsans-400;
     font-size: 16px;
+    line-height: 1.7;
 
     color: #585858;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
+
+    @include r(991) {
+      margin-bottom: 20px;
+    }
+
+    @include r(480) {
+      font-size: 14px;
+    }
   }
 }

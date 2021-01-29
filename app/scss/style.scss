@@ -3,14 +3,24 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
-@import 'components/header';
-@import 'components/top-slider';
-@import 'components/service';
-@import 'components/products';
-@import 'components/lamp-products';
-@import 'components/design';
-@import 'components/video';
-@import 'components/blog';
-@import 'components/footer';
+
+
+@import 'components/components';
+
+@import 'terms/page-content';
+
+@import 'login/login';
+
+@import 'about/about';
+
+@import 'shop-page/shop-page';
+
+@import 'prod_details/prod_details';
+
+@import 'blog-page/blog_page';
+
+@import 'blog-one/blog_one';
+
+@import 'contacts/contacts';
 
 

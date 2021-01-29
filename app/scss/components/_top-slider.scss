@@ -1,96 +1,215 @@
-// TOP-SLIDER
 .top-slider {
-  max-height: 820px;
-
-  &__inner {
-    background-color: $bg;
-    background-image: url('../images/slider/slider-bg.png');
-    background-repeat: no-repeat;
-    background-position: 84% 50%;
-  }
+  background-color: $bg;
 
   &__item {
     display: flex !important;
-    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 213px 170px 281px 297px;
+
+    @include r(1700) {
+      padding: 213px 150px 181px;
+      justify-content: space-between;
+    }
+
+    @include r(1400) {
+      padding: 70px;
+    }
+
+    @include r(767) {
+      padding: 0px;
+      justify-content: center;
+    }
   }
 
   &__content {
-    padding: 215px 0 0 300px;
+    max-width: 411px;
+    margin-right: 115px;
+
+    @include r(1700) {
+      margin-right: 0;
+    }
+
+    @include r(991) {
+      max-width: 240px;
+    }
+
+    @include r(767) {
+      display: none;
+    }
   }
 
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: 21px;
 
     font-size: 72px;
-    line-height: 1;
     @extend %rubik-500;
     text-transform: uppercase;
 
     color: $text;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 3;
+
+    @include r(1700) {
+      font-size: 60px;
+    }
+
+    @include r(1400) {
+      font-size: 50px;
+    }
+
+    @include r(991) {
+      font-size: 35px;
+    }
   }
 
   &__text {
-    margin-bottom: 40px;
-    max-width: 388px;
+    margin-bottom: 39px;
 
     font-size: 18px;
     line-height: 1.6;
     @extend %rubik-400;
 
     color: $top-links;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 4;
+
+    @include r(991) {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
   }
 
-  &__btn {
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-
+  &__link {
+    display: inline-block;
     position: relative;
-
-    padding: 24px 100px 27px 27px;
+    padding: 25px 101px 21px 27px;
 
     font-size: 15px;
     line-height: 1;
     @extend %rubik-500;
 
-    color: #fff;
     background-color: $accent;
-
-    border: 0;
-    outline-color: transparent;
-    cursor: pointer;
+    color: #fff;
 
     transition: background-color 0.3s;
 
-    &:focus,
-    &:hover,
-    &:active{
+    &:focus {
+      background-color: $top-links;
+    }
+
+    &:hover {
       background-color: $text;
+    }
+
+    &:active {
+      background-color: $footer-links;
     }
 
     &::after {
       content: '';
-      background-image: url('../images/slider/btn_arrow.svg');
-      width: 22px;
-      height: 9px;
-    
       position: absolute;
       right: 10%;
       top: 40%;
+
+      background-image: url('../images/slider/icons/btn_arrow.svg');
+      width: 22px;
+      height: 9px;
+    }
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+
+
+    @include r(1400) {
+      align-self: center;
+    }
+
+    @include r(767) {
+      margin: 40px 0 68px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -63%;
+      right: -21%;
+      width: 100%;
+      height: 241%;
+      
+      // width: 634px;
+      // height: 634px;
+
+      background-image: url(../images/decor/slider-decor.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      @include r(1700) {
+        top: -82%;
+      }
+
+      @include r(1400) {
+        height: 145%;
+        top: -23%;
+        left: 10%;
+      }
+
+      @include r(767) {
+        height: 100%;
+        top: 0%;
+        left: 35%;
+      }
+
+      @include r(480) {
+        height: 75%;
+        top: 13%;
+        left: 20%;
+      }
     }
   }
 
   &__img {
-    padding: 270px 295px 280px 0;
+
+    object-fit: contain;
+    width: 600px;
+    height: 264px;
+
+    @include r(1400) {
+      width: 400px;
+    }
+
+    @include r(991) {
+      width: 350px;
+    }
+
+    @include r(767) {
+      width: 330px;
+    }
+
+    @include r(480) {
+      width: 220px;
+    }
   }
 
   // SLICK-DOTS
   ul.slick-dots {
     display: flex;
     position: absolute;
-    bottom: 42px;
+    bottom: 48px;
     left: 50%;
+
     transform: translateX(-50%);
+
+    @include r(767) {
+      bottom: 25px;
+    }
 
     & li+li {
       margin-left: 12px;
@@ -107,21 +226,26 @@
       border-radius: 50%;
       background-color: #fde3cc;
       border: none;
-      outline-color:#808080;
-      cursor: pointer;
+      outline-color: transparent;
+      outline-width: 0;
 
-      transition: background-color 0.3s;
+      transition: color 0.3s;
 
-      &:focus,
-      &:hover,
+      &:focus {
+        color: #314b58;
+      }
+
+      &:hover {
+        color: $accent;
+      }
+
       &:active {
-        background-color: #fff;
+        color: $footer-links;
       }
     }
 
     & .slick-active button {
       background-color: #fff;
-      
     }
   }
 }

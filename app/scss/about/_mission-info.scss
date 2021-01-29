@@ -1,0 +1,67 @@
+.mission-info {
+  padding: 78px 0;
+  background-color: $bg;
+
+  @include r(1199) {
+    padding: 20px 0;
+  }
+
+  &__list {
+    .slick-track {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    @extend %dmsans-700;
+    color: $text;
+
+    span {
+      margin-bottom: 10px;
+    }
+  }
+
+  .icon {
+    height: 64px;
+
+    &--rate {
+      width: 75px;
+      height: 60px;
+    }
+
+    &--delivered {
+      width: 73px;
+      height: 52px;
+    }
+
+    &--daily {
+      width: 79px;
+    }
+
+    &--brands {
+      width: 61px;
+    }
+  }
+
+  &__number {
+    margin-bottom: 12px;
+    font-size: 36px;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+
+    @include r(767) {
+      font-size: 25px;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    line-height: 1.8;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+  }
+}

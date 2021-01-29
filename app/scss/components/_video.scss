@@ -1,26 +1,51 @@
-// VIDEO
 .video {
-  padding-bottom: 110px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
-  &__bg {
+  &__link {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__box {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 501px;
-  }
 
-  &__link {
-    &-play {
-      fill: #fff;
-      transition: fill 0.3s;
+    min-height: 501px;
 
-      &:focus,
-      &:hover,
-      &:active {
-        fill: #183b61;
-      }
+    @include r(991) {
+      min-height: 400px;
     }
 
+    @include r(767) {
+      min-height: 300px;
+    }
+
+    @include r(480) {
+      min-height: 250px;
+    }
+
+    .icon {
+      &--play {
+        fill: #fff;
+        transition: fill 0.3s;
+
+        &:focus {
+          fill: #e6d96d;
+        }
+
+        &:hover {
+          fill: #183b61;
+        }
+
+        &:active {
+          fill: $footer-links;
+        }
+      }
+    }
   }
+
 
 }

@@ -1,0 +1,33 @@
+.partners {
+  padding: 264px 0 85px;
+  background-color: $bg-add;
+
+  @include r(480) {
+    padding: 190px 0 47px;
+  }
+
+  &__list {
+    .slick-track {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    display: flex !important;
+    justify-content: center;
+
+    img {
+      max-width: 167px;
+      max-height: 84px;
+      object-fit: contain;
+    }
+  }
+}
+
+.main {
+  .partners {
+    padding: 70px 0 85px;
+  }
+}

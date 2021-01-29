@@ -1,0 +1,241 @@
+.mission {
+  padding: 118px 0;
+  background-color: #fff;
+
+  @include r(1199) {
+    padding: 20px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    @include r(1199) {
+      background-size: 0;
+    }
+  }
+
+  &__content {
+    max-width: 550px;
+
+    @include r(1199) {
+      max-width: 100%;
+      padding-left: 20px;
+    }
+  }
+
+  &__experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 79px 0 34px;
+
+    @include r(1199) {
+      margin: 0;
+      justify-content: center;
+    }
+
+    @include r(767) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__number {
+    margin-right: 25px;
+
+    font-size: 140px;
+    @extend %rubik-700;
+
+    color: $accent;
+
+    @include r(767) {
+      font-size: 120px;
+    }
+
+    @include r(480) {
+      font-size: 100px;
+    }
+  }
+
+  &__list {
+    margin-top: 21px;
+    @extend %text-hiding;
+    -webkit-line-clamp: 3;
+
+    @include r(1199) {
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 1.9;
+
+    color: $text;
+  }
+
+  &__title {
+    margin-bottom: 33px;
+    text-align: left;
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
+
+    @include r(1199) {
+      text-align: center;
+    }
+
+    @include r(480) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    padding-bottom: 55px;
+    margin-bottom: 42px;
+
+    font-size: 16px;
+    line-height: 1.9;
+
+    border-bottom: 1px solid #e6eaf1;
+    color: $text;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 10;
+
+    @include r(1199) {
+      margin-bottom: 30px;
+    }
+
+    @include r(767) {
+      padding-bottom: 10px;
+    }
+
+    @include r(480) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    margin-bottom: 100px;
+
+    @include r(1199) {
+      margin-bottom: 40px;
+    }
+
+    @include r(767) {
+      margin-bottom: 20px;
+    }
+
+    @include r(480) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    @extend %dmsans-700;
+
+    @include r(767) {
+      margin-bottom: 15px;
+    }
+
+    &--projects,
+    &--revenue,
+    &--awards {
+      &::before {
+        content: '';
+        position: absolute;
+        left: -65%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 37px;
+        height: 38px;
+
+        background-image: url('../images/icons/about/projects.svg');
+
+        @include r(480) {
+          display: none;
+        }
+      }
+    }
+
+    &--revenue {
+      &::before {
+        left: -82%;
+        width: 43px;
+        height: 40px;
+        background-image: url('../images/icons/about/Revenue.svg');
+
+        @include r(480) {
+          display: none;
+        }
+      }
+    }
+
+    &--awards {
+      &::before {
+        left: -90%;
+        width: 42px;
+        height: 42px;
+        background-image: url('../images/icons/about/Awards.svg');
+
+        @include r(480) {
+          display: none;
+        }
+      }
+    }
+
+    &--projects,
+    &--revenue {
+      &::after {
+        content: '';
+        position: absolute;
+        right: -26px;
+        top: 0;
+        border-right: 1px solid#edf0f5;
+        height: 81px;
+
+        @include r(1199) {
+          display: none;
+        }
+      }
+    }
+
+    &--revenue {
+      &::after {
+        right: -35px;
+      }
+    }
+  }
+
+  &__icon-number {
+    margin-bottom: 3px;
+
+    font-size: 36px;
+    color: $text;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+
+    @include r(767) {
+      font-size: 25px;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    color: #4c4c4c;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+  }
+}

@@ -1,0 +1,112 @@
+.team {
+  padding: 116px 0 0;
+  background-color: #fff;
+
+  @include r(1199) {
+    padding: 50px 0;
+  }
+
+  @include r(991) {
+    padding: 25px 0;
+  }
+
+  @include r(480) {
+    padding: 10px 0;
+  }
+
+  &__inner {
+    display: flex;
+
+    @include r(1199) {
+      display: block;
+    }
+  }
+
+  &__content {
+    max-width: 305px;
+    margin-right: 65px;
+
+    @include r(1199) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 32px;
+      padding-left: 20px;
+      text-align-last: center;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 18px;
+
+    @include r(480) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    line-height: 1.9;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 10;
+
+    color: $text;
+
+    @include r(480) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 19px 60px 18px 18px;
+
+    font-size: 15px;
+    line-height: 3.7;
+    @extend %poppins-700;
+
+    background-color: $accent;
+    border-radius: 5px;
+
+    color: #fff;
+
+    transition: background-color 0.3s;
+
+    &:focus {
+      background-color: #aec3bd;
+    }
+
+    &:hover {
+      background-color: $bg;
+    }
+
+    &:active {
+      background-color: $footer-links;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 26px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 15px;
+      height: 11px;
+
+      background-image: url('../images/icons/about/join-arrow.svg');
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include r(1199) {
+      justify-content: center;
+    }
+  }
+}

@@ -1,51 +1,38 @@
-// DESIGN
 .design {
-  padding-bottom: 120px;
+  padding: 96px 0 120px;
   background-color: #fff;
 
+  @include r(1199) {
+    padding: 80px 0;
+  }
+
+  @include r(480) {
+    padding: 40px 0;
+  }
+
   &__title {
-    margin-bottom: 23px;
+    margin-bottom: 22px;
+
+    @include r(1199) {
+      margin-bottom: 10px;
+    }
   }
 
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 34px 30px;
-  }
-}
+  &__filter {
+    margin-bottom: 78px;
 
-.design-card {
-  position: relative;
-  min-height: 246px;
-  padding: 32px 0 127px 36px;
-  background-color: #f8f8f8;
-
-  &__name {
-    max-width: 176px;
-    margin-bottom: 15px;
-
-    font-size: 20px;
-    @extend %dmsans-700;
-    color: #1a1a1a;
-  }
-
-  &__type {
-    font-size: 16px;
-    @extend %dmsans-700;
-    color: #a3bbc8;
-  }
-
-  &__img-link {
-    position: absolute;
-    bottom: 30px;
-    right: 0;
-
-    &--chair_1 {
-      right: 56px;
+    @include r(1199) {
+      margin-bottom: 50px;
     }
 
-    &--chair_2 {
-      right: 30px;
+    @include r(480) {
+      margin-bottom: 30px;
     }
+  }
+
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }

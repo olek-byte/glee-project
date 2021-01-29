@@ -1,0 +1,125 @@
+.team-card {
+  margin-bottom: 34px;
+  padding-right: 30px;
+
+  @include r(1199) {
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+
+  @include r(767) {
+    margin-bottom: 20px;
+    padding: 0 5px;
+  }
+
+  img {
+    max-height: 318px;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: -50px;
+    padding: 31px 21px 28px 25px;
+    max-width: 326px;
+
+    background-color: #fff;
+    box-shadow: 0 6px 57px rgba(37, 37, 37, 0.05);
+    z-index: 10;
+
+    transition: box-shadow 0.4s;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @include r(480) {
+      max-width: 100%;
+    }
+  }
+
+  &__name {
+    margin-bottom: 5px;
+
+    font-size: 22px;
+    @extend %dmsans-700;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+
+    color: $top-links;
+
+    @include r(480) {
+      font-size: 17px;
+    }
+  }
+
+  &__position {
+    font-size: 16px;
+    color: #565872;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
+
+    @include r(480) {
+      font-size: 14px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+
+    li:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    width: 41px;
+    height: 41px;
+
+    fill: #888888;
+    background-color: #f6f6f6;
+
+    transition: all 0.3s;
+
+    &:focus {
+      fill: #aec3bd;
+    }
+
+    &:hover {
+      fill: $bg;
+      background-color: $text;
+    }
+
+    &:active {
+      fill: $footer-links;
+    }
+
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+
+  .icon {
+    &--insta {
+      width: 18px;
+      height: 18px;
+    }
+
+    &--google {
+      width: 23px;
+      height: 15px;
+    }
+
+  }
+
+}
