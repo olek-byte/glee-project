@@ -26,8 +26,8 @@
        </a>
 
        <div class="menu__overlay"></div>
-       
-        <nav class="menu main-menu">
+
+       <nav class="menu main-menu">
 
          <div class="menu__nav-btn menuToggle js-menu__nav-btn">
            <input type="checkbox">
@@ -35,7 +35,7 @@
            <span class="span2"></span>
            <span class="span3"></span>
          </div>
-         
+
          <ul class="menu__list">
 
            <li class="menu__item">
@@ -88,11 +88,21 @@
          <div class="menu__user">
            <div class="menu__btns">
 
-             <button class="menu__btn menu__btn--search" type="button">
-               <svg class="icon icon--search">
-                 <use xlink:href="#search"></use>
-               </svg>
-             </button>
+             <div class="search-holder">
+               <div class="search-holder__form">
+                 <button class="search-button">
+                   <svg class="icon icon--search">
+                     <use xlink:href="#search"></use>
+                   </svg>
+                 </button>
+                 <input type="text" class="search-holder__input" placeholder="Type here to search ..." />
+               </div>
+               <button class="search-close__btn js-cancel__btn">
+                 <svg class="icon icon--cancel">
+                   <use xlink:href="#cancel"></use>
+                 </svg>
+               </button>
+             </div>
 
              <button class="menu__btn menu__btn--heart" type="button">
                <svg class="icon icon--heart">
@@ -108,7 +118,7 @@
                <span class="menu__num menu__num--cart">0</span>
              </button>
 
-             <button class="menu__btn menu__btn--menu-dots" type="button">
+             <button class="menu__btn menu__btn--menu-dots js-menu__dots" type="button">
                <svg class="icon icon--menu-dots">
                  <use xlink:href="#menu-dots"></use>
                </svg>
@@ -121,6 +131,167 @@
      </div>
    </div>
  </header>
+
+
+ <aside class="slide-bar">
+   <div class="slide-bar__inner">
+
+     <button class="search-close__btn js-cancel__btn">
+       <svg class="icon icon--cancel">
+         <use xlink:href="#cancel"></use>
+       </svg>
+     </button>
+
+     <ul class="slide-bar__menu">
+
+       <li class="slide-bar__item">
+         <address class="footer__address slide-bar__address">
+           <a class="logo footer__logo link" href="#body">
+             <img src="images/logo.png" alt="logo">
+           </a>
+
+           <div class="footer__title  slide-bar__title js-btn__aside">Address</div>
+
+           <ul class="footer__list slide-bar__list">
+
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__contact slide-bar__contact" href="#">
+                 <span>Address</span>: 4772 Wines Lane
+                 Houston, TX 77032
+               </a>
+             </li>
+
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__contact slide-bar__contact" href="tel:+8323475843">
+                 <span>Telephone</span>: +832-347-5843
+               </a>
+             </li>
+
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__contact slide-bar__contact" href="mailto:contact@Glee.com">
+                 <span>Email</span>: contact@Glee.com
+               </a>
+             </li>
+           </ul>
+         </address>
+       </li>
+
+       <li class="slide-bar__item">
+         <div class="footer__services slide-bar__services">
+           <div class="footer__title slide-bar__title  js-btn__aside">Services</div>
+
+           <ul class="footer__list slide-bar__list">
+
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__link" href="#">About Us</a>
+             </li>
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__link" href="#">Return Policy</a>
+             </li>
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__link" href="#">Our Blog</a>
+             </li>
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__link" href="#">Contact Us</a>
+             </li>
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__link" href="#">Terms & Condition</a>
+             </li>
+
+           </ul>
+
+         </div>
+       </li>
+
+       <li class="slide-bar__item">
+         <div class="footer__account">
+           <div class="footer__title slide-bar__title  js-btn__aside">Account</div>
+
+           <ul class="footer__list slide-bar__list">
+
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__link" href="#">Your Account</a>
+             </li>
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__link" href="#">Checkout</a>
+             </li>
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__link" href="#">Login</a>
+             </li>
+             <li class="footer__item slide-bar__list-item">
+               <a class="footer__link" href="#">Register</a>
+             </li>
+
+           </ul>
+         </div>
+       </li>
+
+       <li class="slide-bar__item">
+         <div class="footer__newsletter">
+           <div class="footer__title slide-bar__title  js-btn__aside">Newsletter</div>
+           <ul class="footer__list">
+
+             <li class="footer__item slide-bar__list-item">
+               <span class="slide-bar__text">
+                 Subscribe by our newsletter and get
+                 update protidin.
+               </span>
+             </li>
+           </ul>
+
+       </li>
+     </ul>
+
+     <form class="footer__form slide-bar__form" action="#">
+
+       <label class="footer__label">
+         <input id="footer__input" class="footer__input" type="email" name="subscribe[email]"
+           placeholder="Email address" required>
+         <span> Email address</span>
+       </label>
+       <button class="footer__btn" type="submit">Subscribe</button>
+     </form>
+
+     <div class="side-bar__social">
+       <ul class="team-card__social">
+         <li>
+           <a href="#" class="team-card__link team-card__link--insta">
+             <svg class="icon icon--insta">
+               <use xlink:href="#insta"></use>
+             </svg>
+           </a>
+         </li>
+
+         <li>
+           <a href="#" class="team-card__link team-card__link--google">
+             <svg class="icon icon--google">
+               <use xlink:href="#google"></use>
+             </svg>
+           </a>
+         </li>
+
+         <li>
+           <a href="#" class="team-card__link team-card__link--fb">
+             <svg class="icon icon--fb">
+               <use xlink:href="#fb"></use>
+             </svg>
+           </a>
+         </li>
+
+         <li>
+           <a href="#" class="team-card__link team-card__link--twitter">
+             <svg class="icon icon--twitter">
+               <use xlink:href="#tw"></use>
+             </svg>
+           </a>
+         </li>
+
+       </ul>
+     </div>
+
+   </div>
+
+ </aside>
 
 <main class="main-page">
 
@@ -699,7 +870,7 @@
 
   <!-- VIDEO -->
   <div class="video" style="background-image: url(images/video_bg.jpg)">
-    <a class="video__link" data-fancybox href="https://www.youtube.com/watch?v=cVCxssYAYiQ">
+    <a class="video__link" data-fancybox href="https://www.youtube.com/watch?v=kSUxuo8WvGI">
 
       <span class="video__box">
         <svg class="icon icon--play">
@@ -809,8 +980,9 @@
 
   <div class="partners">
   <div class="narrow-container">
-    
+
     <ul class="partners__list">
+
       <li class="partners__item">
         <img src="images/partners/1.png" alt="partners logo">
       </li>
@@ -826,6 +998,7 @@
       <li class="partners__item">
         <img src="images/partners/5.png" alt="partners logo">
       </li>
+
     </ul>
 
   </div>
@@ -972,6 +1145,11 @@
     <symbol id="menu-dots" viewBox="0 0 20 21">
       <path
         d="M2.14571 4.88054c-1.18664 0-2.14588-.95919-2.14588-2.14552 0-1.18698.95924-2.14585 2.14588-2.14585 1.18687 0 2.146.95887 2.146 2.14585 0 1.18633-.95913 2.14552-2.146 2.14552zm0 7.86931c-1.18664 0-2.14588-.96017-2.14588-2.14683 0-1.18633.95924-2.1452 2.14588-2.1452 1.18687 0 2.146.95887 2.146 2.1452 0 1.18666-.95913 2.14683-2.146 2.14683zm0 7.86801c-1.18664 0-2.14588-.95887-2.14588-2.14585 0-1.18666.95924-2.14585 2.14588-2.14585 1.18687 0 2.146.95919 2.146 2.14585 0 1.18698-.95913 2.14585-2.146 2.14585zm7.86862-15.73732c-1.18675 0-2.146-.95919-2.146-2.14552 0-1.18698.95924-2.14585 2.146-2.14585 1.18675 0 2.14588.95887 2.14588 2.14585 0 1.18633-.95913 2.14552-2.14588 2.14552zm0 7.86931c-1.18675 0-2.146-.96017-2.146-2.14683 0-1.18633.95924-2.1452 2.146-2.1452 1.18675 0 2.14588.95887 2.14588 2.1452 0 1.18666-.95913 2.14683-2.14588 2.14683zm0 7.86801c-1.18675 0-2.146-.95887-2.146-2.14585 0-1.18666.95924-2.14585 2.146-2.14585 1.18675 0 2.14588.95919 2.14588 2.14585 0 1.18698-.95913 2.14585-2.14588 2.14585zm7.8685-15.73732c-1.18664 0-2.14588-.95919-2.14588-2.14552 0-1.18698.95924-2.14585 2.14588-2.14585 1.18675 0 2.146.95887 2.146 2.14585 0 1.18633-.95924 2.14552-2.146 2.14552zm0 7.86931c-1.18664 0-2.14588-.96017-2.14588-2.14683 0-1.18633.95924-2.1452 2.14588-2.1452 1.18675 0 2.146.95887 2.146 2.1452 0 1.18666-.95924 2.14683-2.146 2.14683zm0 7.86801c-1.18664 0-2.14588-.95887-2.14588-2.14585 0-1.18666.95924-2.14585 2.14588-2.14585 1.18675 0 2.146.95919 2.146 2.14585 0 1.18698-.95924 2.14585-2.146 2.14585z" />
+    </symbol>
+
+    <symbol id="cancel" viewBox="0 0 20 20">
+      <path
+        d="M 11.105469 10 L 19.769531 1.332031 C 20.078125 1.027344 20.078125 0.535156 19.769531 0.230469 C 19.464844 -0.078125 18.972656 -0.078125 18.667969 0.230469 L 10 8.894531 L 1.332031 0.230469 C 1.027344 -0.078125 0.535156 -0.078125 0.230469 0.230469 C -0.078125 0.535156 -0.078125 1.027344 0.230469 1.332031 L 8.894531 10 L 0.230469 18.667969 C -0.078125 18.972656 -0.078125 19.464844 0.230469 19.769531 C 0.382812 19.921875 0.582031 20 0.78125 20 C 0.980469 20 1.179688 19.921875 1.332031 19.769531 L 10 11.105469 L 18.667969 19.769531 C 18.820312 19.921875 19.019531 20 19.21875 20 C 19.417969 20 19.617188 19.921875 19.769531 19.769531 C 20.078125 19.464844 20.078125 18.972656 19.769531 18.667969 Z M 11.105469 10 " />
     </symbol>
 
     {# Blog-card #}
