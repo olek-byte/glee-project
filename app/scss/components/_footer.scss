@@ -88,6 +88,8 @@
     font-size: 16px;
     text-transform: uppercase;
 
+    // pointer-events: none;
+
     color: #1f2044;
 
     @include r(767) {

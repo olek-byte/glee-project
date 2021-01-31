@@ -174,8 +174,40 @@ $(function () {
     $('body').toggleClass('locked')
   });
 
+  //search-btn
+  (function () {
+    $(document).on('click', '.search-button', function () {
+      $(this).parent().parent().toggleClass('active');
+    });
+  })();
 
-  //HOME__LINK
+  // menu-dots
+  $('.js-menu__dots').on('click', function (e) {
+    e.preventDefault();
+    $('.slide-bar').toggleClass('show');
+    $('body').toggleClass('locked');
+  });
+
+  //cancel-btn
+  $('.js-cancel__btn').on('click', function (event) {
+    event.preventDefault();
+    $('.search-holder').removeClass('active');
+    $('.slide-bar').removeClass('show');
+    $('body').removeClass('locked');
+  });
+
+  //aside js-btn
+  $('.js-btn__aside').on('click', function () {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+    } else {
+      $('.js-btn__aside').removeClass('active');
+      $(this).addClass('active');
+    }
+  })
+
+
+  //HOME__LINK start
   $('.home-menu').on('click', function () {
     $(this).next().slideToggle();
   });
@@ -200,31 +232,35 @@ $(function () {
     };
   });
 
+  //HOME__LINK end
 
-  // PAGE__LINK
+
+  //page-menu start
   $('.page-menu').on('click', function () {
     $(this).next().slideToggle();
   });
 
-  const menuBtns = $('.page-menu'),
-    menus = $('.page-submenu');
+  const menuBtn1 = $('.page-menu'),
+    menu1 = $('.page-submenu');
 
-  menuBtns.on('click', function () {
+  menuBtn1.on('click', function () {
     if ($(this).hasClass('is-active')) {
       $(this).removeClass('is-active');
-      menus.slideUp();
+      menu1.slideUp();
     } else {
       $(this).addClass('is-active');
-      menus.slideDown();
+      menu1.slideDown();
     }
   });
 
   $(document).click(function (e) {
-    if (!menuBtns.is(e.target) && !menus.is(e.target) && menus.has(e.target).length === 0) {
-      menus.slideUp();
-      menuBtns.removeClass('is-active');
+    if (!menuBtn1.is(e.target) && !menu1.is(e.target) && menu1.has(e.target).length === 0) {
+      menu1.slideUp();
+      menuBtn1.removeClass('is-active');
     };
   });
+  //page-menu end
+
 
 
   // Fixed header
@@ -263,10 +299,12 @@ $(function () {
 
   // partners slider
   $('.partners__list').slick({
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     dots: false,
     arrows: false,
+    draggable: true,
+    focusOnSelect: true,
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [{

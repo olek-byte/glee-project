@@ -20,7 +20,11 @@
     right: 0;
     z-index: 1000;
 
-    // MENU-BURGER
+    &.active .menu__list {
+      transform: translateY(0%);
+    }
+
+    // MENU-BURGER start
     .menuToggle {
       overflow: hidden;
       position: absolute;
@@ -84,6 +88,8 @@
       }
     }
 
+    // MENU-BURGER end
+
   }
 
   &__logo {
@@ -104,15 +110,10 @@
   }
 }
 
-.header__inner.active .menu__list {
-  transform: translateY(0%);
-}
-
 
 .locked .menu__overlay {
   display: block;
 }
-
 
 .fixed {
   position: fixed;
@@ -129,11 +130,28 @@
   }
 }
 
+.search-close__btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: $bg;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.4s;
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  &:hover {
+    background-color: $accent;
+  }
+}
+
 ul.menu__list {
 
-  
   @include r(1199) {
-    // padding: 62px 0 15px;
     margin: -20px -15px;
 
     padding: 14% 0 6%;
@@ -144,7 +162,7 @@ ul.menu__list {
   }
 }
 
-// MENU
+// MENU__nav start
 .menu {
   display: flex;
   align-items: center;
@@ -200,7 +218,9 @@ ul.menu__list {
       transition: all 0.4s;
     }
 
-    // SUBMENU
+
+
+    // SUBMENU start
     .submenu {
       position: absolute;
       display: none;
@@ -257,6 +277,9 @@ ul.menu__list {
     }
   }
 
+  // SUBMENU end
+
+  // Menu__link start
   &__link {
     display: block;
     @extend %rubik-500;
@@ -306,6 +329,7 @@ ul.menu__list {
     z-index: 1200;
   }
 
+  // Menu__link end
 
   &__item {
 
@@ -322,6 +346,7 @@ ul.menu__list {
     }
   }
 
+  //menu__user start
   &__user {
     @include r(1199) {
       width: 88%;
@@ -335,6 +360,139 @@ ul.menu__list {
   &__btns {
     display: flex;
   }
+
+  //search-btn start
+  .search-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 21px;
+
+    @include r(480) {
+      margin-right: 15px;
+    }
+
+    &.active {
+      margin-right: 0;
+      position: fixed;
+
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+
+      z-index: 1500;
+      background-color: rgba(0, 0, 0, 0.87);
+    }
+
+    .search-button {
+      box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.28);
+      background-color: #edf1f4;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      fill: $text;
+
+
+      .icon {
+        &--search {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &:hover {
+        fill: $accent;
+      }
+
+      &:active {
+        fill: $footer-links;
+      }
+
+    }
+
+    &.active .search-button {
+      background-color: #fff;
+      transition: background-color .2s ease;
+      -webkit-transition: background-color .2s ease;
+      transition-delay: .1s;
+    }
+
+    & .search-holder__input {
+      background-color: transparent;
+      color: #2BADD8;
+      text-align: left;
+      border: 0;
+      box-shadow: none;
+      outline: none;
+      transform: translate(0, 55px);
+      transition: transform .4s ease;
+      font-size: 1em;
+      padding: 0 20px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &__input::-webkit-input-placeholder {
+      color: $text;
+      border: none;
+    }
+
+    &.active .search-holder__input {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(0, 0);
+      transition: transform .4s ease, opacity .2s ease;
+      -webkit-transition: transform .4s ease, opacity .2s ease;
+      transition-delay: .3s;
+    }
+
+    &__form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap-reverse;
+      position: relative;
+      width: 60px;
+      height: 52px;
+      border-radius: 30px;
+      z-index: 10;
+      background-color: transparent;
+      transition: width .4s ease, background-color .4s ease;
+      -webkit-transition: width .4s ease, background-color .4s ease;
+    }
+
+    &.active .search-holder__form {
+      background-color: #fff;
+      width: 300px;
+      transition: width .4s ease, background-color .4s ease;
+      -webkit-transition: width .4s ease, background-color .4s ease;
+
+      @include r(480) {
+        width: 270px;
+      }
+    }
+
+
+
+    &.active .search-close__btn {
+      display: block;
+      position: absolute;
+      right: 4%;
+      top: 14%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  //search-btn end
 
   &__btn {
     display: flex;
@@ -476,3 +634,6 @@ ul.menu__list {
     }
   }
 }
+
+
+
